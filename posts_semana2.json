@@ -1,0 +1,308 @@
+{
+ "_nota": "Posts de 03 a 08/11. Todos ao meio-dia (Brasilia), exceto o extra de humor (18h). Sem travessao nem dois pontos nos textos das artes e das legendas. Fecho padrao nas legendas.",
+ "pio": {
+  "dia": "2026-11-03 12:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "story_26.png",
+    "scale": 0.75,
+    "tag": "O pio da semana",
+    "title": "Como pedir para *repetir* em 4 idiomas",
+    "body": "Arrasta para o lado e salva para a próxima reunião.",
+    "head": [
+     510,
+     970
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_08.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Inglês",
+    "title": "Pedir para *repetir*",
+    "phrase": "Sorry, could you say that again?",
+    "trans": "Desculpa, pode repetir?",
+    "head": [
+     528,
+     965
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_10.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Espanhol",
+    "title": "Pedir para *repetir*",
+    "phrase": "¿Puedes repetir, por favor?",
+    "trans": "Você pode repetir, por favor?",
+    "head": [
+     376,
+     925
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_02.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Francês",
+    "title": "Pedir para *repetir*",
+    "phrase": "Pouvez-vous répéter, s'il vous plaît ?",
+    "trans": "Você pode repetir, por favor?",
+    "head": [
+     480,
+     1075
+    ],
+    "bg": "stretch"
+   },
+   {
+    "type": "phrase",
+    "art": "story_04.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Alemão",
+    "title": "Pedir para *repetir*",
+    "phrase": "Können Sie das bitte wiederholen?",
+    "trans": "Você pode repetir isso, por favor?",
+    "head": [
+     380,
+     930
+    ],
+    "bg": "stretch"
+   }
+  ],
+  "caption": "Entendeu a pergunta pela metade e travou? Calma, acontece com todo mundo 🦜\n\nEsse é o pio da semana: como pedir para repetir em 4 idiomas. Salva este post para a próxima reunião, viagem ou aula, e conta nos comentários qual idioma você quer ver no próximo!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #espanhol #frances #alemao"
+ },
+ "conheca": {
+  "dia": "2026-11-04 12:00",
+  "slides": [
+   {
+    "type": "cheat",
+    "art": "story_01.png",
+    "scale": 0.58,
+    "oy": 240,
+    "tag": "Conheça a Arara",
+    "title": "Sua futura *professora*",
+    "tsize": 84,
+    "likes": [
+     "Conversar em voz alta",
+     "Errar sem ser julgada",
+     "Pedir café em francês"
+    ],
+    "dislikes": [
+     "Decoreba de gramática",
+     "Vergonha de errar",
+     "Reunião em inglês sem treino"
+    ]
+   }
+  ],
+  "caption": "Prazer, eu sou a Arara 🦜\n\nGosto de conversar em voz alta, de errar sem ser julgada e de pedir café em francês. Não gosto de decoreba de gramática, de vergonha de errar e de reunião em inglês sem treino.\n\nE você, se identificou com algum? Conta nos comentários!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #inteligenciaartificial #estudoidiomas"
+ },
+ "exercicio": {
+  "dia": "2026-11-05 12:00",
+  "slides": [
+   {
+    "type": "exercise",
+    "art": "story_24.png",
+    "scale": 0.62,
+    "oy": -71,
+    "tag": "Traduza para o inglês",
+    "title": "Qual é a *tradução*?",
+    "prompt": "Eu acho que...",
+    "options": [
+     "I think...",
+     "I am think...",
+     "I thinking..."
+    ],
+    "correct": 0,
+    "btn_y": 800
+   },
+   {
+    "type": "answer",
+    "art": "story_25.png",
+    "scale": 0.62,
+    "oy": 40,
+    "tag": "Resposta",
+    "title": "Era a *primeira*",
+    "prompt": "Eu acho que...",
+    "options": [
+     "I think...",
+     "I am think...",
+     "I thinking..."
+    ],
+    "correct": 0,
+    "feedback": "Acertou! Pousou certinho. \"I think...\" é o jeito mais simples de dar uma opinião.",
+    "btn_y": 900,
+    "hide_prompt": true
+   }
+  ],
+  "caption": "Qual é a tradução de \"Eu acho que...\" em inglês? Pensa rápido 👀\n\nArrasta para o lado e confere a resposta. Conta nos comentários se você pousou certinho!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #inglesfacil #estudoidiomas #inteligenciaartificial"
+ },
+ "humor": {
+  "dia": "2026-11-05 18:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "perfil_travada.png",
+    "scale": 0.75,
+    "tag": "Todo mundo já passou por isso",
+    "title": "Você quando entende a pergunta e não sabe *responder*",
+    "body": "Calma. Respira e solta o bico.",
+    "head": [
+     420,
+     1010
+    ]
+   }
+  ],
+  "caption": "Entendeu tudo, abriu a boca e deu branco 😅\n\nCalma, acontece com todo mundo. Respira, escolhe uma frase curtinha e solta o bico. Até arara muda de pena, e errar faz parte de aprender.\n\nMarca aquele amigo que sempre trava na hora de falar!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #humor #estudoidiomas"
+ },
+ "passos": {
+  "dia": "2026-11-06 12:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "story_15_clean.png",
+    "scale": 0.75,
+    "tag": "Como funciona",
+    "title": "Para quem quer *falar* de verdade",
+    "body": "Em 4 passos você sai do branco e solta o bico. Arrasta para ver.",
+    "head": [
+     464,
+     900
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "story_17.png",
+    "scale": 0.75,
+    "tag": "Passo 1",
+    "title": "Escolha seu *idioma* e seu objetivo",
+    "body": "Trabalho, viagem, morar fora ou fazer amigos.",
+    "head": [
+     544,
+     915
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "story_18.png",
+    "scale": 0.75,
+    "tag": "Passo 2",
+    "title": "Converse por *voz* com a tutora de IA",
+    "body": "Você fala, ela responde, como numa conversa de verdade.",
+    "head": [
+     450,
+     880
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "story_19.png",
+    "scale": 0.75,
+    "tag": "Passo 3",
+    "title": "Receba a *correção* na hora",
+    "body": "Se errar, você vê o que foi e por quê, com a explicação em português.",
+    "head": [
+     420,
+     950
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "story_20.png",
+    "scale": 0.75,
+    "tag": "Passo 4",
+    "title": "Voe no seu *ritmo*",
+    "body": "A trilha vai do A1 ao C1, e cada etapa traz conversas por voz.",
+    "head": [
+     400,
+     930
+    ]
+   }
+  ],
+  "caption": "Como é treinar um idioma com a Arara? É mais simples do que parece 🦜\n\nEscolhe o idioma e o objetivo, conversa por voz com a tutora de IA, recebe a correção na hora e voa no seu ritmo, do primeiro passo até o C1.\n\nSalva este post para lembrar de tudo quando a Arara chegar!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #inteligenciaartificial #estudoidiomas #tecnologia"
+ },
+ "girias": {
+  "dia": "2026-11-07 12:00",
+  "slides": [
+   {
+    "type": "rows",
+    "slang": true,
+    "art": "story_27.png",
+    "scale": 0.7,
+    "tag": "Gíria do bando",
+    "title": "As que ninguém ensina na *escola*",
+    "rows": [
+     "no cap | sem mentira",
+     "slay | arrasar",
+     "lowkey | meio que",
+     "ghosting | sumir sem avisar"
+    ],
+    "row_h": 70
+   }
+  ],
+  "caption": "Você aprendeu inglês na escola, mas ninguém contou isso aqui 😎\n\nQuatro gírias que você vai ouvir em série, música e rede social: no cap, slay, lowkey e ghosting. Qual delas você já usa? Conta nos comentários!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #girias #inglesfacil #estudoidiomas"
+ },
+ "quiz": {
+  "dia": "2026-11-08 12:00",
+  "slides": [
+   {
+    "type": "quiz_cover",
+    "arts": [
+     "perfil_decoreba.png",
+     "perfil_travada.png",
+     "perfil_constante.png",
+     "perfil_ouvido.png"
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_decoreba.png",
+    "scale": 0.75,
+    "tag": "Perfil 1 de 4",
+    "title": "Arara *Decoreba*",
+    "body": "Sabe todas as regras, mas na hora de falar vira estátua. Solte o bico, mesmo errando.",
+    "head": [
+     420,
+     1000
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_travada.png",
+    "scale": 0.75,
+    "tag": "Perfil 2 de 4",
+    "title": "Arara *Travada*",
+    "body": "Dá branco na hora de falar. Respire e comece com uma frase curta.",
+    "head": [
+     420,
+     1010
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_constante.png",
+    "scale": 0.75,
+    "tag": "Perfil 3 de 4",
+    "title": "Arara *Constante*",
+    "body": "Treina todo dia, nem que sejam cinco minutinhos. É assim que se voa longe.",
+    "head": [
+     420,
+     980
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_ouvido.png",
+    "scale": 0.75,
+    "tag": "Perfil 4 de 4",
+    "title": "Arara de *Ouvido*",
+    "body": "Entende tudo o que ouve, mas não solta o bico. Que tal falar uma frase em voz alta hoje?",
+    "head": [
+     420,
+     1000
+    ]
+   }
+  ],
+  "caption": "Que tipo de arara você é? 🦜\n\nDecoreba, Travada, Constante ou de Ouvido? Arrasta para o lado, descobre o seu perfil e conta nos comentários qual combina mais com você. Marca um amigo que é a cara de um deles!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #teste #estudoidiomas"
+ }
+}

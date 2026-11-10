@@ -1,0 +1,330 @@
+{
+ "conta": {
+  "dia": "2026-11-09 12:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "s3_restaurante.png",
+    "scale": 0.75,
+    "tag": "O pio da semana",
+    "title": "A *conta*, por favor, em 4 idiomas",
+    "body": "Arrasta para o lado e salva para o próximo restaurante.",
+    "head": [
+     540,
+     930
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_08.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Inglês",
+    "title": "Pedir a *conta*",
+    "phrase": "Can I have the check, please?",
+    "trans": "Posso pedir a conta, por favor?",
+    "head": [
+     528,
+     965
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_10.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Espanhol",
+    "title": "Pedir a *conta*",
+    "phrase": "La cuenta, por favor.",
+    "trans": "A conta, por favor.",
+    "head": [
+     376,
+     925
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_02.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Francês",
+    "title": "Pedir a *conta*",
+    "phrase": "L'addition, s'il vous plaît.",
+    "trans": "A conta, por favor.",
+    "head": [
+     480,
+     1075
+    ],
+    "bg": "stretch"
+   },
+   {
+    "type": "phrase",
+    "art": "story_03.png",
+    "scale": 0.75,
+    "tag": "Frase útil · Italiano",
+    "title": "Pedir a *conta*",
+    "phrase": "Il conto, per favore.",
+    "trans": "A conta, por favor.",
+    "head": [
+     400,
+     900
+    ],
+    "bg": "stretch"
+   }
+  ],
+  "caption": "Terminou de comer e travou na hora de pedir a conta? 🍽️\n\nEsse é o pio da semana: como pedir a conta em 4 idiomas. Salva este post para a próxima viagem e conta nos comentários qual idioma você quer ver no próximo!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #espanhol #frances #italiano"
+ },
+ "banheiro": {
+  "dia": "2026-11-10 12:00",
+  "slides": [
+   {
+    "type": "exercise",
+    "art": "story_24.png",
+    "scale": 0.62,
+    "oy": -71,
+    "tag": "Traduza para o inglês",
+    "title": "Qual é a *tradução*?",
+    "prompt": "Onde fica o banheiro?",
+    "options": [
+     "Where is the bathroom?",
+     "Where are the bathroom?",
+     "Where stay the bathroom?"
+    ],
+    "correct": 0,
+    "btn_y": 800
+   },
+   {
+    "type": "answer",
+    "art": "story_25.png",
+    "scale": 0.62,
+    "oy": 40,
+    "tag": "Resposta",
+    "title": "Era a *primeira*",
+    "prompt": "Onde fica o banheiro?",
+    "options": [
+     "Where is the bathroom?",
+     "Where are the bathroom?",
+     "Where stay the bathroom?"
+    ],
+    "correct": 0,
+    "feedback": "Acertou! Pousou certinho. \"Where is the bathroom?\" é o jeito mais simples de perguntar.",
+    "btn_y": 900,
+    "hide_prompt": true
+   }
+  ],
+  "caption": "Está viajando e precisa achar o banheiro? Pensa rápido 👀\n\nQual é a tradução de \"Onde fica o banheiro?\" em inglês? Arrasta para o lado e confere a resposta. Conta nos comentários se você pousou certinho!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #inglesfacil #viagem #estudoidiomas"
+ },
+ "tutor": {
+  "dia": "2026-11-11 12:00",
+  "slides": [
+   {
+    "type": "cheat",
+    "art": "s3_tutor.png",
+    "scale": 0.58,
+    "oy": 240,
+    "tag": "Conheça o tutor",
+    "title": "O *tutor* de IA da Arara",
+    "tsize": 84,
+    "likes": [
+     "Repetir quantas vezes precisar",
+     "Corrigir com carinho",
+     "Explicar em português"
+    ],
+    "dislikes": [
+     "Julgar o seu erro",
+     "Ter pressa",
+     "Deixar você travado"
+    ]
+   }
+  ],
+  "caption": "Esse é o tutor de IA que vai treinar você na Arara 🦜\n\nEle gosta de repetir quantas vezes você precisar, corrige com carinho e explica em português. Não gosta de julgar o seu erro, de ter pressa e de deixar você travado.\n\nQual dessas coisas você mais quer num professor? Conta nos comentários!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #inteligenciaartificial #idiomas #tecnologia"
+ },
+ "humor2": {
+  "dia": "2026-11-12 12:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "s3_humor.png",
+    "scale": 0.75,
+    "tag": "Todo mundo já passou por isso",
+    "title": "Você quando *acerta* a frase e ninguém viu",
+    "body": "Comemore do mesmo jeito. O bando viu.",
+    "head": [
+     480,
+     960
+    ]
+   }
+  ],
+  "caption": "Acertou a frase em outro idioma e ninguém viu? 😅\n\nComemora do mesmo jeito. Cada acerto é um voo a mais, mesmo sem plateia.\n\nMarca aquele amigo que merece comemorar!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #humor #estudoidiomas"
+ },
+ "falsos": {
+  "dia": "2026-11-13 12:00",
+  "slides": [
+   {
+    "type": "plain",
+    "art": "s3_falsos.png",
+    "scale": 0.75,
+    "tag": "Falsos amigos",
+    "title": "4 palavras que *enganam* quem fala português",
+    "body": "Arrasta para o lado e não caia mais.",
+    "head": [
+     544,
+     900
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_08.png",
+    "scale": 0.75,
+    "tag": "Falso amigo 1",
+    "title": "*Actually* não é atualmente",
+    "phrase": "Actually",
+    "trans": "Quer dizer \"na verdade\". Atualmente é \"currently\".",
+    "head": [
+     528,
+     965
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_19.png",
+    "scale": 0.75,
+    "tag": "Falso amigo 2",
+    "title": "*Pretend* não é pretender",
+    "phrase": "Pretend",
+    "trans": "Quer dizer \"fingir\". Pretender é \"intend\".",
+    "head": [
+     420,
+     950
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_06.png",
+    "scale": 0.75,
+    "tag": "Falso amigo 3",
+    "title": "*Library* não é livraria",
+    "phrase": "Library",
+    "trans": "Quer dizer \"biblioteca\". Livraria é \"bookstore\".",
+    "head": [
+     384,
+     1010
+    ]
+   },
+   {
+    "type": "phrase",
+    "art": "story_26.png",
+    "scale": 0.75,
+    "tag": "Falso amigo 4",
+    "title": "*Exit* não é êxito",
+    "phrase": "Exit",
+    "trans": "Quer dizer \"saída\". Êxito é \"success\".",
+    "head": [
+     510,
+     970
+    ]
+   }
+  ],
+  "caption": "Parece português, mas não é 😅\n\nQuatro falsos amigos do inglês que enganam todo mundo: actually, pretend, library e exit. Qual deles já te pegou? Conta nos comentários e salva este post para não cair de novo!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #falsosamigos #inglesfacil #estudoidiomas"
+ },
+ "obrigado": {
+  "dia": "2026-11-14 12:00",
+  "slides": [
+   {
+    "type": "rows",
+    "art": "story_13.png",
+    "scale": 0.62,
+    "tag": "Boa educação",
+    "title": "Como dizer *obrigado* em 6 idiomas",
+    "rows": [
+     "Inglês | Thank you",
+     "Espanhol | Gracias",
+     "Francês | Merci",
+     "Italiano | Grazie",
+     "Alemão | Danke",
+     "Japonês | ありがとう"
+    ],
+    "row_h": 66
+   },
+   {
+    "type": "rows",
+    "art": "story_14.png",
+    "scale": 0.62,
+    "tag": "Boa educação",
+    "title": "E como responder *de nada*",
+    "rows": [
+     "Inglês | You're welcome",
+     "Espanhol | De nada",
+     "Francês | De rien",
+     "Italiano | Prego",
+     "Alemão | Bitte",
+     "Japonês | どういたしまして"
+    ],
+    "row_h": 66
+   }
+  ],
+  "caption": "Agradecer é a primeira coisa que todo viajante aprende 🙏\n\nAqui vai o obrigado em 6 idiomas e a resposta de nada, para você usar em qualquer lugar. Arrasta para o lado, salva e conta nos comentários qual você já sabia!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #viagem #estudoidiomas"
+ },
+ "quiz2": {
+  "dia": "2026-11-15 12:00",
+  "slides": [
+   {
+    "type": "quiz_cover",
+    "arts": [
+     "perfil_curiosa.png",
+     "perfil_sociavel.png",
+     "perfil_perfeccionista.png",
+     "perfil_aventureira.png"
+    ],
+    "title": "Que tipo de *arara* você é?",
+    "tag": "Teste rápido · Parte 2"
+   },
+   {
+    "type": "plain",
+    "art": "perfil_curiosa.png",
+    "scale": 0.75,
+    "tag": "Perfil 1 de 4",
+    "title": "Arara *Curiosa*",
+    "body": "Quer saber de tudo, de onde vem cada palavra e como se diz em outro idioma. Use essa curiosidade a seu favor e pergunte mais.",
+    "head": [
+     560,
+     970
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_sociavel.png",
+    "scale": 0.75,
+    "tag": "Perfil 2 de 4",
+    "title": "Arara *Sociável*",
+    "body": "Puxa conversa com todo mundo, em qualquer idioma. Aproveite, porque falar com gente de verdade é o melhor treino.",
+    "head": [
+     600,
+     900
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_perfeccionista.png",
+    "scale": 0.75,
+    "tag": "Perfil 3 de 4",
+    "title": "Arara *Perfeccionista*",
+    "body": "Só fala quando tem certeza. Tudo bem, mas lembre que errar também ensina. Arrisque uma frase hoje.",
+    "head": [
+     480,
+     930
+    ]
+   },
+   {
+    "type": "plain",
+    "art": "perfil_aventureira.png",
+    "scale": 0.75,
+    "tag": "Perfil 4 de 4",
+    "title": "Arara *Aventureira*",
+    "body": "Se joga em qualquer idioma, sem medo do erro. Continue assim e voe cada vez mais longe.",
+    "head": [
+     528,
+     1000
+    ]
+   }
+  ],
+  "caption": "Que tipo de arara você é? Parte 2 🦜\n\nCuriosa, Sociável, Perfeccionista ou Aventureira? Arrasta para o lado, descobre o seu perfil e conta nos comentários qual combina mais com você. Marca um amigo que é a cara de um deles!\n\nArara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜\n\n#aprenderidiomas #ingles #idiomas #teste #estudoidiomas"
+ }
+}
