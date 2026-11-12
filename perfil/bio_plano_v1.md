@@ -44,3 +44,12 @@ Junto com a foto de perfil, no domingo 15/11, no mesmo dia de arquivar os posts 
 ## Atualização de 12/11/2026, ~21h10 UTC
 - **Foto de perfil: opção B aprovada** (laranja com equalizador de voz e a Rara acenando). Arquivo final `perfil/foto_perfil_aprovada_1080.png`. Troca manual no domingo 15/11.
 - **Bio:** o Rodrigo achou as três opções engessadas e pediu algo informal, "como uma conversa, com mais proximidade". Quatro novas opções (v2) enviadas para escolha, em minúsculas e sem ponto final, no tom das legendas.
+
+## Bio aprovada (12/11/2026, ~21h15 UTC)
+Opção 4 da v2, com "16 idiomas" no lugar de "16 idiomas de papo" (pedido do Rodrigo). Texto exato em `perfil/bio_aprovada.txt`:
+
+> vem conversar comigo? 🦜
+> eu escuto, corrijo com carinho e a gente treina 16 idiomas
+> chego dia 20/01, entra no bando pelo link
+
+Pendentes: OK do nome ("Arara • Aprenda idiomas com IA") e do link (https://falearara.com). Troca manual no domingo 15/11. Depois de 20/01 a bio muda para a versão de lançamento, conferindo antes se as lojas publicaram.
