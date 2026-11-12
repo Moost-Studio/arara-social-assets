@@ -24,3 +24,19 @@ Seis imagens geradas (cinco cenas mais a regeração do Raro): cerca de US$ 0,41
 ## Telas compostas (12/11, ~21h50 UTC)
 15 telas 1080x1920 em `telas/{seg,qua,sex,sab,dom}_{1,2,3}.png`, geradas por `compor_telas.py` (HTML em `semana1/_scripts/diario_*.html`). Selo no topo ("DIÁRIO DA RARA" ou "HISTÓRIA DO RARO"), título na tela 1, balão com a fala aprovada sempre acima da cabeça (medido: pelo menos 117 px livres entre o balão e o topo do personagem), texto mínimo de 40 px. Limite: as 3 telas de cada episódio usam a MESMA cena (só uma imagem por episódio foi gerada); o que muda é o texto. Aguardam o OK do Rodrigo; nada agendado.
 Atenção no texto aprovado: a tela 3 de segunda diz "amanhã eu conto por que ninguém chegou", mas terça 24/11 é modo carente, sem episódio; promessa sem entrega. Sugestão: "e até agora ninguém chegou".
+
+## Retorno do Rodrigo (12/11, ~21h59 UTC): "as imagens estão boas, mas estão iguais em todos do carrossel; têm que ser diferentes e concordar com o texto"
+Cada tela precisa de UMA IMAGEM PRÓPRIA que ilustre a fala. Já existem as 5 cenas da tela 1. Faltam 10 (duas por episódio), custo cerca de US$ 0,68 (US$ 0,068 por imagem). A semana já está em cerca de US$ 0,62 de stories, então o total dos stories iria a cerca de US$ 1,30, acima do teto de US$ 1 por semana (sem contar os posts da semana 23 a 29, que pedem mais US$ 0,30 a 0,45). **Parar e pedir aumento do teto antes de gerar.**
+
+| Tela | Fala | Cena a gerar (edição da cena do episódio, mesmo personagem e cenário) |
+| --- | --- | --- |
+| seg 2 | ensaiei o japonês do trabalho em voz alta | Rara em reverência educada diante de uma cadeira vazia, crachá pendurado |
+| seg 3 | só tem um detalhe / e até agora ninguém chegou | Rara olhando um relógio de parede sem números, cabeça inclinada, intrigada |
+| qua 2 | falei por dez minutos / o microfone estava no mudo | Rara falando de forma intensa de perfil, os bichinhos da tela com cara de confusos, ícone de mudo grande |
+| qua 3 | errou? treinou / agora eu confiro antes de falar | Rara determinada, a ponta da asa encostando no botão do microfone do notebook |
+| sex 2 | aprendi duas palavras na fila | Rara na fila erguendo duas penas como se contasse "dois", olhar de quem aprendeu algo |
+| sex 3 | no fim saí com um suporte de microfone | Rara saindo da loja, satisfeita, um suporte de microfone encostado ao lado e uma sacola pousada |
+| sab 2 | vem do hebraico... grego e latim | Raro com a ponta da asa apontando uma linha do dicionário aberto, sobrancelha levantada |
+| sab 3 | por isso sábado combina com rede | Raro deitado na rede, chapéu sobre os olhos, caneca por perto |
+| dom 2 | errei na call, na fila e na hora de chegar | Rara no tapete, diante de três quadrinhos na parede (fone no mudo, sacolas, relógio) sem texto |
+| dom 3 | e tudo bem, errou? treinou / segunda tem mais | Rara sorrindo para a câmera, de manta, com o nascer do sol pela janela |
