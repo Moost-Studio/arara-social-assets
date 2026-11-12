@@ -53,3 +53,6 @@ Opção 4 da v2, com "16 idiomas" no lugar de "16 idiomas de papo" (pedido do Ro
 > chego dia 20/01, entra no bando pelo link
 
 Pendentes: OK do nome ("Arara • Aprenda idiomas com IA") e do link (https://falearara.com). Troca manual no domingo 15/11. Depois de 20/01 a bio muda para a versão de lançamento, conferindo antes se as lojas publicaram.
+
+## Nome e link aprovados (12/11/2026, ~21h20 UTC)
+Nome "Arara • Aprenda idiomas com IA" e link https://falearara.com, OK do Rodrigo. Tudo junto, para copiar, em `perfil/perfil_final.txt`. Troca manual em 15/11; depois eu confiro pela API (`biography`, `name`, `website`).
