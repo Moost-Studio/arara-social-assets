@@ -40,3 +40,7 @@ Cada tela precisa de UMA IMAGEM PRÓPRIA que ilustre a fala. Já existem as 5 ce
 | sab 3 | por isso sábado combina com rede | Raro deitado na rede, chapéu sobre os olhos, caneca por perto |
 | dom 2 | errei na call, na fila e na hora de chegar | Rara no tapete, diante de três quadrinhos na parede (fone no mudo, sacolas, relógio) sem texto |
 | dom 3 | e tudo bem, errou? treinou / segunda tem mais | Rara sorrindo para a câmera, de manta, com o nascer do sol pela janela |
+
+## Decisão do Rodrigo (12/11, 23h52 UTC): "pode gerar as imagens e sobe o teto por essa semana"
+Opção 1: gerar as 10 cenas extras, uma por vez, como EDIÇÃO da cena do episódio (mesmo personagem e cenário, só pose e enquadramento). Teto desta semana (23 a 29/11 de conteúdo, produzido em 12/11) subiu de US$ 1 para US$ 2 (valor que propus e ele aceitou sem corrigir); só vale para esta semana. Frase de segunda tela 3: trocar por "e até agora ninguém chegou" (recomendação; ele não objetou, confirmar no envio da folha).
+Fila: seg2, seg3, qua2, qua3, sex2, sex3, sab2, sab3, dom2, dom3 (tabela acima). Depois de cada geração: copiar para `geradas/<ep>_<n>.jpg`, conferir (cílios, olhos castanhos, pés no chão, asa sem objeto, topo livre, sem texto), anotar aqui. Ao fim: atualizar `compor_telas.py` para usar uma imagem por tela e refazer a folha.
