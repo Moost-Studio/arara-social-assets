@@ -1,0 +1,24 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}
+@font-face{font-family:'JP';src:url('../_fontes/NotoSansJP.ttf')}
+*{box-sizing:border-box;margin:0;padding:0}
+#post{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:'Nunito','JP';color:#081226;background:#222}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.veil{position:absolute;left:0;right:0;top:0;height:640px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0))}
+.sel{position:absolute;left:72px;top:92px;font-weight:900;font-size:38px;letter-spacing:.2em;display:flex;align-items:center;gap:16px}
+.sel::after{content:'';width:56px;height:5px;border-radius:3px;background:currentColor}
+.pg{position:absolute;right:72px;top:96px;font-weight:900;font-size:34px;letter-spacing:.12em;opacity:.7}
+.tit{position:absolute;left:72px;right:72px;top:168px;font-family:'Mochiy';font-size:74px;line-height:1.12}
+.tit b{font-weight:400;background:linear-gradient(transparent 55%,#FFC83D 55%,#FFC83D 94%,transparent 94%);padding:0 6px;margin-left:-6px}
+.bal{position:absolute;left:72px;right:72px;background:#fff;border-radius:38px;padding:34px 42px;box-shadow:0 18px 40px rgba(0,0,0,.22);font-weight:800;font-size:50px;line-height:1.22}
+.bal small{display:block;font-weight:700;font-size:40px;line-height:1.25;color:#2E3A55;margin-top:12px}
+.bal::after{content:'';position:absolute;left:210px;bottom:-34px;width:0;height:0;border-left:30px solid transparent;border-right:30px solid transparent;border-top:36px solid #fff}
+</style></head><body><div id="post">
+<div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/qua_call_v2.jpg')"></div><div class="veil"></div>
+<div class="sel">DIÁRIO DA RARA</div><div class="pg">1 DE 3</div><div class="tit">A call que <b>só eu</b> ouvi</div>
+<div class="bal" id="bal"><div>10h, call importante, eu estava inspirada</div></div></div>
+<script>
+const b=document.getElementById('bal');const topo=589;const bottomMax=topo-80;
+// ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
+b.style.top=(bottomMax-36-b.offsetHeight)+'px';
+</script></body></html>

@@ -20,3 +20,7 @@ Seis imagens geradas (cinco cenas mais a regeração do Raro): cerca de US$ 0,41
 ## Decisões do Rodrigo (12/11, ~21h25 UTC)
 - **Raro (sáb 28/11):** a v1 era a preferida; "deixe tudo igual, só ajuste o topete". Fazer edição da v1 (sab_raro_v1.jpg) mudando SÓ o topete (sem penas atravessando o topo do chapéu). A v2 fica descartada.
 - **"Cena de 15/11 artificial demais":** não há cena em 15/11; assumi 25/11 (a call, Rara de asas abertas na mesa). Regerar qua_call_v2 mais natural. Confirmar com o Rodrigo. O domingo 29/11 segue com defeitos (olhos azul-esverdeados, calendário com números) e sem decisão.
+
+## Telas compostas (12/11, ~21h50 UTC)
+15 telas 1080x1920 em `telas/{seg,qua,sex,sab,dom}_{1,2,3}.png`, geradas por `compor_telas.py` (HTML em `semana1/_scripts/diario_*.html`). Selo no topo ("DIÁRIO DA RARA" ou "HISTÓRIA DO RARO"), título na tela 1, balão com a fala aprovada sempre acima da cabeça (medido: pelo menos 117 px livres entre o balão e o topo do personagem), texto mínimo de 40 px. Limite: as 3 telas de cada episódio usam a MESMA cena (só uma imagem por episódio foi gerada); o que muda é o texto. Aguardam o OK do Rodrigo; nada agendado.
+Atenção no texto aprovado: a tela 3 de segunda diz "amanhã eu conto por que ninguém chegou", mas terça 24/11 é modo carente, sem episódio; promessa sem entrega. Sugestão: "e até agora ninguém chegou".
