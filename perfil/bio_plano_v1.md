@@ -40,3 +40,7 @@ Trocar para https://falearara.com. Uma página de lista de espera com UTM de ori
 
 ## Quando trocar
 Junto com a foto de perfil, no domingo 15/11, no mesmo dia de arquivar os posts antigos. Assim o perfil já abre a semana 16 com a nova identidade. Depois do lançamento (20/01), a bio muda para "Já está disponível", conferindo antes se as duas lojas publicaram.
+
+## Atualização de 12/11/2026, ~21h10 UTC
+- **Foto de perfil: opção B aprovada** (laranja com equalizador de voz e a Rara acenando). Arquivo final `perfil/foto_perfil_aprovada_1080.png`. Troca manual no domingo 15/11.
+- **Bio:** o Rodrigo achou as três opções engessadas e pediu algo informal, "como uma conversa, com mais proximidade". Quatro novas opções (v2) enviadas para escolha, em minúsculas e sem ponto final, no tom das legendas.
