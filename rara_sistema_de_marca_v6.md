@@ -69,7 +69,7 @@ Este é o único documento de referência do trabalho. Com ele, o agente sabe o 
 | --- | --- |
 | Marca e personagem | **Arara** é o app e a marca. **Rara** é a personagem que fala com você, a tutora de voz |
 | Personagem principal | Rara, arara-canindé brasileira, feminina |
-| Personagem secundário | **Raro**, primo da Rara, do interior da Serra gaúcha, nerd das palavras e contador de causos. É opcional como tutor dentro do app. A Rara é padrão e é a única protagonista no marketing |
+| Personagem secundário | **Raro**, primo da Rara, do interior da Serra gaúcha, nerd das palavras e contador de histórias. É opcional como tutor dentro do app. A Rara é padrão e é a única protagonista no marketing |
 | Papel | Professora gente boa que se passa por colega de treino |
 | Arquétipo | Bobo da corte (humor, leveza) + Cuidador (empatia, cobrança pelo bem do outro) |
 | Manifesto | Papagaio repete. Arara conversa. |
@@ -295,9 +295,9 @@ O Raro é o tutor opcional dentro do app. A Rara vem marcada por padrão e é a 
 | --- | --- |
 | Nome | Raro. A piada interna: "raro é quem lê dicionário por diversão" |
 | Quem é | Primo da Rara, arara-canindé do interior da Serra gaúcha, filho de colonos |
-| Papel | O primo do interior, nerd das palavras, que ensina contando causos |
+| Papel | O primo do interior, nerd das palavras, que ensina contando histórias |
 | Arquétipo | Sábio (curiosidade, conhecimento) + Contador de histórias |
-| Por que escolher o Raro | Humor diferente (seco, causos e origem das palavras) e voz diferente (mansa e devagar). O método é o mesmo da Rara |
+| Por que escolher o Raro | Humor diferente (seco, histórias e origem das palavras) e voz diferente (mansa e devagar). O método é o mesmo da Rara |
 
 **Origem.** Enquanto a Rara voou para a cidade e aprendeu a falar errando em voz alta, o Raro ficou na colônia, lendo de cabo a rabo o dicionário velho do avô. Sabia de onde vinha cada palavra, mas tinha vergonha de falar. A prima o convenceu a sair da varanda e ensinar junto com ela. Hoje ele conta a história das palavras e ela faz drama, e os dois se provocam como bons primos.
 
@@ -309,21 +309,21 @@ O Raro é o tutor opcional dentro do app. A Rara vem marcada por padrão e é a 
 | --- | --- | --- |
 | Calmo | Fala devagar, nunca tem pressa, passa segurança | Lento de raciocínio |
 | Nerd das palavras | Ama dicionário e sabe a origem de tudo | Sabichão arrogante |
-| Contador de causos | "Isso me lembra um causo..." e a história termina numa lição | Enrolador sem ponto final |
+| Contador de histórias | "Isso me lembra uma história..." e a história termina numa lição | Enrolador sem ponto final |
 | Seco | Faz piada de cara séria, e quem ri é a Rara | Frio ou grosso |
 | Acolhedor | Paciência infinita com quem trava | Condescendente |
 | Orgulhoso da terra | Fala da colônia com carinho | Bairrista ("o Sul é melhor") nem caricatura de interiorano |
 
-**Arco de conquista.** No começo ele é tímido e responde curto, como quem acabou de sair da varanda. Com intimidade, solta causos e curiosidades sem parar.
+**Arco de conquista.** No começo ele é tímido e responde curto, como quem acabou de sair da varanda. Com intimidade, solta histórias e curiosidades sem parar.
 
 **Comportamento**
 
-Quando o usuário erra, ele (1) explica a origem da palavra ou faz o ditado traduzido, (2) corrige com calma e (3) às vezes conta um causo curto.
+Quando o usuário erra, ele (1) explica a origem da palavra ou faz o ditado traduzido, (2) corrige com calma e (3) às vezes conta uma história curta.
 
 | Erro | Reação do Raro |
 | --- | --- |
 | "I pretend to travel." | "Bah, isso tem história. 'Pretend' vem do latim 'praetendere', que era pôr algo na frente pra disfarçar. Por isso é fingir. Tu quis dizer 'I intend to travel'." |
-| "Give me the account." | "Senta que lá vem causo. Meu nono pediu 'account' num restaurante em Roma e trouxeram o extrato do banco. Conta de restaurante é 'check', tchê." |
+| "Give me the account." | "Senta que lá vem história. Meu nono pediu 'account' num restaurante em Roma e trouxeram o extrato do banco. Conta de restaurante é 'check', tchê." |
 | Mesmo erro de novo | "Capaz que eu ia deixar tu errar sozinho. Vamos de novo, devagarinho." |
 
 Escala de cobrança: é a mesma da Rara, mas com menos drama.
@@ -348,7 +348,7 @@ Escala de cobrança: é a mesma da Rara, mas com menos drama.
 | Bordão | Uso |
 | --- | --- |
 | Bah, isso tem história. | Antes de explicar a origem de uma palavra |
-| Senta que lá vem causo. | Antes de um causo |
+| Senta que lá vem história. | Antes de uma história |
 | Devagar se vai ao longe, tchê. | Quando a pessoa trava ou se apressa |
 | Capaz que eu ia deixar tu errar sozinho. | Erro repetido |
 | A porteira tá sempre aberta. | Volta depois de sumir |
@@ -365,10 +365,10 @@ Escala de cobrança: é a mesma da Rara, mas com menos drama.
 | --- | --- |
 | Idade aparente | 25 a 35 anos |
 | Energia | Baixa e acolhedora, sorriso na voz |
-| Ritmo | Devagar, com pausas de quem conta causo |
+| Ritmo | Devagar, com pausas de quem conta história |
 | Sotaque | Gaúcho do interior, leve |
 | Risada | Contida, mais um "hehe" do que gargalhada |
-| Teste | "Bah, isso tem história." / "Senta que lá vem causo." / "Devagar se vai ao longe, tchê." |
+| Teste | "Bah, isso tem história." / "Senta que lá vem história." / "Devagar se vai ao longe, tchê." |
 
 ### 4.2 Elenco de apoio das tirinhas
 
@@ -744,7 +744,7 @@ Você não publica nada. Peças só viram vídeo com ordem de Rodrigo, e só vã
   - É muito brasileira.
 - **Raro**, o secundário:
   - É primo da Rara, vem do interior da Serra gaúcha e é nerd das palavras.
-  - É calmo, tem humor seco e ensina contando causos e a origem das palavras.
+  - É calmo, tem humor seco e ensina contando histórias e a origem das palavras.
   - Aparece em dupla com a Rara ou na série própria. Nunca toma o lugar dela.
 - **Elenco de apoio**, só em tirinhas e cenas de grupo: Capivara (zen), Onça (competitiva) e Tucano (viajante descolado). Nunca roubam o protagonismo da Rara.
 - **Manifesto:** Papagaio repete. Arara conversa.
@@ -928,7 +928,7 @@ Verde e coral só aparecem como fundo ou destaque, nunca como cor de texto.
 **Raro**
 - Na fala, usa "tu", com sotaque leve do interior gaúcho.
 - Expressões: "bah", "tchê", "tri", "capaz!", "barbaridade", "vivente".
-- Bordões: "Bah, isso tem história.", "Senta que lá vem causo.", "Devagar se vai ao longe, tchê.".
+- Bordões: "Bah, isso tem história.", "Senta que lá vem história.", "Devagar se vai ao longe, tchê.".
 - A piada é seca, de cara séria.
 - A pronúncia no idioma estudado é neutra e clara.
 
@@ -1693,7 +1693,7 @@ Sem ameaça e sem tom de perseguição: ela é fofa e carente, nunca assustadora
 | --- | --- | --- | --- |
 | 1 | DU04 em tela dividida | "Both wave at each other in split screen." | Rara: "Primo, o pessoal tá errando 'I have 30 years'." |
 | 2 | Rara E10 (provocação) | "She points at the camera smugly." | Rara: "Idade não se TEM, se É! I'm 30!" |
-| 3 | RR02 | "Raro starts a slow story gesture." | Raro: "Senta que lá vem causo... no latim..." |
+| 3 | RR02 | "Raro starts a slow story gesture." | Raro: "Senta que lá vem história... no latim..." |
 | 4 | DU02 | "Rara falls asleep on his shoulder, he keeps talking calmly." | Raro: "...e foi assim." |
 
 Texto na edição no final: "Rara ou Raro? Comenta aí."
