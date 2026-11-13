@@ -1,0 +1,26 @@
+{
+  "name": "arara-video",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reels da Arara em código com Remotion (licença gratuita: só o Rodrigo usa)",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "preview": "node scripts/render.mjs R01 previa",
+    "final": "node scripts/render.mjs R01 final"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/media-utils": "4.0.543",
+    "@remotion/noise": "4.0.543",
+    "@remotion/renderer": "4.0.543",
+    "@remotion/transitions": "4.0.543",
+    "@types/react": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.543",
+    "typescript": "7.0.2",
+    "zod": "3.25.76"
+  }
+}
