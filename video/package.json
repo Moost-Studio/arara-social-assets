@@ -10,16 +10,20 @@
     "final": "node scripts/render.mjs R01 final"
   },
   "dependencies": {
+    "@react-three/fiber": "9.0.0",
     "@remotion/bundler": "4.0.543",
     "@remotion/cli": "4.0.543",
     "@remotion/media-utils": "4.0.543",
     "@remotion/noise": "4.0.543",
     "@remotion/renderer": "4.0.543",
+    "@remotion/three": "4.0.543",
     "@remotion/transitions": "4.0.543",
     "@types/react": "19.3.0",
+    "@types/three": "0.170.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.543",
+    "three": "0.170.0",
     "typescript": "7.0.2",
     "zod": "3.25.76"
   }
