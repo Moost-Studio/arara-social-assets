@@ -1,0 +1,31 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000}
+#post{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Nunito';color:#081226;background:linear-gradient(165deg,#FF8A78 0%,#FF6B57 55%,#F25744 100%)}
+#post::before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;right:-240px;top:-300px;background:radial-gradient(circle,rgba(255,255,255,.30),rgba(255,255,255,.10) 62%,rgba(255,255,255,0) 70%)}
+#post::after{content:"";position:absolute;width:820px;height:820px;border-radius:50%;left:-300px;bottom:-330px;background:radial-gradient(circle,rgba(255,255,255,.26),rgba(255,255,255,.08) 62%,rgba(255,255,255,0) 70%)}
+.pill{position:absolute;left:64px;top:84px;z-index:5;display:flex;align-items:center;gap:14px;background:#fff;color:#081226;padding:14px 26px 14px 20px;border-radius:999px;font-weight:800;font-size:28px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.14)}
+.pill svg{width:34px;height:34px;stroke:#2457E6}
+h1{position:absolute;left:64px;top:150px;z-index:5;font-weight:900;font-size:76px;line-height:1.04;letter-spacing:-.01em;width:900px}
+.hl{background:linear-gradient(transparent 52%,#FFC83D 52%,#FFC83D 92%,transparent 92%);padding:0 6px}
+.grid{position:absolute;left:30px;top:262px;width:1020px;display:grid;grid-template-columns:500px 500px;gap:20px;z-index:4}
+.p{position:relative;width:500px;height:500px;border-radius:34px;overflow:hidden;border-bottom:12px solid #B9CCF2;box-shadow:0 18px 34px rgba(0,0,0,.25);background:#fff}
+.p img{width:500px;height:500px;display:block}
+.sign{position:absolute;left:425px;top:44px;width:62px;height:30px;background:#fff;border:2px solid #081226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;letter-spacing:.03em;color:#081226;transform:rotate(-2deg)}
+.cap{position:absolute;left:18px;right:18px;bottom:18px;background:#081226;border-radius:22px;padding:14px 18px;text-align:center;font-family:'Mochiy';text-transform:uppercase;font-size:30px;line-height:1.18;color:#fff}
+.cap .y{color:#FFC83D}
+.foot{position:absolute;left:64px;bottom:44px;z-index:5;font-weight:800;font-size:34px}
+</style></head><body>
+<svg style="display:none"><symbol id="mic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></symbol></svg>
+<div id="post">
+ <div class="pill"><svg><use href="#mic"/></svg>Mico da Rara</div>
+ <h1>O mico da <span class="hl">porta</span></h1>
+ <div class="grid">
+  <div class="p"><img src="../grupo3_feed/t1_quadros/T1_q1.png"></div>
+  <div class="p"><img src="../grupo3_feed/t1_quadros/T1_q2.png"><div class="sign">PUSH</div></div>
+  <div class="p"><img src="../grupo3_feed/t1_quadros/T1_q3.png"></div>
+  <div class="p"><img src="../grupo3_feed/t1_quadros/T1_q4.png"><div class="cap">PUSH é empurrar<br><span class="y">Errou? Treinou</span></div></div>
+ </div>
+</div></body></html>

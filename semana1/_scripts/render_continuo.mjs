@@ -1,0 +1,13 @@
+import { createRequire } from 'module';
+const require = createRequire('/home/rodrigo/moost-projects/devfluent-app/package.json');
+const { chromium } = require('playwright');
+import path from 'path'; import { fileURLToPath } from 'url';
+const here = path.dirname(fileURLToPath(import.meta.url));
+const [,, htmlFile, outFile] = process.argv;
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 5400, height: 1350 }, deviceScaleFactor: 1 });
+await p.goto('file://' + path.resolve(here, htmlFile));
+await p.evaluate(() => document.fonts.ready);
+await p.waitForFunction(()=>window.__done===true); await p.waitForTimeout(500);
+await (await p.$('#stage')).screenshot({ path: outFile });
+await b.close();

@@ -1,0 +1,10 @@
+import { createRequire } from 'module';
+const require = createRequire('/home/rodrigo/moost-projects/devfluent-app/package.json');
+const { chromium } = require('playwright');
+import path from 'path'; import { fileURLToPath } from 'url';
+const here = path.dirname(fileURLToPath(import.meta.url));
+const b = await chromium.launch(); const p = await b.newPage({ viewport:{width:1080,height:1920} });
+await p.goto('file://'+path.join(here,'stories.html')); await p.waitForFunction(()=>window.__done===true);
+console.log(await p.evaluate(()=>[...document.querySelectorAll('polygon')].map(x=>x.getAttribute('points')+' | '+x.parentElement.parentElement.id).join('\n')));
+console.log(await p.evaluate(()=>[...document.querySelectorAll('.bal')].map(b=>b.parentElement.id+' '+b.offsetLeft+','+b.offsetTop+' '+b.offsetWidth+'x'+b.offsetHeight).join('\n')));
+await b.close();

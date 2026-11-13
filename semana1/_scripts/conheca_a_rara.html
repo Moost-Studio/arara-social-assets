@@ -1,0 +1,89 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}
+:root{--noite:#081226;--azul:#2457E6;--amarelo:#FFC83D;--coral:#FF6B57;--ceu:#DCEBFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Nunito';color:#fff;
+ background:linear-gradient(165deg,#0E2255 0%,#081226 62%)}
+.slide::before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;left:-210px;top:-170px;
+ background:radial-gradient(circle,rgba(36,87,230,.42),rgba(36,87,230,.14) 62%,rgba(36,87,230,0) 70%)}
+.slide::after{content:"";position:absolute;width:900px;height:900px;border-radius:50%;right:-330px;bottom:-130px;
+ background:radial-gradient(circle,rgba(36,87,230,.34),rgba(36,87,230,.1) 62%,rgba(36,87,230,0) 70%)}
+.pill{position:absolute;left:64px;top:96px;z-index:5;display:flex;align-items:center;gap:14px;background:#fff;color:var(--noite);
+ padding:14px 26px 14px 20px;border-radius:999px;font-weight:800;font-size:28px;letter-spacing:.14em;text-transform:uppercase}
+.pill svg{width:34px;height:34px;stroke:var(--azul)}
+.rara{position:absolute;z-index:3;filter:drop-shadow(0 26px 30px rgba(0,0,0,.35))}
+h1{font-weight:900;line-height:1.04;letter-spacing:-.01em}
+.y{color:var(--amarelo)}
+.footer{position:absolute;left:64px;right:64px;bottom:96px;z-index:6;display:flex;justify-content:space-between;align-items:center}
+.footer span{font-weight:800;font-size:34px}
+.btn{width:104px;height:104px;border-radius:50%;background:var(--amarelo);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 0 rgba(0,0,0,.22)}
+.btn svg{width:54px;height:54px;stroke:var(--noite)}
+/* card branco, balão torto, borda inferior grossa */
+.card{position:absolute;left:64px;right:64px;z-index:4;background:#fff;color:var(--noite);border-radius:52px;border-bottom:18px solid #B9CCF2;
+ padding:64px 64px 58px;transform:rotate(-1.2deg);box-shadow:0 30px 60px rgba(0,0,0,.28)}
+.card h1{font-size:84px}
+.card .hl{background:linear-gradient(transparent 52%,var(--amarelo) 52%,var(--amarelo) 92%,transparent 92%);padding:0 6px}
+.card p{font-weight:800;font-size:44px;line-height:1.28;margin-top:30px}
+.punch{font-family:'Mochiy';text-transform:uppercase;line-height:1.18;letter-spacing:.01em}
+.dots{position:absolute;top:96px;right:64px;z-index:5;display:flex;gap:12px}
+.dots i{width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.35)}
+.dots i.on{background:var(--amarelo)}
+</style></head><body>
+<!-- icones lucide: mic, arrow-right -->
+<svg style="display:none"><symbol id="mic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></symbol>
+<symbol id="arr" viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol></svg>
+
+<!-- 1 CAPA -->
+<div class="slide" id="s1">
+ <div class="pill"><svg><use href="#mic"/></svg>Conheça a Rara</div>
+ <h1 style="position:absolute;left:64px;top:218px;z-index:5;font-size:132px;width:620px">Oi, eu sou a <span class="y">Rara</span></h1>
+ <div style="position:absolute;left:64px;top:560px;z-index:5;font-weight:800;font-size:46px;line-height:1.25;width:380px">Sua tutora de IA e parceira de treino</div>
+ <img class="rara" src="../recortes/C01.png" style="height:800px;left:500px;top:380px">
+ <div class="footer"><span>Arrasta para o lado</span><div class="btn"><svg><use href="#arr"/></svg></div></div>
+</div>
+
+<!-- 2 -->
+<div class="slide" id="s2">
+ <div class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+ <div class="card" style="top:160px">
+  <h1>Falo muito, mas quem fala é <span class="hl">você</span></h1>
+  <p>Eu sou a Rara, sua tutora de IA. A gente treina conversa por voz, em inglês e mais 15 idiomas, sem pressão e sem ninguém te julgar.</p>
+ </div>
+ <img class="rara" src="../recortes/E01.png" style="height:520px;right:100px;bottom:80px">
+</div>
+
+<!-- 3 -->
+<div class="slide" id="s3">
+ <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+ <div class="card" style="top:160px">
+  <h1>Eu já fui <span class="hl">papagaio</span></h1>
+  <p>Eu repetia “hello” e “thank you” o dia inteiro, mas travava quando alguém respondia de verdade. Cansei, comecei a errar em voz alta e passei a rir de cada mico.</p>
+ </div>
+ <div class="punch" style="position:absolute;left:64px;right:64px;top:850px;z-index:4;font-size:96px;color:#fff">Papagaio repete.<br><span class="y">Arara conversa.</span></div>
+</div>
+
+<!-- 4 -->
+<div class="slide" id="s4">
+ <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+ <div class="card" style="top:160px">
+  <h1>E esse é o meu primo <span class="hl">Raro</span></h1>
+  <p>Ele vem do interior da Serra gaúcha, é nerd das palavras e conta causo. Eu faço o drama, ele faz a piada de cara séria.</p>
+ </div>
+ <img class="rara" src="../recortes/C05.png" style="width:880px;left:100px;bottom:80px">
+</div>
+
+<!-- 5 FINAL -->
+<div class="slide" id="s5">
+ <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+ <div class="card" style="top:160px">
+  <h1>Errou? <span class="hl">Treinou.</span></h1>
+  <p>Aqui o erro é bem-vindo, porque errar em voz alta prova que você falou. Eu comemoro, faço um trocadilho e a gente tenta de novo.</p>
+ </div>
+ <img class="rara" src="../recortes/G06.png" style="height:540px;right:90px;bottom:140px">
+ <div class="punch" style="position:absolute;left:64px;top:900px;z-index:5;font-size:88px;width:430px">Solta o <span class="y">bico.</span></div>
+ <div class="footer" style="bottom:84px"><span style="font-size:36px;max-width:640px;line-height:1.2">Manda pro colega que trava</span></div>
+</div>
+</body></html>

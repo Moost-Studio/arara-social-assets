@@ -13,7 +13,7 @@ EPS = {
  'qua': dict(img=['qua_call_v2.jpg', 'qua_2.jpg', 'qua_3.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
    telas=[ ['10h, call importante, eu estava inspirada'],
            ['falei por dez minutos', '<small>o microfone estava no mudo</small>'],
-           ['errou? treinou', '<small>agora eu confiro antes de falar</small>'] ]),
+           ['pode errar, a gente erra junto', '<small>e agora eu confiro o microfone antes de falar</small>'] ]),
  'sex': dict(img=['sex_fila_v1.jpg', 'sex_2.jpg', 'sex_3.jpg'], sel='DIÁRIO DA RARA', topo=[819, 819, 819], titulo='A fila da Black Friday', kw='fila',
    telas=[ ['a fila dá duas voltas no poleiro'],
            ['aprendi duas palavras na fila', '<small>sale, liquidação</small><small>discount, desconto</small>'],
@@ -25,7 +25,7 @@ EPS = {
  'dom': dict(img=['dom_resumo_v2.jpg', 'dom_2.jpg', 'dom_3.jpg'], sel='DIÁRIO DA RARA', topo=[648, 429, 648], titulo='O resumo da semana', kw='resumo',
    telas=[ ['domingo é dia de contar os micos'],
            ['errei na call, errei na fila e errei a hora de chegar'],
-           ['e tudo bem, errou? treinou', '<small>segunda tem mais</small>'] ]),
+           ['tudo bem, a gente erra junto', '<small>segunda tem mais</small>'] ]),
 }
 CSS = """@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
 @font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}

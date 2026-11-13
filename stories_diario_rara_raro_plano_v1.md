@@ -24,7 +24,7 @@ Cada dia combina três coisas que mudam: **expressão** (idioma em rodízio), **
 - **Selo:** a etiqueta "DIÁRIO DA RARA" (ou "HISTÓRIA DO RARO") no topo, para deixar claro que é a vida dos personagens e não caso real.
 - **Tamanho:** 1 a 3 telas, com gancho na última para a noite seguinte. Uma ação por episódio no máximo (ver o post, responder pela conversa, voltar amanhã), sem enquete.
 - **Tipos de episódio:**
-  1. **Mico da Rara:** ela erra em outro idioma e acolhe o erro ("errou? treinou"). Ficção, sempre da própria Rara.
+  1. **Mico da Rara:** ela erra em outro idioma e acolhe o erro ("pode errar, a gente erra junto"). Ficção, sempre da própria Rara.
   2. **História do Raro:** uma palavra com história, contada com o humor seco dele. **Só entra com fonte conferida** da origem da palavra.
   3. **Bastidor:** a Rara treinando, descansando, nervosa. Sem número, sem cliente, sem depoimento.
 - **Aluno nunca aparece como pessoa real.** Até 20/01 todo "aluno" é um personagem de apoio da ficção (como a capivara e a onça das tirinhas).

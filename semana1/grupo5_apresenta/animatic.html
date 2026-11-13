@@ -1,0 +1,220 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Nunito';src:url('/_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('/_fontes/MochiyPopOne-Regular.ttf')}
+@font-face{font-family:'NAr';src:url('/_fontes/NotoSansArabic.ttf');font-weight:100 900}
+@font-face{font-family:'NHe';src:url('/_fontes/NotoSansHebrew.ttf');font-weight:100 900}
+@font-face{font-family:'NDe';src:url('/_fontes/NotoSansDevanagari.ttf');font-weight:100 900}
+@font-face{font-family:'NSC';src:url('/_fontes/NotoSansSC.ttf');font-weight:100 900}
+@font-face{font-family:'NJP';src:url('/_fontes/NotoSansJP.ttf');font-weight:100 900}
+@font-face{font-family:'NKR';src:url('/_fontes/NotoSansKR.ttf');font-weight:100 900}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:#000;overflow:hidden}
+#wrap{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:'Nunito'}
+canvas#gl{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#dom{position:absolute;left:0;width:1080px;text-align:center;top:1300px;font-weight:900;font-size:92px;color:#fff;opacity:0;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+#hud{position:absolute;left:24px;top:24px;font:700 30px 'Nunito';color:rgba(255,255,255,.75);z-index:9;line-height:1.25;text-shadow:0 2px 6px #000}
+#cue{position:absolute;left:24px;bottom:24px;font:800 34px 'Nunito';color:#FFC83D;z-index:9;text-shadow:0 2px 6px #000}
+#black{position:absolute;inset:0;background:#000;opacity:1;pointer-events:none;z-index:8}
+</style>
+<script type="importmap">{"imports":{"three":"/grupo5_apresenta/vendor/three/build/three.module.js","three/addons/":"/grupo5_apresenta/vendor/three/examples/jsm/"}}</script>
+</head><body>
+<div id="wrap"><canvas id="gl"></canvas><div id="dom">falearara.com</div><div id="hud"></div><div id="cue"></div><div id="black"></div></div>
+<script type="module">
+import * as THREE from 'three';
+import {TTFLoader} from 'three/addons/loaders/TTFLoader.js';
+import {Font} from 'three/addons/loaders/FontLoader.js';
+import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
+
+const Q=new URLSearchParams(location.search);const HUD=Q.get('hud')!=='0';
+const W=1080,H=1920,DPR=window.devicePixelRatio||1,TOT=18;
+const clamp=(x,a=0,b=1)=>Math.min(Math.max(x,a),b),lerp=(a,b,p)=>a+(b-a)*p;
+const sm=(a,b,x)=>{const p=clamp((x-a)/(b-a));return p*p*(3-2*p)};
+const eoE=p=>p>=1?1:1-Math.pow(2,-10*p),eio=p=>p<=0?0:p>=1?1:p<.5?Math.pow(2,20*p-10)/2:(2-Math.pow(2,-20*p+10))/2;
+const bk=p=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(p-1,3)+c1*Math.pow(p-1,2)};
+function rng(seed){let s=seed>>>0||1;return()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+// ---------- renderer ----------
+const canvas=document.getElementById('gl');
+const R=new THREE.WebGLRenderer({canvas,antialias:false,alpha:false,preserveDrawingBuffer:true});
+R.setPixelRatio(DPR);R.setSize(W,H,false);R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;R.outputColorSpace=THREE.SRGBColorSpace;
+const BW=Math.round(W*DPR),BH=Math.round(H*DPR);
+const RT=new THREE.WebGLRenderTarget(BW,BH,{colorSpace:THREE.SRGBColorSpace});
+const FOV=50,ASPECT=W/H;
+const camS=new THREE.PerspectiveCamera(FOV,ASPECT,0.01,200),camT=new THREE.PerspectiveCamera(FOV,ASPECT,0.05,400);
+// ---------- fontes e texturas ----------
+const FAM=`'Nunito','NSC','NJP','NKR','NAr','NHe','NDe'`;
+await Promise.all(['Nunito','NAr','NHe','NDe','NSC','NJP','NKR','Mochiy'].map(n=>document.fonts.load(`900 100px '${n}'`,'العربية עברית हिन्दी 中文 日本語 한국어 РУССКИЙ ÇĞİŞ')));
+const TL=new THREE.TextureLoader();
+const loadTex=u=>new Promise(r=>TL.load(u,t=>{t.colorSpace=THREE.NoColorSpace;t.anisotropy=4;t.generateMipmaps=true;t.minFilter=THREE.LinearMipmapLinearFilter;r(t)}));
+const TEX={C01:await loadTex('/recortes/rig/C01.png'),C01b:await loadTex('/recortes/rig/C01_blink.png'),C01k:await loadTex('/recortes/rig/C01_beak.png')};
+const ttf=await (await fetch('/_fontes/MochiyPopOne-Regular.ttf')).arrayBuffer();
+const FONT=new Font(new TTFLoader().parse(ttf));
+// ---------- cena S (palco) ----------
+const S=new THREE.Scene();S.background=new THREE.Color(0x04070d);S.fog=new THREE.Fog(0x04070d,14,40);
+const spot=new THREE.SpotLight(0xfff1d6,300,0,0.5,0.75,1.6);spot.position.set(0.4,8.5,6.0);spot.target.position.set(0,0.4,0.8);
+spot.castShadow=true;spot.shadow.mapSize.set(1024,1024);spot.shadow.bias=-0.0004;spot.shadow.camera.near=3;spot.shadow.camera.far=22;
+S.add(spot,spot.target);const amb=new THREE.AmbientLight(0x1a2a55,0.9);S.add(amb);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(60,64),new THREE.MeshStandardMaterial({color:0x1b2240,roughness:0.9,metalness:0}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;S.add(floor);
+// logo extrudado
+const LETTERS=[],GAP=0.09,LS=0.62;let cursor=0;const LOGOW=[];
+const letterMat=i=>new THREE.MeshStandardMaterial({color:0x2457E6,roughness:0.45,metalness:0.1,emissive:0x0a1a55,emissiveIntensity:0.6});
+'ARARA'.split('').forEach((ch,i)=>{const g=new TextGeometry(ch,{font:FONT,size:LS,depth:0.5,curveSegments:10,bevelEnabled:true,bevelThickness:0.04,bevelSize:0.03,bevelSegments:3});g.computeBoundingBox();
+ const bb=g.boundingBox,w=bb.max.x-bb.min.x;g.translate(-bb.min.x-w/2,-bb.min.y,-0.2);
+ const m=new THREE.Mesh(g,letterMat(i));m.castShadow=true;m.receiveShadow=true;const grp=new THREE.Group();grp.add(m);S.add(grp);
+ LETTERS.push({grp,mesh:m,w,h:bb.max.y-bb.min.y,cx:0});LOGOW.push(w)});
+const total=LOGOW.reduce((a,b)=>a+b,0)+GAP*4;cursor=-total/2;
+LETTERS.forEach((L,i)=>{L.cx=cursor+L.w/2;L.grp.position.set(L.cx,0,0);cursor+=L.w+GAP});
+const LH=LETTERS[0].h;
+// topete da letra (aparece no fim)
+const CREST=new THREE.Group();(function(){const cols=[0x2457E6,0x3f8cff,0x22b5a8];const mk=(ang,len,col)=>{const sh=new THREE.Shape();sh.moveTo(0,0);sh.bezierCurveTo(0.09,0.12,0.12,len*0.7,0,len);sh.bezierCurveTo(-0.12,len*0.7,-0.09,0.12,0,0);
+ const g=new THREE.ExtrudeGeometry(sh,{depth:0.08,bevelEnabled:false});g.translate(0,0,-0.04);const m=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:col,roughness:0.5,emissive:col,emissiveIntensity:0.25}));m.rotation.z=ang;m.castShadow=true;return m};
+ CREST.add(mk(0.45,0.55,cols[1]),mk(-0.05,0.78,cols[0]),mk(-0.5,0.5,cols[2]))})();
+CREST.scale.setScalar(0);S.add(CREST);
+// ---------- Rara (billboard) ----------
+const KPX=1.5/1211, PLANE=1254*KPX, FEETROW=1229, CENTERROW=627;
+const RaraGrp=new THREE.Group();S.add(RaraGrp);
+const holeUV=new THREE.Vector2(696/1254,1-364/1254);
+const raraMat=new THREE.ShaderMaterial({transparent:true,side:THREE.DoubleSide,uniforms:{map:{value:TEX.C01},uHole:{value:holeUV},uR:{value:0},uSpot:{value:new THREE.Vector3(0,0,0.8)},uDim:{value:1}},
+ vertexShader:`varying vec2 vUv;varying vec3 vW;void main(){vUv=uv;vec4 w=modelMatrix*vec4(position,1.0);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+ fragmentShader:`uniform sampler2D map;uniform vec2 uHole;uniform float uR;uniform vec3 uSpot;uniform float uDim;varying vec2 vUv;varying vec3 vW;
+ void main(){vec4 c=texture2D(map,vUv);float d=distance(vUv,uHole);float a=c.a*smoothstep(uR*0.92,uR,d);if(a<0.01)discard;
+ float lit=0.30+0.70*(1.0-smoothstep(3.2,7.0,length(vW.xz-uSpot.xz)));
+ gl_FragColor=vec4(c.rgb*mix(1.0,lit,uDim),a);}`});
+const plane=new THREE.Mesh(new THREE.PlaneGeometry(PLANE,PLANE),raraMat);plane.position.y=(FEETROW-CENTERROW)*KPX;
+const proxy=new THREE.Mesh(new THREE.SphereGeometry(1,20,14),new THREE.MeshBasicMaterial({colorWrite:false,depthWrite:false}));proxy.scale.set(0.26,0.72,0.26);proxy.position.y=0.78;proxy.castShadow=true;
+const tiltG=new THREE.Group();tiltG.add(plane,proxy);RaraGrp.add(tiltG);
+const MIC=new THREE.Vector3((696-628)*KPX,(FEETROW-364)*KPX,0);   // microfone em relação aos pés
+// portais (janela para a cena T, em espaço de tela)
+const portalMat=new THREE.ShaderMaterial({uniforms:{rt:{value:RT.texture},res:{value:new THREE.Vector2(BW,BH)},uA:{value:1}},side:THREE.DoubleSide,transparent:true,depthWrite:false,
+ vertexShader:`void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
+ fragmentShader:`uniform sampler2D rt;uniform vec2 res;uniform float uA;void main(){vec4 c=texture2D(rt,gl_FragCoord.xy/res);gl_FragColor=vec4(c.rgb,uA);}`});
+const portalMic=new THREE.Mesh(new THREE.CircleGeometry(0.09,32),portalMat);portalMic.position.set(MIC.x,MIC.y+(FEETROW-CENTERROW)*0,-0.004);RaraGrp.add(portalMic);portalMic.visible=false;
+const portalBack=new THREE.Mesh(new THREE.PlaneGeometry(40,40),portalMat);portalBack.position.set(0,0,-0.03);RaraGrp.add(portalBack);portalBack.visible=false;
+// balão-portal na frente do bico
+function balloonShape(w,h,r,tail){const s=new THREE.Shape();const x0=-w/2,y0=-h/2;s.moveTo(x0+r,y0);s.lineTo(tail[0]-0.12,y0);s.lineTo(tail[0],tail[1]);s.lineTo(tail[0]+0.16,y0);s.lineTo(x0+w-r,y0);s.quadraticCurveTo(x0+w,y0,x0+w,y0+r);s.lineTo(x0+w,y0+h-r);s.quadraticCurveTo(x0+w,y0+h,x0+w-r,y0+h);s.lineTo(x0+r,y0+h);s.quadraticCurveTo(x0,y0+h,x0,y0+h-r);s.lineTo(x0,y0+r);s.quadraticCurveTo(x0,y0,x0+r,y0);return s}
+const BEAK=new THREE.Vector3((628-628)*KPX,(FEETROW-335)*KPX,0.0);   // bico (aprox.) na pose C01
+const BALW=1.2,BALH=1.5;const balPos=new THREE.Vector3(BEAK.x-0.5,BEAK.y+1.15,0.12);
+const portalBal=new THREE.Mesh(new THREE.ShapeGeometry(balloonShape(BALW,BALH,0.28,[0.45,-BALH/2-0.4]),24),portalMat);portalBal.position.copy(balPos);portalBal.scale.setScalar(1);RaraGrp.add(portalBal);portalBal.visible=false;
+const balRim=new THREE.Mesh(new THREE.ShapeGeometry(balloonShape(BALW+0.1,BALH+0.1,0.31,[0.45,-BALH/2-0.46]),24),new THREE.MeshBasicMaterial({color:0xffffff,side:THREE.DoubleSide}));balRim.position.set(balPos.x,balPos.y,balPos.z-0.002);RaraGrp.add(balRim);balRim.visible=false;
+// ---------- balões de fala (sprites) ----------
+function textTex(txt,wpx,hpx,fs,color='#081226'){const c=document.createElement('canvas');c.width=wpx;c.height=hpx;const x=c.getContext('2d');const r=hpx*0.2;const tail=hpx*0.22;
+ x.fillStyle='#fff';x.beginPath();const bh=hpx-tail;x.moveTo(r,0);x.arcTo(wpx,0,wpx,bh,r);x.arcTo(wpx,bh,0,bh,r);x.lineTo(wpx*0.36,bh);x.lineTo(wpx*0.28,hpx);x.lineTo(wpx*0.24,bh);x.arcTo(0,bh,0,0,r);x.arcTo(0,0,wpx,0,r);x.closePath();x.fill();
+ x.fillStyle=color;let f2=fs;x.font=`900 ${f2}px ${FAM}`;while(x.measureText(txt).width>wpx*0.86&&f2>20){f2-=6;x.font=`900 ${f2}px ${FAM}`}x.textAlign='center';x.textBaseline='middle';x.fillText(txt,wpx/2,bh/2+fs*0.04);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;return t}
+function mkBalloon(txt,wm,hm,fsFrac=0.46){const wpx=1024,hpx=Math.round(1024*hm/wm);const t=textTex(txt,wpx,hpx,Math.round(hpx*0.78*fsFrac*1.35));const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthWrite:false,fog:false}));sp.userData={w:wm,h:hm};sp.visible=false;sp.scale.set(wm,hm,1);S.add(sp);return sp}
+const GREET=['hello','hola','bonjour','ciao','olá'];
+const BAL=GREET.map(g=>mkBalloon(g,1.45,0.8));
+const BALQ=mkBalloon('tá me ouvindo?',2.2,0.9),BALF=mkBalloon('bora soltar o bico?',2.6,1.0);
+// ---------- cena T (túnel de palavras) ----------
+const T=new THREE.Scene();T.background=new THREE.Color(0x081226);T.fog=new THREE.FogExp2(0x081226,0.022);
+const WORDS=[['ENGLISH','hello'],['ESPAÑOL','hola'],['FRANÇAIS','bonjour'],['DEUTSCH','hallo'],['ITALIANO','ciao'],['NEDERLANDS','hallo'],['SVENSKA','hej'],['POLSKI','cześć'],['РУССКИЙ','привет'],['TÜRKÇE','merhaba'],['العربية','مرحبا'],['עברית','שלום'],['हिन्दी','नमस्ते'],['中文','你好'],['日本語','こんにちは'],['한국어','안녕하세요']];
+const wordTex=(txt,blur,col)=>{const c=document.createElement('canvas');c.width=1024;c.height=256;const x=c.getContext('2d');x.font=`900 150px ${FAM}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle=col;if(blur)x.filter=`blur(${blur}px)`;x.fillText(txt,512,128);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t};
+const TW=[];const rr=rng(77);
+for(let i=0;i<64;i++){const lang=WORDS[i%16],txt=lang[(i>>4)&1];const ang=i*2.399,rad=1.6+rr()*3.2,z=-3-i*2.35-rr()*1.2;
+ const col=['#ffffff','#FFC83D','#8fb4ff','#ffffff'][i%4];
+ const texs=[wordTex(txt,0,col),wordTex(txt,9,col),wordTex(txt,22,col)];const dark=wordTex(txt,0,'#081226');
+ const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:texs[0],transparent:true,depthWrite:false}));const sc=1.7+rr()*1.1;sp.scale.set(sc*4,sc,1);
+ sp.position.set(Math.cos(ang)*rad,Math.sin(ang)*rad,z);T.add(sp);TW.push({sp,texs,dark,base:sp.position.clone(),ang,rad,sc,i})}
+// balão (fundo) para onde as palavras convergem
+const tBal=new THREE.Mesh(new THREE.ShapeGeometry(balloonShape(5.0,6.3,1.0,[1.5,-3.15-1.4]),24),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0,fog:false}));tBal.position.set(0,0,0);T.add(tBal);
+const dust=new THREE.Points(new THREE.BufferGeometry(),new THREE.PointsMaterial({size:0.05,color:0x9fc2ff,transparent:true,opacity:0.7}));
+{const p=[];const r2=rng(5);for(let i=0;i<500;i++)p.push((r2()-.5)*14,(r2()-.5)*14,-r2()*170);dust.geometry.setAttribute('position',new THREE.Float32BufferAttribute(p,3))}T.add(dust);
+// ---------- atuação (animatic: Rara parada, só se desloca) ----------
+const LAND=[3.35,3.95,4.55,5.15,5.75];            // pousos nas letras
+const topOf=i=>LETTERS[i].h*0.93;                  // altura aproximada do topo
+const SEG=[ // t0,t1, de[x,y,z], para[x,y,z], altura
+ [0.55,1.15,[7.0,0,1.4],[3.3,0,1.4],0.7],[1.15,1.75,[3.3,0,1.4],[2.0,0,1.4],0.5],[1.62,2.1,[2.0,0,1.4],[1.2,0,1.4],0.55],
+ [3.0,3.35,[1.2,0,1.4],[LETTERS[0].cx,topOf(0),0],0.95],
+ ...[1,2,3,4].map(i=>[LAND[i-1]+0.04,LAND[i],[LETTERS[i-1].cx,topOf(i-1),0],[LETTERS[i].cx,topOf(i),0],0.7]),
+ [5.82,6.45,[LETTERS[4].cx,topOf(4),0],[1.0,0,1.8],0.8],[6.5,7.05,[1.0,0,1.8],[0.0,0,3.2],0.5],
+ [14.15,14.75,[0.0,0,3.2],[-0.9,0,1.9],0.9],[14.8,15.4,[-0.9,0,1.9],[LETTERS[0].cx+1.4,0,0.9],0.7],[15.45,15.95,[LETTERS[0].cx+1.4,0,0.9],[LETTERS[0].cx,topOf(0)+0.02,0],1.0]];
+function rpos(t){let p=[7.0,0,1.4],sq=0,air=false;
+ for(const s of SEG){const [a,b,f,to,h]=s;if(t>=a&&t<b){const u=(t-a)/(b-a);const e=eoE(Math.min(u*1.15,1));p=[lerp(f[0],to[0],u),lerp(f[1],to[1],u)+h*4*u*(1-u),lerp(f[2],to[2],u)];air=true;return{p,sq:0,air}}
+  if(t>=b){p=[to[0],to[1],to[2]]}}
+ return{p,sq:0,air}}
+function squashAt(t){ // antecipação 0,1 s antes de cada pulo e pouso com mola
+ let sq=0;for(const [a,b] of SEG){if(t>=a-0.1&&t<a){const u=(t-(a-0.1))/0.1;sq=0.1*Math.sin(u*Math.PI/2)}
+  if(t>=b){const tau=t-b;sq+=0.1*Math.exp(-9*tau)*Math.cos(26*tau)}}
+ return clamp(sq,-0.1,0.12)}
+const landingsT=[...SEG.map(s=>s[1])];
+// ---------- câmera ----------
+const CAMK=[ // t, pos, alvo
+ [0,[0.2,2.6,10.0],[0,0.9,0]],[3,[0.1,2.5,9.6],[0.0,0.95,0]],[5.9,[0.3,2.4,9.4],[0.6,0.9,0]],[6.5,[0.5,2.0,8.2],[0.5,0.9,1.4]],
+ [7.2,[0.2,1.5,6.9],[0.05,1.1,3.2]],[8.0,[0.12,1.3,6.2],[0.07,1.0,3.2]]];
+function lerp3(a,b,u){return[lerp(a[0],b[0],u),lerp(a[1],b[1],u),lerp(a[2],b[2],u)]}
+function camPath(t){ // [pos,target] da câmera S
+ if(t<8.0){let i=0;while(i<CAMK.length-2&&t>=CAMK[i+1][0])i++;const [t0,p0,q0]=CAMK[i],[t1,p1,q1]=CAMK[i+1];const u=eio((t-t0)/(t1-t0))*0+sm(0,1,(t-t0)/(t1-t0));return[lerp3(p0,p1,u),lerp3(q0,q1,u)]}
+ const mic=[MIC.x+0.07*0+RaraGrp.position.x,MIC.y+RaraGrp.position.y,3.2];
+ if(t<9.0){const u=eio(clamp((t-8.0)/1.0));const p0=[0.12,1.3,6.2],p1=[mic[0],mic[1],mic[2]+0.06];return[lerp3(p0,p1,u),lerp3([0.07,1.0,3.2],[mic[0],mic[1],mic[2]-1],u)]}
+ if(t<12.0){return[[mic[0]+0.004*Math.sin(t*3),mic[1]+0.003*Math.cos(t*2),mic[2]+0.06],[mic[0],mic[1],mic[2]-3]]}
+ if(t<14.15){const u=eio(clamp((t-12.0)/2.15));const bx=RaraGrp.position.x+balPos.x,by=balPos.y,bz=RaraGrp.position.z+balPos.z;
+  const p0=[bx,by,bz+1.29],p1=[0.2,1.5,7.6];const tg0=[bx,by,bz],tg1=[0.05,0.95,3.1];return[lerp3(p0,p1,u),lerp3(tg0,tg1,u)]}
+ // 14.15-18: acompanha a volta ao logo
+ const a=[0.2,1.5,7.6],b=[0.5,2.5,9.8],c=[0.4,2.0,9.2];
+ if(t<15.2){const u=sm(14.15,15.2,t);return[lerp3(a,b,u),lerp3([0.05,0.95,3.1],[-0.3,0.8,0.9],u)]}
+ const u=sm(15.2,17.6,t);return[lerp3(b,[0.2,2.4,9.2],u),lerp3([-0.3,0.8,0.9],[-0.55,1.0,0],u)]}
+// ---------- cena: atualização por tempo ----------
+const hudEl=document.getElementById('hud'),cueEl=document.getElementById('cue'),domEl=document.getElementById('dom'),blackEl=document.getElementById('black');
+const CUES=[[0.3,'spot ON'],[0.55,'Rara entra pulando (clipe 1)'],[2.6,'olha o logo, olha a câmera, pisca'],[3.35,'pio_pulo_1'],[3.95,'pio_pulo_2'],[4.55,'pio_pulo_3'],[5.15,'pio_pulo_4'],[5.75,'pio_pulo_5'],[7.3,'toque_microfone'],[8.2,'whoosh_mergulho'],[12.2,'whoosh_saida'],[15.95,'pop'],[17.2,'pio']];
+function setBalloon(sp,t,t0,dur,pos,rise,fadeIn=0.12){const u=(t-t0)/dur;if(u<0||u>1){sp.visible=false;return}const s=sp.userData;const e=bk(clamp(u/0.2));sp.visible=true;sp.position.set(pos[0],pos[1]+rise*u,pos[2]);sp.scale.set(s.w*e,s.h*e,1);sp.material.opacity=1-sm(0.72,1,u)}
+const TBZ=-71.8;const tmpV=new THREE.Vector3(),tmpR=new THREE.Vector3();
+function portalFit(t,tz){ // a câmera T enquadra o balão T exatamente na área que o balão-portal ocupa na tela S
+ portalBal.getWorldPosition(tmpV);const c=tmpV.clone().project(camS);
+ tmpR.set(1,0,0).applyQuaternion(camS.quaternion).multiplyScalar(BALW/2*portalBal.scale.x);const r=tmpV.clone().add(tmpR).project(camS);
+ const hx=Math.max(Math.abs(r.x-c.x),0.02),tanH=Math.tan(FOV*Math.PI/360)*ASPECT,tanV=Math.tan(FOV*Math.PI/360);
+ const D=5.0/(2*hx*tanH);camT.position.set(tBal.position.x-c.x*D*tanH,tBal.position.y-c.y*D*tanV,TBZ+D);camT.rotation.set(0,0,0);camT.updateMatrixWorld()}
+window.setT=function(t){
+ // Rara
+ const r=rpos(t);const sq=squashAt(t);RaraGrp.position.set(r.p[0],r.p[1],r.p[2]);
+ const sx=1+sq*0.8,sy=1-sq;tiltG.scale.set(sx,sy,1);
+ // olhar: gira em Y (logo) e volta para a câmera; pisca em 2,85 s
+ let yaw=0;if(t>=1.8&&t<2.7){yaw=-0.55*sm(1.8,2.1,t)*(1-sm(2.35,2.7,t))}
+ const [cp,ct]=camPath(t);camS.position.set(cp[0],cp[1],cp[2]);camS.lookAt(ct[0],ct[1],ct[2]);
+ // handheld sutil
+ camS.position.x+=0.012*Math.sin(t*1.7);camS.position.y+=0.01*Math.sin(t*1.3+1);camS.updateMatrixWorld();
+ const toCam=Math.atan2(camS.position.x-RaraGrp.position.x,camS.position.z-RaraGrp.position.z);
+ RaraGrp.rotation.y=(t>=7.4&&t<14.2)?0:clamp(toCam,-0.5,0.5)*0.6+yaw;
+ const blink=(t>=2.85&&t<2.97)||(t>=16.6&&t<16.72);const beak=(t>=7.2&&t<7.45)||(t>=16.3&&t<16.6);
+ raraMat.uniforms.map.value=blink?TEX.C01b:(beak?TEX.C01k:TEX.C01);
+ const bob=1+0.012*Math.sin(2*Math.PI*t/2.4);tiltG.scale.y*=bob;
+ raraMat.uniforms.uDim.value=1;raraMat.uniforms.uSpot.value.set(0,0,0.8);
+ // spot e palco
+ const sp=sm(0.2,1.3,t);spot.intensity=260*sp;amb.intensity=0.9*(0.35+0.65*sp);
+ // letras: afundam com mola nos pousos
+ LETTERS.forEach((L,i)=>{const tl=LAND[i]!==undefined?LAND[i]:null;let d=0;if(tl!==null&&t>=tl&&t<tl+1.3){const tau=t-tl;d=Math.exp(-7*tau)*Math.cos(24*tau)}
+  if(i===0&&t>=15.95&&t<17.3){const tau=t-15.95;d+=Math.exp(-7*tau)*Math.cos(24*tau)}
+  L.grp.position.y=-0.22*d;L.grp.scale.set(1+0.05*d,1-0.1*d,1)});
+ // topete
+ if(t>=15.95){const u=clamp((t-15.95)/0.45);const e=bk(u);CREST.scale.setScalar(Math.max(e,0)*1.15);CREST.position.set(LETTERS[0].cx-0.05,LH*0.99-0.22*0,0.05);CREST.rotation.z=0.05*Math.sin((t-15.95)*9)*Math.exp(-(t-15.95)*3)}else CREST.scale.setScalar(0);
+ // balões
+ LAND.forEach((tl,i)=>setBalloon(BAL[i],t,tl+0.05,1.1,[LETTERS[i].cx+(i===0?0.35:0),topOf(i)+0.95,0.3],0.5));
+ // "tá me ouvindo?" acima da cabeça (Rara a 3,2 m)
+ setBalloon(BALQ,t,7.45,1.0,[0.25,1.0*0+2.05,3.2],0.1);
+ setBalloon(BALF,t,16.25,1.7,[LETTERS[0].cx+1.15,topOf(0)+1.5,0.3],0.1);
+ // portais
+ const diving=t>=7.9&&t<=9.0;const inside=t>=8.9&&t<12.05;const ex=t>=12.0&&t<14.9;
+ // orifício do microfone cresce na aproximação (7.6 -> 8.9) e fecha depois da saída
+ const holeR=0.03*(sm(7.5,8.4,t)*(1-sm(12.2,12.8,t)));raraMat.uniforms.uR.value=holeR;
+ portalMic.visible=holeR>0.002;portalBack.visible=false;
+ portalBal.visible=ex;balRim.visible=ex;if(ex){const z=1-0.0*sm(14,14.9,t);const f=1-sm(14.2,14.9,t);const s=Math.max(f,0.001);portalBal.scale.setScalar(s);balRim.scale.setScalar(s)}
+ // T: câmera voa pelo túnel
+ const tz=(()=>{const a=8.4,b=12.0;if(t<a)return 0;if(t<b){const u=(t-a)/(b-a);return-(66*(u*u*(3-2*u)*0.4+u*0.6))}return-66})();
+ camT.position.set(0.15*Math.sin(t*0.9),0.12*Math.cos(t*0.8),tz);camT.lookAt(0.0,0.0,tz-10);camT.rotation.z+=0.12*Math.sin(t*0.5);
+ if(t>=12.0&&t<14.95){portalFit(t,tz)}
+ const conv=sm(12.0,13.4,t);const dk=sm(12.9,13.6,t);
+ TW.forEach(w=>{const wp=w.sp.position;const dz=w.base.z-tz;
+  if(w.i<16){const col=w.i%2,row=Math.floor(w.i/2);const target=new THREE.Vector3((col-0.5)*2.25,(3.5-row)*0.62,TBZ+0.05);wp.lerpVectors(w.base,target,eio(conv))}else wp.copy(w.base);
+  const dist=camT.position.distanceTo(wp);const bl=Math.abs(dist-9);const k=bl<4?0:(bl<10?1:2);const kk=dk>0.5?0:k;
+  w.sp.material.map=dk>0.5?w.dark:w.texs[kk];w.sp.material.needsUpdate=false;w.sp.visible=(dz<4&&dz>-95)||(w.i<16&&conv>0.02);
+  const fin=sm(0,1,(-dz-0.5)/3);w.sp.material.opacity=(w.i<16&&conv>0.02)?clamp(Math.max(fin*(dz>-0.6?0:1),sm(0,0.25,conv)),0,1):clamp(fin*(dz>-0.6?0:1),0,1);w.sp.material.fog=!(w.i<16&&conv>0.5);
+  const sc=w.i<16?lerp(w.sc,0.52,conv):w.sc;w.sp.scale.set(sc*4,sc,1);if(w.i>=16)w.sp.material.opacity*=(1-conv);if(w.i<16&&dk>0.5)w.sp.material.opacity=1});
+ tBal.position.set(0,0,TBZ);tBal.material.opacity=0.97*sm(12.7,13.5,t);tBal.visible=t>=12.6;
+ dust.position.z=0;
+ if(t>=8.2&&t<14.9){R.setRenderTarget(RT);R.render(T,camT);R.setRenderTarget(null)}
+ R.render(S,camS);
+ // HUD e legenda
+ const hh=(t%1);hudEl.style.display=HUD?'block':'none';cueEl.style.display=HUD?'block':'none';
+ if(HUD){hudEl.textContent=`ANIMATIC  t=${t.toFixed(2)}s  ·  60 fps`;let c='';for(const [ct_,tx] of CUES)if(t>=ct_&&t<ct_+0.9)c=tx;cueEl.textContent=c?'♪ '+c:''}
+ domEl.style.opacity=sm(16.65,17.0,t);domEl.style.transform=`scale(${0.9+0.1*bk(clamp((t-16.65)/0.3))})`;
+ blackEl.style.opacity=t<0.15?1:clamp(1-(t-0.15)/0.4);
+};
+window.__done=true;
+</script></body></html>

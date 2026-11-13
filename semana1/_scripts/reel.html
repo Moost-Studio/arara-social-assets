@@ -1,0 +1,116 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}
+@font-face{font-family:'NAr';src:url('../_fontes/NotoSansArabic.ttf');font-weight:100 900}
+@font-face{font-family:'NHe';src:url('../_fontes/NotoSansHebrew.ttf');font-weight:100 900}
+@font-face{font-family:'NDe';src:url('../_fontes/NotoSansDevanagari.ttf');font-weight:100 900}
+@font-face{font-family:'NSC';src:url('../_fontes/NotoSansSC.ttf');font-weight:100 900}
+@font-face{font-family:'NJP';src:url('../_fontes/NotoSansJP.ttf');font-weight:100 900}
+@font-face{font-family:'NKR';src:url('../_fontes/NotoSansKR.ttf');font-weight:100 900}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;width:1080px;height:1920px;overflow:hidden}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:'Nunito'}
+.layer{position:absolute;inset:0}
+.circ{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.26),rgba(255,255,255,.08) 62%,rgba(255,255,255,0) 70%)}
+.row{position:absolute;left:0;width:1080px;height:250px;white-space:nowrap;overflow:visible;font-weight:900;font-size:210px;line-height:250px;color:#fff;letter-spacing:-.01em}
+.row span{display:inline-block;padding-right:70px}
+.glyph{position:absolute;font-weight:900;color:#fff;filter:blur(7px);opacity:.38;line-height:1}
+#rara{position:absolute;left:0;top:0;transform-origin:50% 100%;filter:drop-shadow(0 30px 34px rgba(0,0,0,.32));z-index:5}
+.cap{position:absolute;left:0;width:984px;text-align:center;z-index:8;font-weight:900;-webkit-text-stroke:0;paint-order:stroke fill}
+#greet{top:1296px;font-size:118px;line-height:1.05;color:#FFC83D;-webkit-text-stroke:14px #081226}
+#sub{top:1418px;font-size:56px;line-height:1.1;color:#fff;-webkit-text-stroke:10px #081226}
+#intro,#end{position:absolute;inset:0;z-index:9;background:#081226}
+.mo{font-family:'Mochiy'}
+</style></head><body><div id="v">
+ <div class="layer" id="bgprev"></div>
+ <div class="layer" id="bgcur"></div>
+ <div class="layer" id="words"></div>
+ <div class="layer" id="glyphs"></div>
+ <img id="rara" src="../recortes/C01.png">
+ <div class="cap" id="greet"></div><div class="cap" id="sub"></div>
+ <div id="intro">
+   <div class="circ" style="width:900px;height:900px;left:-300px;top:120px"></div><div class="circ" style="width:1000px;height:1000px;left:420px;top:900px"></div>
+   <div class="mo" id="i16" style="position:absolute;left:0;width:984px;text-align:center;top:250px;font-size:420px;line-height:1;color:#FFC83D">16</div>
+   <div class="mo" id="iid" style="position:absolute;left:0;width:984px;text-align:center;top:690px;font-size:128px;line-height:1.1;color:#fff">IDIOMAS</div>
+   <div id="ius" style="position:absolute;left:0;width:984px;text-align:center;top:858px;font-size:56px;font-weight:900;color:#fff">e uma Rara só</div>
+   <img id="irara" src="../recortes/G06.png" style="position:absolute;transform-origin:50% 100%;filter:drop-shadow(0 26px 30px rgba(0,0,0,.4))">
+ </div>
+ <div id="end">
+   <div class="circ" style="width:900px;height:900px;left:-300px;top:100px"></div><div class="circ" style="width:900px;height:900px;left:500px;top:1000px"></div>
+   <img id="erara" src="../recortes/G06.png" style="position:absolute;transform-origin:50% 100%;filter:drop-shadow(0 26px 30px rgba(0,0,0,.4))">
+   <div style="position:absolute;left:0;width:984px;text-align:center;top:1210px;font-size:76px;font-weight:900;color:#fff">falearara.com</div>
+   <div class="mo" style="position:absolute;left:0;width:984px;text-align:center;top:1330px;font-size:84px;color:#FFC83D">Solta o bico.</div>
+ </div>
+</div>
+<script>
+const L=[
+ ['ENGLISH','hello','inglês','Nunito'],['ESPAÑOL','hola','espanhol','Nunito'],['FRANÇAIS','bonjour','francês','Nunito'],['DEUTSCH','hallo','alemão','Nunito'],
+ ['ITALIANO','ciao','italiano','Nunito'],['NEDERLANDS','hallo','holandês','Nunito'],['SVENSKA','hej','sueco','Nunito'],['POLSKI','cześć','polonês','Nunito'],
+ ['РУССКИЙ','привет','russo','Nunito'],['TÜRKÇE','merhaba','turco','Nunito'],['العربية','مرحبا','árabe','NAr'],['עברית','שלום','hebraico','NHe'],
+ ['हिन्दी','नमस्ते','hindi','NDe'],['中文','你好','mandarim','NSC'],['日本語','こんにちは','japonês','NJP'],['한국어','안녕하세요','coreano','NKR']];
+const BG=[['#FF9A2E','#F2711C'],['#8A5CE6','#5B33B8'],['#22B573','#128A55'],['#FF7A66','#E5503C'],['#F07AB8','#C9488F'],['#14264F','#081226']];
+const POSES=['C01','E01','E02','G06','G02','G01'];
+const DIM={C01:[386,1211],E01:[489,1211],E02:[959,1223],G06:[637,1210],G02:[583,1210],G01:[487,1215]};
+const T0=1.6,SD=0.7,TEND=T0+16*SD,TOT=TEND+1.6;
+const $=id=>document.getElementById(id);
+const rara=$('rara');
+// pré-carrega
+const imgs={}; let loaded=0;
+POSES.forEach(k=>{const i=new Image(); i.src='../recortes/'+k+'.png'; imgs[k]=i;});
+// linhas
+const words=$('words'); const rows=[];
+for(let r=0;r<5;r++){const d=document.createElement('div'); d.className='row'; d.style.top=(235+r*248)+'px'; words.appendChild(d); rows.push(d);}
+const gl=$('glyphs'); const gls=[]; for(let g=0;g<5;g++){const d=document.createElement('div'); d.className='glyph'; gl.appendChild(d); gls.push(d);}
+function circles(){return '<div class="circ" style="width:900px;height:900px;left:-280px;top:200px"></div><div class="circ" style="width:1000px;height:1000px;left:420px;top:980px"></div>';}
+function bgHtml(c){return `<div class="layer" style="background:linear-gradient(170deg,${c[0]},${c[1]})"></div>`+circles();}
+const ease=p=>1-Math.pow(1-p,3), back=p=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(p-1,3)+c1*Math.pow(p-1,2)};
+let lastScene=-1;
+function setScene(i){
+  const [w,g,sub,font]=L[i];
+  const rtl=(font==='NAr'||font==='NHe');
+  rows.forEach((d,r)=>{d.innerHTML=(`<span>${w}</span>`).repeat(8); d.style.fontFamily=`'${font}','Nunito'`; d.style.direction=rtl?'rtl':'ltr'; d.style.opacity=(r%2?0.92:1);
+    d.style.fontSize=(font==='NSC'||font==='NJP'||font==='NKR'?'220px':(font==='NDe'?'200px':'210px'));});
+  $('greet').style.fontFamily=`'${font}','Nunito'`; $('greet').textContent=g; $('sub').textContent='em '+sub;
+  $('greet').style.webkitTextStroke=(font==='Nunito'?'14px #081226':'12px #081226');
+  const ch=[...w.replace(/\s/g,'')]; gls.forEach((d,k)=>{d.textContent=ch[(k*2)%ch.length]; d.style.fontFamily=`'${font}','Nunito'`; d.style.fontSize=(220+k*40)+'px'; });
+  $('bgprev').innerHTML=bgHtml(BG[(i+5)%6]); $('bgcur').innerHTML=bgHtml(BG[i%6]);
+  const pk=POSES[i%6]; rara.src=imgs[pk].src; rara.dataset.pk=pk;
+}
+window.setT=function(t){
+  const intro=$('intro'), end=$('end');
+  intro.style.display=t<T0?'block':'none'; end.style.display=t>=TEND?'block':'none';
+  const show=(t>=T0&&t<TEND);
+  ['bgprev','bgcur','words','glyphs'].forEach(id=>$(id).style.display=show?'block':'none');
+  rara.style.display=show?'block':'none'; $('greet').style.display=show?'block':'none'; $('sub').style.display=show?'block':'none';
+  if(t<T0){ // gancho: Rara estoura o quadro e o texto já começa em ação
+    const ir=$('irara'); const H=500,[w,h]=DIM.G06,W=H*w/h; const p=Math.min(Math.max((t-0.1)/0.28,0),1); const e=back(p);
+    const sc=.45+.55*e, sx=sc*(1+.12*Math.sin(Math.PI*p)), sy=sc*(1-.12*Math.sin(Math.PI*p));
+    ir.style.height=H+'px'; ir.style.left=(492-W/2)+'px'; ir.style.top=(1480-H)+'px';
+    ir.style.opacity=t<0.1?0:1; ir.style.transform=`scale(${sx},${sy}) rotate(${Math.sin(t*14)*2.2}deg)`;
+    const tp=Math.min(t/0.25,1); $('i16').style.transform=`scale(${.7+.3*back(tp)})`; $('i16').style.opacity=1;
+    $('iid').style.transform=`translateY(${(1-ease(Math.min(Math.max((t-.12)/.25,0),1)))*60}px)`; $('iid').style.opacity=Math.min(Math.max((t-.1)/.15,0),1);
+    $('ius').style.opacity=Math.min(Math.max((t-.45)/.2,0),1);
+    return;}
+  if(t>=TEND){const lt=t-TEND; const er=$('erara'); const H=800,[w,h]=DIM.G06,W=H*w/h; const p=Math.min(lt/0.3,1); const e=back(p);
+    const sc=.5+.5*e; er.style.height=H+'px'; er.style.left=(492-W/2)+'px'; er.style.top=(1180-H)+'px';
+    er.style.transform=`scale(${sc*(1+.1*Math.sin(Math.PI*p))},${sc*(1-.1*Math.sin(Math.PI*p))}) rotate(${Math.sin(lt*9)*2.5}deg)`; return;}
+  const i=Math.min(Math.floor((t-T0)/SD),15), lt=(t-T0)-i*SD, u=lt/SD;
+  if(i!==lastScene){setScene(i); lastScene=i;}
+  // revelação circular do fundo
+  const rp=Math.min(lt/0.16,1); $('bgcur').style.clipPath=`circle(${ease(rp)*1700}px at 492px 900px)`;
+  // linhas de palavra deslizando
+  rows.forEach((d,r)=>{const dir=(r%2?1:-1); const base=(r*173)%420; d.style.transform=`translateX(${dir*(lt*340+base)-(dir>0?900:0)}px)`;});
+  gls.forEach((d,k)=>{d.style.left=(60+k*210+Math.sin(t*2+k)*40)+'px'; d.style.top=(300+((k*331+lt*260)%1100))+'px'; d.style.transform=`rotate(${k*25+lt*40}deg)`;});
+  // Rara: entrada com tropeço/squash
+  const pk=rara.dataset.pk; const H=900,[w,h]=DIM[pk],W=H*w/h; const p=Math.min(lt/0.2,1); const e=back(p);
+  const sc=.55+.45*e, sx=sc*(1+.12*Math.sin(Math.PI*p)), sy=sc*(1-.12*Math.sin(Math.PI*p));
+  rara.style.height=H+'px'; rara.style.left=(492-W/2)+'px'; rara.style.top=(1275-H)+'px';
+  rara.style.transform=`translateY(${(1-ease(p))*80}px) scale(${sx},${sy}) rotate(${Math.sin(t*13)*2.4}deg)`;
+  const cp=Math.min(Math.max((lt-.06)/.12,0),1); const cap=[ $('greet'),$('sub') ]; cap.forEach(c=>{c.style.opacity=cp; c.style.transform=`scale(${.85+.15*back(cp)})`;});
+};
+Promise.all([document.fonts.ready,...Object.values(imgs).map(i=>i.decode()),...['G06'].map(k=>{const i=new Image();i.src='../recortes/'+k+'.png';return i.decode()})]).then(()=>{
+  // força o carregamento das fontes de todas as línguas
+  const f=['Nunito','NAr','NHe','NDe','NSC','NJP','NKR'].map(n=>document.fonts.load(`900 100px '${n}'`,'العربية עברית हिन्दी 中文 日本語 한국어 РУССКИЙ ÇĞİŞ'));
+  Promise.all(f).then(()=>{window.__done=true;});
+});
+</script></body></html>

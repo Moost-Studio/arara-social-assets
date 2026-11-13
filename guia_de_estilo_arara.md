@@ -17,7 +17,7 @@ Compilado em 31/10/2026 a partir de tudo que o Rodrigo pediu, corrigiu e aprovou
 - Nunca: "bater asas" (é do Duolingo), "ficar arara", "papagaio" em sentido pejorativo.
 - A tutora e a professora são femininas ("a tutora", "ela"). Nunca "o tutor".
 - Fecho padrão de toda legenda: "Arara vai ser sua nova professora de idiomas. Entre no bando, em breve tem novidade 🦜". Rodapé só na legenda, nunca dentro da arte.
-- Pré-lançamento (lançamento 15/12/2026, go/no-go 28/11, recuo 12/01/2027): sem preço, sem data nova, sem prometer o que o app não faz.
+- Pré-lançamento (lançamento oficial 20/01/2027, decidido pelo Rodrigo em 11/11 e confirmado como data pública em 12/11, com GO/NO-GO em 15/01/2027): sem preço, sem prometer o que o app não faz. A data 20/01 pode aparecer nas peças; se o GO/NO-GO falhar, a data é adiada e avisada.
 - Afirmações de produto sempre conferidas contra o app (idiomas, níveis, correção, indicação). Níveis A1 a C1 são referência, sem equivalência com TOEFL ou IELTS.
 
 ## 3. Legendas
@@ -88,3 +88,11 @@ Rodrigo viu o vídeo de teste e aprovou ("gostei do vídeo, vamos guardar o esti
 **Encerramento do logo (aprovado como padrão em 04/11/2026, a confirmar após ver o resultado).** Todo reel termina com um clipe de 4,6 s: três pontos (azul, amarelo, verde) convergem num ponto que cresce e vira o ícone da Arara, com anéis e penas coloridas; o ícone desliza e a palavra "Arara" surge ao lado; depois "Converse por voz em 16 idiomas" e a pílula "falearara.com". Fundo azul-noite, referência: encerramento animado do Spotify enviado pelo Rodrigo. O reel escurece em 0,3 s antes do clipe (sem sobrepor cenas). Reaproveitar: `reel_teste/outro/index.html`, `render_outro.js`, `build_outro.py <reel_mudo> <reel_sfx>`.
 
 **Pendências conhecidas.** Música; resolução da mascote (540×965 ampliada); link da bio ativo para o CTA; `publish.py` ainda não publica Reel.
+
+## Atualizações de 06/11 e 09/11/2026
+- Balões, incluindo caudas, nunca cobrem o rosto da Rara (reforço de 09/11). Preserve olhos, bico e expressão inteiramente visíveis, com respiro; posicione os balões nas áreas vazias e confira cada peça exportada antes da entrega.
+- Reels (direção de 06/11): manter a arara antiga e buscar vídeos mais imersivos, com motion arrojado e criativo e experiência 3D. O pedido de 3D não autoriza substituir ou redesenhar a mascote. A direção não equivale à aprovação de uma peça final nem de publicação ou agendamento.
+- Referência de motion aprovada em 06/11: aberturas da Pixar, pelos princípios de atuação, peso, antecipação, pausas e som ligado à ação. A arara provoca os acontecimentos e as transições; preservar identidade própria, sem reproduzir a sequência da luminária.
+
+## Bordão (13/11/2026): "Errou? Treinou" substituído
+O Rodrigo reprovou "Errou? Treinou" por soar seco ("fala de erro, não convida"). Novo bordão principal: **"Pode errar, a gente erra junto"** (escolha "1" da lista de 12/11). O fecho curto sugerido, "Bora de novo?", aguarda confirmação. Aplicado em captions, telas do Diário e planos; registros históricos e logs ficam como estavam. Não usar "Errou? Treinou" em peça nova.
