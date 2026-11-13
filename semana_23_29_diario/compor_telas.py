@@ -6,7 +6,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 SC = HERE.parent / 'semana1' / '_scripts'
 # topo do personagem em px (1920): onde o balão NÃO pode chegar
 EPS = {
- 'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 616, 470], titulo='Segunda e eu cheguei primeiro', kw='primeiro',
+ 'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 613, 470], titulo='Segunda e eu cheguei primeiro', kw='primeiro',
    telas=[ ['são 7h e o escritório inteiro é meu'],
            ['ensaiei o japonês do trabalho em voz alta', '<small>お疲れ様です (otsukaresama desu) pra cadeira, e ela nem respondeu</small>'],
            ['só tem um detalhe', '<small>e até agora ninguém chegou</small>'] ]),

@@ -57,3 +57,4 @@ Fila: seg2, seg3, qua2, qua3, sex2, sex3, sab2, sab3, dom2, dom3 (tabela acima).
 
 ## Telas v2 compostas (13/11, ~00h30 UTC)
 15 telas, UMA IMAGEM PRÓPRIA por tela (`geradas/<ep>_2.jpg`, `_3.jpg` e a cena original na tela 1), balão sempre acima do personagem e, em seg 3 e dom 2, acima do relógio e dos quadros. Frase de seg 3 trocada por "e até agora ninguém chegou". Dom 2 com balão em 46 px (cabe sem tocar o selo). Custo: 15 imagens no total pelo gerador do Google, cerca de US$ 1,0 pela estimativa (US$ 0,068 por imagem); teto da semana US$ 2. Aguardam OK; nada agendado.
+- seg_2 v2 frontal (12/11 ~00h20 UTC): a v1 foi reprovada pelo Rodrigo ('de lado não parece a Rara'). v2: rosto frontal, sorriso gentil, cabeça levemente inclinada; reverência bem sutil (quase em pé), crachá reto; topo=613
