@@ -6,23 +6,23 @@ HERE = pathlib.Path(__file__).resolve().parent
 SC = HERE.parent / 'semana1' / '_scripts'
 # topo do personagem em px (1920): onde o balão NÃO pode chegar
 EPS = {
- 'seg': dict(img='seg_escritorio_v1.jpg', sel='DIÁRIO DA RARA', topo=613, titulo='Segunda e eu cheguei primeiro', kw='primeiro',
+ 'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 616, 470], titulo='Segunda e eu cheguei primeiro', kw='primeiro',
    telas=[ ['são 7h e o escritório inteiro é meu'],
            ['ensaiei o japonês do trabalho em voz alta', '<small>お疲れ様です (otsukaresama desu) pra cadeira, e ela nem respondeu</small>'],
-           ['só tem um detalhe', '<small>amanhã eu conto por que ninguém chegou</small>'] ]),
- 'qua': dict(img='qua_call_v2.jpg', sel='DIÁRIO DA RARA', topo=589, titulo='A call que só eu ouvi', kw='só eu',
+           ['só tem um detalhe', '<small>e até agora ninguém chegou</small>'] ]),
+ 'qua': dict(img=['qua_call_v2.jpg', 'qua_2.jpg', 'qua_3.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
    telas=[ ['10h, call importante, eu estava inspirada'],
            ['falei por dez minutos', '<small>o microfone estava no mudo</small>'],
            ['errou? treinou', '<small>agora eu confiro antes de falar</small>'] ]),
- 'sex': dict(img='sex_fila_v1.jpg', sel='DIÁRIO DA RARA', topo=819, titulo='A fila da Black Friday', kw='fila',
+ 'sex': dict(img=['sex_fila_v1.jpg', 'sex_2.jpg', 'sex_3.jpg'], sel='DIÁRIO DA RARA', topo=[819, 819, 819], titulo='A fila da Black Friday', kw='fila',
    telas=[ ['a fila dá duas voltas no poleiro'],
            ['aprendi duas palavras na fila', '<small>sale, liquidação</small><small>discount, desconto</small>'],
            ['no fim saí com um suporte de microfone', '<small>amanhã o primo liga</small>'] ]),
- 'sab': dict(img='sab_raro_v3.jpg', sel='HISTÓRIA DO RARO', topo=669, titulo='De onde vem sábado', kw='sábado',
+ 'sab': dict(img=['sab_raro_v3.jpg', 'sab_2.jpg', 'sab_3.jpg'], sel='HISTÓRIA DO RARO', topo=[669, 669, 780], titulo='De onde vem sábado', kw='sábado',
    telas=[ ['bah, prima, hoje é sábado e tu sabe de onde vem essa palavra'],
            ['vem do hebraico, onde quer dizer descanso', '<small>passou pelo grego e pelo latim até chegar no nosso português</small>'],
            ['por isso sábado combina com rede', '<small>devagar se vai ao longe, tchê</small>'] ]),
- 'dom': dict(img='dom_resumo_v2.jpg', sel='DIÁRIO DA RARA', topo=648, titulo='O resumo da semana', kw='resumo',
+ 'dom': dict(img=['dom_resumo_v2.jpg', 'dom_2.jpg', 'dom_3.jpg'], sel='DIÁRIO DA RARA', topo=[648, 429, 648], titulo='O resumo da semana', kw='resumo',
    telas=[ ['domingo é dia de contar os micos'],
            ['errei na call, errei na fila e errei a hora de chegar'],
            ['e tudo bem, errou? treinou', '<small>segunda tem mais</small>'] ]),
@@ -48,11 +48,11 @@ def tela(ep, d, i, linhas):
     bal = ''.join(f'<div>{l}</div>' if not l.startswith('<small') else l for l in linhas)
     titulo = f'<div class="tit">{t}</div>' if i == 0 else ''
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body><div id="post">
-<div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/{d['img']}')"></div><div class="veil"></div>
+<div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/{d['img'][i]}')"></div><div class="veil"></div>
 <div class="sel">{d['sel']}</div><div class="pg">{i+1} DE 3</div>{titulo}
-<div class="bal" id="bal">{bal}</div></div>
+<div class="bal" id="bal" style="{"font-size:46px;padding:22px 42px" if (ep=="dom" and i==1) else ""}">{bal}</div></div>
 <script>
-const b=document.getElementById('bal');const topo={d['topo']};const bottomMax=topo-80;
+const b=document.getElementById('bal');const topo={d['topo'][i]};const bottomMax=topo-80;
 // ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
 b.style.top=(bottomMax-36-b.offsetHeight)+'px';
 </script></body></html>"""
