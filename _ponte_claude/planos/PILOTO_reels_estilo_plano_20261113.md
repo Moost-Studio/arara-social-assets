@@ -43,3 +43,35 @@ O preço do Veo 3.1 não está no catálogo que consultei. Minha estimativa por 
 
 ## 6. Entrega do piloto [FATO, do skill]
 Pelo Telegram: as três versões, a folha de contato de cada, o custo real de cada, o método de boca usado (sincronia manual e, se existir, lip-sync por modelo) e a pergunta "qual estilo, e o que mudar". Nada é publicado ou agendado.
+
+---
+
+# Revisão de 13/11/2026 (00h58 UTC): economizar sem perder qualidade
+
+Pedido do Rodrigo: "tudo que conseguirmos fazer para economizar, vamos fazer, mas tem que ter extrema qualidade". Isto SUBSTITUI a tabela de custo da seção 4 e a proposta de teto da seção 5. Continua sem nada pago.
+
+## Preço de referência [REPORTADO por agregador, não oficial]
+costgoat.com, atualizado em 20/10/2026, para a Gemini API: Veo 3.1 Lite US$ 0,05/s; Fast US$ 0,10/s; completo US$ 0,40/s. O catálogo do OpenClaw confirma que a rota Google direta tem os três (`veo-3.1-lite-generate-preview`, `veo-3.1-fast-generate-preview`, `veo-3.1-generate-preview`). Não sei se o preço muda sem áudio; leio o custo real na primeira geração.
+
+## Regras de economia
+1. **Etapa zero, custo zero:** storyboard e animatic em Remotion com as artes já aprovadas, antes de qualquer clipe.
+2. **B e C saem principalmente do Remotion**, com o rig em camadas (topete separado, entrega de hoje), poses aprovadas, 3D de letras, anéis, balão e celular. Veo só entra se o rig não der vida suficiente. **Risco real:** o Rodrigo já reprovou "animação monótona e slide que desliza"; se o animatic do rig parecer duro, eu digo e peço Veo naquele trecho.
+3. **Escada de qualidade por clipe:** Lite (4 s) para testar enquadramento e movimento, Fast (8 s) para o candidato, completo (`veo-3.1-generate-preview`) só para o clipe que você aprovar como final, em uma tentativa.
+4. **Imagem para vídeo a partir de quadro-chave aprovado** (canônica ou edição dela), nunca texto para vídeo: identidade travada, menos refação. Quadro-chave ruim se descarta antes de animar (imagem custa cerca de US$ 0,07).
+5. **Reuso:** o mesmo clipe sobre cinza #8C8C8C serve às três versões com composições diferentes; a fala da Rara é gerada uma vez só.
+6. **Recorte por cinza chapado** (sem `rembg`); **render local**, sem nuvem; **áudio** pela chave Google, se o TTS dela atender (confirmo antes de pedir recarga do OpenRouter).
+7. **Um clipe de cada vez**, olhando primeiro e último quadro antes de gastar o próximo.
+
+## Custo revisado [ESTIMATIVA sobre o preço acima]
+| Item | Esperado | Pior caso |
+| --- | --- | --- |
+| Etapa zero (storyboard, animatic, transições, áudio de referência) | US$ 0 a 0,3 | US$ 0,5 |
+| Quadros-chave | US$ 0,3 | US$ 0,8 |
+| Testes em Lite (6 clipes de 4 s) | US$ 1,2 | US$ 2,0 |
+| Candidatos em Fast (4 clipes de 8 s) | US$ 3,2 | US$ 5,0 |
+| Finais em qualidade completa (2 clipes de 8 s, só se aprovados) | US$ 6,4 | US$ 9,6 |
+| **Total** | **US$ 5 a 11** | **US$ 18** |
+
+## Teto proposto em duas travas
+- **Trava 1: até US$ 1.** Cobre a etapa zero e os quadros-chave. Termina no storyboard e no animatic para o seu OK. Nenhum vídeo gerado.
+- **Trava 2: até US$ 10 no total**, liberada só depois do OK do storyboard. Se uma etapa pedir mais, eu paro e peço aval.
