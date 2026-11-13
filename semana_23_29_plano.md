@@ -66,7 +66,7 @@ Carrossel de 6 slides. Primeira edição do "Como funciona" (cronograma da campa
 - Slide 2. "antes de começar, eu te passo 3 expressões" / "sua missão é encaixar elas na conversa". Tela da missão no celular inclinado.
 - Slide 3. "aí a gente conversa por voz, numa situação de verdade" / "tipo um check-in no hotel ou uma reunião do seu trabalho". (Exemplo de situação ilustrativo, a tela mostra o conteúdo real da captura.)
 - Slide 4. "travou no meio?" / "eu repito mais devagar, explico em português ou traduzo a minha última fala". Rara de fone, calma.
-- Slide 5. "não deu pra usar as 3?" / "tudo bem, na próxima conversa tem outra chance". Punchline Mochiy "PODE ERRAR, A GENTE ERRA JUNTO".
+- Slide 5. "não deu pra usar as 3?" / "tudo bem, na próxima conversa tem outra chance". Punchline Mochiy "BORA DE NOVO?".
 - Slide 6 (final). "Salva pra lembrar como funciona" / "e se preferir, dá pra responder escrevendo também". Rara acenando.
 Legenda
 você já entrou numa conversa em outro idioma sem saber o que dizer? 🎯
@@ -89,7 +89,7 @@ eu falando o melhor inglês da minha vida, só que no mudo 🙈
 a call inteira me ouviu pensar e ninguém ouviu eu falar
 a onça até apontou pra orelha, e eu achando que era elogio
 
-pode errar, a gente erra junto
+bora de novo?
 
 manda pra quem já fez discurso no mudo
 
@@ -173,7 +173,7 @@ Stories (2)
 - 19h Modo carente leve, hebraico. "לאט לאט" (le'at le'at) "devagarinho" / "domingo é dia de treinar devagar, mas treinar"
 
 ## Opção extra para domingo (só se você quiser post no domingo)
-Rara reage, post único. "Semana de mico, Thanksgiving e Black Friday" com punchline "PODE ERRAR, A GENTE ERRA JUNTO". Legenda pedindo para marcar um amigo.
+Rara reage, post único. "Semana de mico, Thanksgiving e Black Friday" com punchline "BORA DE NOVO?". Legenda pedindo para marcar um amigo.
 
 ---
 

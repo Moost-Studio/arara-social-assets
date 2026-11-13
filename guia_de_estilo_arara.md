@@ -94,5 +94,5 @@ Rodrigo viu o vídeo de teste e aprovou ("gostei do vídeo, vamos guardar o esti
 - Reels (direção de 06/11): manter a arara antiga e buscar vídeos mais imersivos, com motion arrojado e criativo e experiência 3D. O pedido de 3D não autoriza substituir ou redesenhar a mascote. A direção não equivale à aprovação de uma peça final nem de publicação ou agendamento.
 - Referência de motion aprovada em 06/11: aberturas da Pixar, pelos princípios de atuação, peso, antecipação, pausas e som ligado à ação. A arara provoca os acontecimentos e as transições; preservar identidade própria, sem reproduzir a sequência da luminária.
 
-## Bordão (13/11/2026): "Errou? Treinou" substituído
-O Rodrigo reprovou "Errou? Treinou" por soar seco ("fala de erro, não convida"). Novo bordão principal: **"Pode errar, a gente erra junto"** (escolha "1" da lista de 12/11). O fecho curto sugerido, "Bora de novo?", aguarda confirmação. Aplicado em captions, telas do Diário e planos; registros históricos e logs ficam como estavam. Não usar "Errou? Treinou" em peça nova.
+## Bordão (13/11/2026): "Errou? Treinou" substituído por "Bora de novo?"
+O Rodrigo reprovou "Errou? Treinou" por soar seco. Escolheu como bordão principal **"Bora de novo?"** (opção 10 da lista de 12/11; uma primeira leitura minha, "Pode errar, a gente erra junto", foi descartada). Aplicado em captions, telas do Diário e planos; logs e registros históricos ficam como estavam. Não usar "Errou? Treinou" em peça nova.

@@ -8,7 +8,7 @@ eu falando o melhor inglês da minha vida, só que no mudo 🙈
 a call inteira me ouviu pensar e ninguém ouviu eu falar
 a onça até apontou pra orelha, e eu achando que era elogio
 
-pode errar, a gente erra junto
+bora de novo?
 
 salva esse post pra conferir o microfone antes de falar
 e manda pra quem já fez discurso de mudo
@@ -37,7 +37,7 @@ achei que ele tinha chamado o prato de esquisito
 mas exquisite quer dizer requintado, e esquisito em inglês é weird
 ele ficou vermelho, e a gente aprendeu junto
 
-pode errar, a gente erra junto
+bora de novo?
 
 salva esse post pra não confundir os dois
 e marca aquele amigo que acha que exquisite é esquisito
@@ -52,7 +52,7 @@ no espanhol, embarazada não é envergonhada, e eu descobri no bar 😳
 a plateia aplaudiu, me deram um chocalho de bebê, e eu só queria um buraco no chão
 o certo era avergonzada, claro
 
-pode errar, a gente erra junto
+bora de novo?
 
 salva esse post pra nunca mais trocar as duas
 e manda pra quem já passou vergonha em outra língua

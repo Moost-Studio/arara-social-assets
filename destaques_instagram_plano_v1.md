@@ -21,7 +21,7 @@ Seis no lançamento da nova identidade, nesta ordem no perfil:
 
 | # | Nome | Para que serve | Entra aqui |
 | --- | --- | --- | --- |
-| 1 | **Sobre** | Quem é a Rara e o Raro, em 5 a 6 stories | "Conheça a Rara" (seg 16/11), "Prazer, Rara" da ficha (qui 19/11), "Conheça o Raro" (a criar, antes de 28/11), "Pode errar, a gente erra junto" e "Entre no bando" (a criar) |
+| 1 | **Sobre** | Quem é a Rara e o Raro, em 5 a 6 stories | "Conheça a Rara" (seg 16/11), "Prazer, Rara" da ficha (qui 19/11), "Conheça o Raro" (a criar, antes de 28/11), "Bora de novo?" e "Entre no bando" (a criar) |
 | 2 | **Como funciona** | O passo a passo, em 4 stories | Derivados do carrossel "Como funciona 1" (ter 24/11): missão, conversa por voz, ajuda no meio, tentar de novo. Só recursos `live` |
 | 3 | **Frases** | As melhores expressões, em ordem de chegada | Os Bom dia perenes (BD01 a BD07), a melhor frase de cada Pio da Semana e o "oi" em 5 idiomas (sáb 21/11). Meta de 30 stories |
 | 4 | **Diário** | O dia a dia da Rara | Episódios do "DIÁRIO DA RARA" a partir de 23/11, só os que fazem sentido sem a data |
@@ -37,7 +37,7 @@ Os Bom dia de 16 a 22/11 já estão agendados e entram em **Frases**. O que falt
 
 | Quando | Faixa | Story | Destaque | Origem da arte |
 | --- | --- | --- | --- | --- |
-| Seg 16/11 | 13h | "Conheça a Rara", capa e a frase "pode errar, a gente erra junto" | Sobre | Recorte 9:16 do carrossel aprovado (sem arte nova) |
+| Seg 16/11 | 13h | "Conheça a Rara", capa e a frase "bora de novo?" | Sobre | Recorte 9:16 do carrossel aprovado (sem arte nova) |
 | Ter 17/11 | 13h | A melhor frase do Pio do restaurante | Frases | Recorte do slide do Pio (sem arte nova) |
 | Qua 18/11 | 13h | Frase do mico da porta ("push é empurrar") | Frases | Recorte do carrossel v7 (sem arte nova) |
 | Qui 19/11 | 13h | "Prazer, Rara", a ficha | Sobre | Recorte da ficha aprovada (sem arte nova) |
@@ -45,7 +45,7 @@ Os Bom dia de 16 a 22/11 já estão agendados e entram em **Frases**. O que falt
 | Ter 24/11 | 13h | "A missão de cada conversa" | Como funciona | Recorte do carrossel "Como funciona 1" |
 | A definir (semana 23 a 29) | 13h | "Conheça o Raro" | Sobre | Dupla Rara e Raro do acervo, a compor |
 
-Para completar o mínimo de 3 em **Sobre** e **Como funciona** antes de criar os destaques, faltam por volta de 3 stories de "Como funciona" (conversa por voz, ajuda no meio, tentar de novo) e 2 de "Sobre" ("Pode errar, a gente erra junto", "Entre no bando"). Eu os escrevo e componho por código, e eles entram nas faixas das 13h das semanas seguintes.
+Para completar o mínimo de 3 em **Sobre** e **Como funciona** antes de criar os destaques, faltam por volta de 3 stories de "Como funciona" (conversa por voz, ajuda no meio, tentar de novo) e 2 de "Sobre" ("Bora de novo?", "Entre no bando"). Eu os escrevo e componho por código, e eles entram nas faixas das 13h das semanas seguintes.
 
 **Cada story de destaque precisa de uma versão perene**, sem "hoje" nem "já no feed". Quando o story das 13h tiver essas palavras, faço um segundo story perene só para o destaque, e ele sai em outra faixa (ou fica fora). Fica registrado qual story entrou em qual destaque, com o id.
 

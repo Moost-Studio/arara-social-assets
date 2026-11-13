@@ -220,7 +220,7 @@ No app, por enquanto só cargos neutros de gênero, até existir o campo "Como p
 | Bordão | Uso |
 | --- | --- |
 | Solta o bico! | Antes de falar, quando a pessoa trava. Também é a assinatura sonora |
-| Pode errar, a gente erra junto. | Depois de qualquer erro |
+| Bora de novo?. | Depois de qualquer erro |
 | Papagaio repete. Arara conversa. | Manifesto e campanhas |
 | Bora ensaiar? | Convite para a sessão |
 | Que coisa Rara! | Acerto difícil |
@@ -622,13 +622,13 @@ Visual do Modo carente: fundo em degradê roxo para rosa, a Rara olhando para a 
 | Formato | Estrutura | Inspiração |
 | --- | --- | --- |
 | A. Rara falando | Gancho (0–2 s), fala com legenda (2–12 s), punchline em caixa alta cinética (12–14 s), cartão final | Tipografia cinética com a personagem atravessando as letras |
-| B. Cena encenada | 3 a 5 planos de 1 a 2 s num cenário real: a Rara se enrola, vira o jogo, e a moral é "Pode errar, a gente erra junto." | Plano-herói com elementos voando |
+| B. Cena encenada | 3 a 5 planos de 1 a 2 s num cenário real: a Rara se enrola, vira o jogo, e a moral é "Bora de novo?." | Plano-herói com elementos voando |
 | C. Tela do app + reação | Celular inclinado em 3D, cards da interface saltando para fora da tela, a Rara puxando a correção para fora | Celular em 3D e interface flutuando |
 | D. Meme e trend | Áudio em alta, com a Rara no lugar do personagem | Formatos virais do momento |
 | E. 16 idiomas | A Rara na frente de uma palavra gigante repetida ("ENGLISH ENGLISH", "ESPAÑOL", "日本語"...), com fundo e palavra trocando a cada batida | Produto girando diante de palavras repetidas |
 | F. Antes e depois | Frase travada em cinza ("renderizando...") e depois a frase fluente colorida, com a Rara comemorando | Revelação do render cinza para o colorido |
 | G. Abertura de marca | A Rara montada traço a traço até virar o ícone do app | Mascote montada e simplificada |
-| H. Manda o áudio | O áudio do seguidor tocando com a forma de onda na tela, a correção com trocadilho e o "Pode errar, a gente erra junto." | Formato próprio |
+| H. Manda o áudio | O áudio do seguidor tocando com a forma de onda na tela, a correção com trocadilho e o "Bora de novo?." | Formato próprio |
 
 ### 6.6 Calendário semanal
 
@@ -708,7 +708,7 @@ A Rara vive uma história contínua no perfil, não posts soltos.
 **Legendas:**
 - "Quem nunca empurrou a porta escrita PULL que atire a primeira pena."
 - "Salva esse carrossel e me agradece na reunião de segunda."
-- "Comenta a tradução. Pode errar, a gente erra junto. Eu corrijo com carinho e um trocadilho péssimo."
+- "Comenta a tradução. Bora de novo?. Eu corrijo com carinho e um trocadilho péssimo."
 
 **Pautas iniciais** (além das peças dos lotes 7 e 13):
 - Rara reage: formato "ninguém: / absolutamente ninguém: / eu na call:" com a Rara dizendo "sorry?" pela 3ª vez.
@@ -911,7 +911,7 @@ Verde e coral só aparecem como fundo ou destaque, nunca como cor de texto.
 | Meu consagrado, minha consagrada | Volta depois de sumir |
 | Comandante | Começo de trilha ou desafio |
 
-- Bordões: "Solta o bico!", "Pode errar, a gente erra junto.", "Bora ensaiar?", "Que coisa Rara!", "Guardei seu lugar.".
+- Bordões: "Solta o bico!", "Bora de novo?.", "Bora ensaiar?", "Que coisa Rara!", "Guardei seu lugar.".
 - Diante de erro, ela comemora a tentativa, faz um trocadilho com o erro e, às vezes, conta um mico dela.
 - O elogio é sempre concreto, sobre algo que a pessoa fez de verdade.
 - Nunca usa: "querido aluno", "parabéns pelo seu progresso", "você falhou", "não desista".
@@ -1276,7 +1276,7 @@ Na edição, a tela real do app (gravação) entra dentro do celular, e o card m
 | 1 | "Rara at a fancy restaurant table, raising a wing to call the waiter, confident." | "She raises her wing with exaggerated confidence." | "Give me the account, please!" |
 | 2 | "A confused waiter seen from behind, holding a bank statement, Rara in the background." | "Waiter turns slowly, comedic pause." | — |
 | 3 | "Rara covering her face with both wings, blushing, crest over one eye." | "She hides her face and peeks through the feathers." | "Pedi o extrato do banco..." |
-| 4 | "Rara holding the check proudly, big smile." | "Bouncy proud pose." | "Can I have the check, please? Pode errar, a gente erra junto." |
+| 4 | "Rara holding the check proudly, big smile." | "Bouncy proud pose." | "Can I have the check, please? Bora de novo?." |
 
 **R5. Antes e depois (10 s)**
 
@@ -1316,7 +1316,7 @@ Cenas de dupla, com as canônicas C01 e C03 como referência:
 
 Gere em 1:1 sobre #8C8C8C, remova o fundo e exporte em 512 × 512. Use as expressões e gestos dos lotes 2 e 4, mais estes itens:
 
-F01 "Solta o bico" (bico aberto com ondas de som) · F02 Pode errar, a gente erra junto. (joinha rindo) · F03 drama de novela · F04 chorando com o celular · F05 dançando · F06 dormindo no teclado · F07 café na mão, olhos de sono · F08 comemorando com confete · F09 revirando os olhos · F10 "presidente" (continência) · F11 derretendo de vergonha · F12 coração com as asas
+F01 "Solta o bico" (bico aberto com ondas de som) · F02 Bora de novo?. (joinha rindo) · F03 drama de novela · F04 chorando com o celular · F05 dançando · F06 dormindo no teclado · F07 café na mão, olhos de sono · F08 comemorando com confete · F09 revirando os olhos · F10 "presidente" (continência) · F11 derretendo de vergonha · F12 coração com as asas
 
 ### 7.13 Lote 11: datas e lojas
 
@@ -1365,7 +1365,7 @@ Os blocos [VIDEO], [VOZ RARA] e [VOZ RARO] estão na seção 10 do prompt fundam
 | QZ01 | Pergunta | "Rara pointing up toward empty space at the top of the frame where a quiz sticker will go, eyebrow-like crest feather raised, teasing grin, yellow background, character in the lower half." | Pergunta + sticker de quiz |
 | QZ02 | Suspense | "Rara biting the tip of a feather nervously, eyes darting to the side, drumroll pose, yellow background." | "E aí? Qual você marcou?" |
 | QZ03 | Acertou | "Rara jumping with joy, crest fanned out with sparkles, confetti feathers, green background." | "ACERTOU!" (Mochiy) + explicação curta |
-| QZ04 | Errou | "Rara dramatically fainting backwards onto a cushion, wing on forehead, crest drooping, coral background, funny not sad." | "Pode errar, a gente erra junto." + a resposta certa |
+| QZ04 | Errou | "Rara dramatically fainting backwards onto a cushion, wing on forehead, crest drooping, coral background, funny not sad." | "Bora de novo?." + a resposta certa |
 | QZ05 | Placar | "Rara holding a small blank scoreboard with both wings, proud, purple background." | "X% acertaram. Que coisa Rara!" |
 
 **12C. Bastidores do app**
@@ -1441,7 +1441,7 @@ Cada quadro é uma imagem separada e vira um slide do carrossel (4:5), com capa 
 | T1. A porta | 1 | "Rara confidently walking toward a glass door of a coffee shop, chest out." | — |
 | | 2 | "Rara pulling the door handle hard, the door does not move, confused." | "PUSH" na porta |
 | | 3 | "Rara pulling with both wings and one foot on the wall, crest messy, people watching inside." | — |
-| | 4 | "Rara finally pushes the door and stumbles inside, embarrassed laugh, waving at the camera." | "PUSH é empurrar. Pode errar, a gente erra junto." |
+| | 4 | "Rara finally pushes the door and stumbles inside, embarrassed laugh, waving at the camera." | "PUSH é empurrar. Bora de novo?." |
 | T2. Microfone mudo | 1 | "Rara in a video call at a desk with a laptop, wearing her headset, talking passionately with big gestures." | "Eu falando o melhor inglês da minha vida" |
 | | 2 | "Close-up of the laptop screen showing [ONÇA] in a small video window, confused face, pointing at her own ear." | — |
 | | 3 | "Rara noticing a tiny muted microphone icon shape on the laptop, frozen in horror, crest shooting up." | — |
@@ -1453,7 +1453,7 @@ Cada quadro é uma imagem separada e vira um slide do carrossel (4:5), com capa 
 | T4. O tucano exquisito | 1 | "[TUCANO] at a fancy restaurant tasting food, eyes closed with delight." | — |
 | | 2 | "The toucan telling the waiter something proudly, chest out." | "This food is very EXQUISITE!" |
 | | 3 | "Rara at the next table spitting out her drink in shock, crest shooting up." | — |
-| | 4 | "Rara explaining to the toucan with a feather tip raised, the toucan blushing." | "Exquisite é requintado. Esquisito é weird. Pode errar, a gente erra junto." |
+| | 4 | "Rara explaining to the toucan with a feather tip raised, the toucan blushing." | "Exquisite é requintado. Esquisito é weird. Bora de novo?." |
 | T5. Embarazada | 1 | "Rara at a tapas bar, blushing, covering her face with a wing." | — |
 | | 2 | "Rara telling the bartender something with an embarrassed smile." | "Estoy embarazada..." |
 | | 3 | "The whole bar cheering and clapping for Rara, someone handing her a tiny baby rattle, she is confused." | — |
@@ -1607,7 +1607,7 @@ Prompt base: "Same character as the reference image, integrated into a real phot
 | 1 | "Rara accidentally bumping into a stack of books that falls, embarrassed, cream background." | "Books fall, she flinches, then turns to the camera with a guilty smile." | "Derrubei tudo. Hora de pedir desculpas!" | — |
 | 2 | Rara E04 (vergonha) com fundo laranja | "She bows slightly with a sheepish smile." | "Sorry! Perdón! Pardon! Scusa!" | Cada palavra entra no ritmo, em Mochiy |
 | 3 | Rara G09 (asas juntas) | "She presses her wings together pleading, eyes big." | "E se for grave: I'm so sorry." | "I'M SO SORRY" |
-| 4 | Cartão final | — | "Pode errar, a gente erra junto." | falearara.com |
+| 4 | Cartão final | — | "Bora de novo?." | falearara.com |
 
 **R8. Meme e trend: "POV: você na call em inglês" (formato D, 8 s, molde para áudios em alta)**
 
@@ -1638,7 +1638,7 @@ Troque o texto e o áudio conforme a trend do momento. A estrutura de 3 planos (
 | 1 | MA02 | "She listens with eyes closed, nodding slowly to the rhythm." | Áudio real do seguidor (com autorização) | Forma de onda + "@seguidor mandou:" |
 | 2 | RP05 | "She squints and taps her beak, thinking." | "Hmm... quase, presidente!" | Frase do seguidor |
 | 3 | MA03 | "She explains with a wink, pointing up." | Correção com trocadilho | Frase corrigida |
-| 4 | QZ03 | "She jumps with joy, sparkles." | "Pode errar, a gente erra junto. Manda o próximo!" | "MANDA O SEU" |
+| 4 | QZ03 | "She jumps with joy, sparkles." | "Bora de novo?. Manda o próximo!" | "MANDA O SEU" |
 
 **R11. Palavra gigante: "SOLTA O BICO!" (inspirado em tipografia cinética, 8 s)**
 

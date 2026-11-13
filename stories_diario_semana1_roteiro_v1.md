@@ -13,7 +13,7 @@ Regras aplicadas: selo no topo ("DIÁRIO DA RARA" ou "HISTÓRIA DO RARO"), ficç
 Liga com a tirinha T2 do feed do dia.
 - **Tela 1.** Selo DIÁRIO DA RARA. Título "A call que só eu ouvi". Cena: Rara de fone, animada, falando com a tela. Fala: "10h, call importante, eu estava inspirada".
 - **Tela 2.** Cena: Rara parando, olhando o microfone com o ícone de mudo. Fala: "falei por dez minutos" e "o microfone estava no mudo".
-- **Tela 3.** Cena: Rara acolhendo o erro com um sorriso torto. Fala: "pode errar, a gente erra junto" e "agora eu confiro antes de falar".
+- **Tela 3.** Cena: Rara acolhendo o erro com um sorriso torto. Fala: "bora de novo?" e "agora eu confiro antes de falar".
 
 ## Sex 27/11, 19h. Diário da Rara: "A fila da Black Friday" (3 telas)
 Liga com o post do dia (Black Friday em inglês).
@@ -30,7 +30,7 @@ Liga com o post do dia (Black Friday em inglês).
 ## Dom 29/11, 19h. Diário da Rara: "O resumo da semana" (3 telas, Bastidor)
 - **Tela 1.** Selo DIÁRIO DA RARA. Título "O resumo da semana". Cena: Rara enrolada na manta de tricô no sofá, xícara no pé (pousada). Fala: "domingo é dia de contar os micos".
 - **Tela 2.** Cena: Rara contando nas penas. Fala: "errei na call, errei na fila e errei a hora de chegar".
-- **Tela 3.** Cena: Rara de olhos fechados, sorrindo. Fala: "tudo bem, a gente erra junto" e "segunda tem mais".
+- **Tela 3.** Cena: Rara de olhos fechados, sorrindo. Fala: "tudo bem, bora de novo?" e "segunda tem mais".
 
 ## Produção e conferência
 - **Montagem:** HTML com fontes aprovadas (Nunito e Mochiy Pop One), título com palavra-chave em destaque, balão saindo do bico, cenas do acervo. Texto mínimo de 40 px, terço superior livre.

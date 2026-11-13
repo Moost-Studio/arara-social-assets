@@ -6,7 +6,7 @@ Prazer, eu sou a Rara 👋
 sou sua tutora de IA e vou treinar conversa com você sem pressão
 eu já fui uma papagaia daquelas, então sei bem como é travar
 
-pode errar, a gente erra junto
+bora de novo?
 
 manda esse post pra um colega que trava na hora de falar inglês
 
