@@ -10,7 +10,7 @@ EPS = {
    telas=[ ['são 7h e o escritório inteiro é meu'],
            ['ensaiei o japonês do trabalho em voz alta', '<small>お疲れ様です (otsukaresama desu) pra cadeira, e ela nem respondeu</small>'],
            ['só tem um detalhe', '<small>e até agora ninguém chegou</small>'] ]),
- 'qua': dict(img=['qua_call_v2.jpg', 'qua_2.jpg', 'qua_3.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
+ 'qua': dict(img=['qua_call_v5.jpg', 'qua_2_v4.jpg', 'qua_3_v5.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
    telas=[ ['10h, call importante, eu estava inspirada'],
            ['falei por dez minutos', '<small>o microfone estava no mudo</small>'],
            ['bora de novo?', '<small>agora eu confiro antes de falar</small>'] ]),
@@ -58,7 +58,10 @@ b.style.top=(bottomMax-36-b.offsetHeight)+'px';
 </script></body></html>"""
 def main():
     medidas = {}
+    import sys
+    only = sys.argv[1:]
     for ep, d in EPS.items():
+        if only and ep not in only: continue
         for i, linhas in enumerate(d['telas']):
             n = SC / f'diario_{ep}_{i+1}.html'
             n.write_text(tela(ep, d, i, linhas), encoding='utf-8')
