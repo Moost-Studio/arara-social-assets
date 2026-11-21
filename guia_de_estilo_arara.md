@@ -96,3 +96,40 @@ Rodrigo viu o vídeo de teste e aprovou ("gostei do vídeo, vamos guardar o esti
 
 ## Bordão (13/11/2026): "Errou? Treinou" substituído por "Bora de novo?"
 O Rodrigo reprovou "Errou? Treinou" por soar seco. Escolheu como bordão principal **"Bora de novo?"** (opção 10 da lista de 12/11; uma primeira leitura minha, "Pode errar, a gente erra junto", foi descartada). Aplicado em captions, telas do Diário e planos; logs e registros históricos ficam como estavam. Não usar "Errou? Treinou" em peça nova.
+
+## Rabo da Rara nunca reto (regra do Rodrigo, 17/11/2026)
+Nenhum post ou story pode mostrar o rabo da Rara caindo reto e vertical, como na canônica C01. O rabo sempre aparece curvo ou inclinado. Correção de 17/11 (11h50 UTC): o rabo não pode nascer **embaixo dos pés**, senão os pés parecem apoiados nele e o rabo parece segurar o corpo. O rabo nasce por TRÁS das pernas, passa atrás dos pés e sai em diagonal para o lado; os pés ficam livres na frente. Use `bend_tail_behind.py` (recortes, saída `<pose>_ct.png`) e `bend_tail_scene_behind.py` (cena de fundo liso). As versões `bend_tail_gen.py` e `bend_tail_scene.py` (rabo curvo logo abaixo dos pés) ficam só como histórico: não use.
+Como aplicar:
+- **Recortes (poses G, ARDENCIA etc.):** `semana1/_scripts/bend_tail_gen.py <recorte.png> <saida.png> <d|e>` curva o rabo (padrão dx 0,95, dy 0,8, cy 0,5). Alterne o lado entre peças e confira o espaço livre. Os recortes curvados ficam como `<pose>_cc.png`.
+- **Imagem de cena com fundo liso ou em degradê:** `semana1/_scripts/bend_tail_scene.py` (precisa da linha das garras e da faixa x do rabo). Em cena escura com objetos (cadeira, piso), o resultado fica rasgado e com borrão: não use, peça nova geração com "tail curved to the side, never straight down".
+- **Geração nova:** inclua no prompt que o rabo é curvo para o lado, nunca reto para baixo, e confira o resultado.
+- **Conferência:** olhe o rabo de cada peça ampliado antes de entregar. Rede de pendurar ou cadeira onde o rabo pende por gravidade ainda conta: peça curva.
+
+## Pés sempre no chão (regra do Rodrigo, 17/11/2026, reforço)
+Quando a ideia é a Rara em pé, os **pés tocam um chão visível**, com **sombra de contato** sob eles, e o rabo fica **atrás**, deitado ou inclinado, nunca embaixo dos pés. Se ela estiver no ar, está **voando com as asas abertas**. Ela **nunca** flutua parada, pulando sem asas ou pairando sobre fundo liso.
+- **Cenário sem chão visível** (parede lisa, degradê): crie o chão alinhando os pés com o pé de um objeto do cenário (mesa, cadeira) ou com uma faixa de sombra do fundo, e desenhe a sombra de contato. Os balões e textos descem junto.
+- **Ferramentas:** `bend_tail_behind.py` (recorte, rabo deitado: `0.95 0.3 0.35 0.2`), `bend_tail_scene_behind.py` (cena) e `ground_scene.py` (desce a Rara e cria a sombra). O HTML `pio6.html` mostra a montagem com a sombra `.gsh`.
+- **Pose pulando ou correndo sem asas abertas** (ex.: BD04 "let's warm up"): reprovada. Gerar de novo com os pés no chão, ou usar uma pose de pé.
+- **Conferência:** antes de entregar, olhe se cada peça tem chão e sombra sob os pés.
+
+### Checklist de física (17/11/2026, depois de duas rodadas reprovadas)
+O Rodrigo reprovou "pés no chão" duas vezes: eu só conferia a posição e não a física. Antes de entregar qualquer peça com a Rara em pé, confira, ampliado e em escala real:
+1. **Sombra projetada colada nos dedos**, escura e curta, deslocada para o lado oposto à luz. Sombra larga, fraca ou abaixo da linha dos dedos faz os pés flutuarem.
+2. **Nenhum filtro `drop-shadow` deslocado para baixo** na imagem da Rara (o `.rara` do `pio*.html` traz `drop-shadow(0 20px 26px)`, que é sombra de figura flutuando). Em peça de pé use `filter:none` e a sombra embutida no PNG.
+3. **Os dedos nunca ficam sobre o rabo.** O rabo nasce atrás da barriga, passa acima dos dedos e só desce ao chão depois do pé; a ponta repousa na linha de apoio, com sombra.
+4. **Uma linha de apoio visível** que combine com o cenário (pé da mesa, faixa de piso), sem objeto no mesmo plano flutuando acima dela.
+5. **Rabo atrás é mais alto na tela que os pés** (mais longe da câmera), nunca abaixo deles.
+6. No ar: asas abertas e sem sombra projetada colada.
+Ferramentas: `bend_tail_behind.py <pose> <saida> <d|e> 0.82 0.13 0.6 0.0 0.8 --sombra` com `EXT_RAIZ=65` (recortes, saída `_cx.png`), `bend_tail_scene_behind.py` com `EXT_RAIZ=65` e `ground_scene.py` (cena). Montagem do carrossel em `pio7.html`.
+
+### Escala da Rara e do Raro em relação aos objetos (regra do Rodrigo, 21/11/2026)
+A Rara e o Raro são araras-azuis: corpo de uns 40 a 50 cm (sem o rabo). Os objetos do cenário mantêm o tamanho real em relação a esse porte; ela não pode parecer do tamanho de um carro. Exemplo que motivou a regra: no slide do Hello (carrossel de saudações de 21/11) a Rara ficou com a altura do táxi e parecia ter o mesmo tamanho dele. A peça não foi refeita; vale para as próximas.
+- **Referência de escala (no mesmo plano de profundidade da Rara):** carro ou táxi com pelo menos 3 vezes a altura dela (ou bem atrás, em perspectiva, e menor na imagem só se estiver longe); porta, poste, relógio de estação e árvore com pelo menos 3 a 4 vezes a altura dela; mesa e balcão na altura do peito ou da cabeça dela; cadeira com o assento no nível da barriga; banco de estação ou de praça com o assento na altura do peito.
+- **Objetos pequenos continuam pequenos:** xícara, copo, croissant, celular, livro, cone de sorvete, pretzel e crachá ficam do tamanho real em relação a ela, e ela os segura ou usa com a asa sem parecerem miniaturas nem gigantes.
+- **Como pedir na geração:** inclua 'the macaw is about 50 cm tall; everything else keeps its real-world size relative to her: cars are at least three times her height, tables reach her chest or head, doors and street lamps tower over her, small props are small' e, se houver veículo, ponha-o mais ao fundo.
+- **Conferência:** em cada peça com cenário, compare a cabeça e o corpo da Rara com carro, mesa, cadeira, porta e poste do mesmo plano. Se ela passar de uns 1/3 da altura de um carro no mesmo plano, ou parecer do tamanho de uma porta, reprove ou afaste o objeto grande.
+- **Sem ampliar a Rara para caber o balão:** libere o topo da imagem em vez de aumentar a Rara; a escala vem antes da composição.
+
+### Rara em cenário: gerar dentro da cena (17/11/2026)
+Se o fundo tem objetos e chão (restaurante, cafeteria, rua), **não use recorte da Rara colado**: a luz, a escala e o chão não conversam e ela parece jogada ali. Gere a Rara dentro da cena (canônica + imagem do cenário como referência de ambiente), peça 'both feet flat on the floor with a dark contact shadow, tail resting on the floor behind and to the side', deixe 40% do topo livre para o balão e confira pés, sombra, rabo e identidade. No ar, só voando com as asas bem abertas e sombra mais abaixo. Recorte com sombra de contato fica só para fundo liso ou degradê. Se o gerador pintar os pés cinza, recolorir para amarelo.
+
