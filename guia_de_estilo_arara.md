@@ -97,6 +97,20 @@ Rodrigo viu o vídeo de teste e aprovou ("gostei do vídeo, vamos guardar o esti
 ## Bordão (13/11/2026): "Errou? Treinou" substituído por "Bora de novo?"
 O Rodrigo reprovou "Errou? Treinou" por soar seco. Escolheu como bordão principal **"Bora de novo?"** (opção 10 da lista de 12/11; uma primeira leitura minha, "Pode errar, a gente erra junto", foi descartada). Aplicado em captions, telas do Diário e planos; logs e registros históricos ficam como estavam. Não usar "Errou? Treinou" em peça nova.
 
+## SISTEMA DE LAYOUT (regra do Rodrigo, 23/11/2026; código em `semana_23_29_feed/html/ds.py`)
+Vale para posts, stories e vídeos. Todo texto da arte passa por este sistema; não crie layout solto.
+- **Ordem de leitura obrigatória: da esquerda para a direita e de cima para baixo.** Série (canto superior esquerdo) → título → subtítulo → conteúdo (fala, cartão, opções) → CTA. O fluxo é por coluna, com espaço fixo entre blocos, para o texto não se aglomerar nem se sobrepor. Medir a zona de texto contra o topo da cabeça da Rara (sem tocar o rosto).
+- **Hierarquia tipográfica (só Nunito; Mochiy apenas no gancho final, ex. "Bora de novo?").** Feed 1080 x 1350: série 28 px (caps, discreta), título 66 px (maior), subtítulo 38 px, status/descritivo ("Modo carente", "Bom dia da Rara") 24 px, discreto, fala 58 px (principal), apoio da fala 36 px, cartão 46/36 px, CTA 42 px. Story 1080 x 1920: série 32, título 74, subtítulo 42, fala 62. **Quando há fala, ela é o foco e título, subtítulo e descritivo viram apoio** (título menor, a "helper").
+- **Balão só para conversa.** Orgânico, inclinado, rabinho curvo apontando para quem fala, ponta a ~50 px do topo da cabeça. Informação, tradução e CTA vão em cartão, texto solto ou chip, nunca em balão.
+- **Seta de navegação única:** botão redondo amarelo com contorno escuro (68 px), canto inferior direito, só a seta, sem texto, nunca mexer no estilo. Aparece em todo slide exceto no último. O foco do card é sempre a informação, não elementos terceiros.
+- **Badge de idioma/categoria padronizado:** altura 48 px, padding 0 24 px, raio 24 px, Nunito 900 24 px caps, fundo #081226 e texto branco, sempre acima do cartão, 14 px de distância. Idêntico em todos os posts.
+- **Destaque (marca-texto) nos títulos:** linha com altura 1.2 e marca só no terço inferior, sem invadir a linha de cima. Em fundo escuro, o destaque é a palavra em amarelo.
+- **CTA final** ("Manda pro amigo que...", "Salva..."): fora do balão, em cor que contrasta com o fundo, ícone redondo amarelo (lucide) e a palavra-chave em cor de destaque.
+- **Série de perguntas:** chama-se **Quiz da Rara** (não mais "Traduz aí, presidente").
+- **Jargões íntimos** ("Faaala, meu jogador!", "Aopaaa, delegado", "Fala, mestre!") **só quando o texto pede algo ao seguidor** (cobrança carinhosa, modo carente), com cara de desconfiada/"cobrando". Não usar em bom dia, informação ou piada de situação. Ex. "Faaala, meu jogador caro, já fez tua lição de hoje? 👀"; "Faaala, delegado, vai ficar postergando teus estudos até quando? 👀".
+- **Emoji:** permitido na arte e na legenda quando fizer sentido com o contexto e sem excesso (no máximo um ou dois por peça).
+- **Mico (legenda sobre foto):** texto branco sobre degradê escuro embaixo, sem caixa, na ordem da história (antes → durante → depois).
+
 ## VOZ E COESÃO DO TEXTO (regra do Rodrigo, 23/11/2026, PRECEDE a seção 3.1b do sistema de marca)
 Os textos de 16 a 22/11 e do plano de 23 a 29/11 saíram telegráficos ("homem das cavernas"): frases soltas, sem conectivos, ironia sem preparação. Regras fixas daqui em diante, para posts, stories, legendas e reels:
 - **Linguagem extremamente acessível, mas SEMPRE coerente.** Cada fala nasce da anterior e leva à seguinte; nada solto, jogado ou desconexo. Toda tela tem conexão, sentido e propósito. Se uma frase só faz sentido para quem já sabe a história, reescreva.
