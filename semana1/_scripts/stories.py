@@ -6,7 +6,7 @@ S=[
  dict(id='BD01',img=G+'BD01_segunda.png',theme='light',pill='Bom dia da Rara',title='Bom dia, presidente',lines=['a expressão de hoje é'],key='I’m running on coffee',after=['tô funcionando à base de café'],head=768),
  dict(id='BD02',img=G+'BD02_terca.png',theme='light',pill='Bom dia da Rara',title='Terça é dia de soltar o bico',hs=64,lines=[],key=None,after=[],head=9999,bal=B('a expressão de hoje é','rise and shine','levanta e brilha',24,430,640,(520,742))),
  dict(id='BD03',img=G+'BD03_quarta.png',theme='light',pill='Bom dia da Rara',title='Meio da semana, topete no lugar',hs=58,lines=['a expressão de hoje é'],key='looking sharp',after=['visual em dia'],head=696),
- dict(id='BD04',img=G+'BD04_quinta.png',theme='dark',pill='Bom dia da Rara',title='Quinta é dia de aquecer',hs=62,lines=[],key=None,after=[],head=9999,bal=B('repete comigo em voz alta','let’s warm up','a gente aquece junto',24,436,620,(505,690))),
+ dict(id='BD04',img=G+'BD04_quinta.png',theme='dark',pill='Bom dia da Rara',title='Quinta é dia de aquecer',hs=62,lines=[],key=None,after=[],head=9999,bal=B('repete comigo em voz alta','let’s warm up','a gente aquece junto',24,436,620,(505,838))),
  dict(id='BD05',img=G+'BD05_sexta.png',theme='light',pill='Bom dia da Rara',title='Sextou, mas antes uma frase',lines=['a expressão de hoje é'],key='that Friday feeling',after=['aquela sensação boa de fim de semana'],head=800),
  dict(id='BD06',img=G+'BD06_sabado.png',theme='light',pill='Bom dia da Rara',title='Sábado com calma',hs=70,lines=[],key=None,after=[],head=9999,bal=B('a expressão de hoje é','take it easy','hoje a gente só desacelera',24,450,660,(440,748))),
  dict(id='BD07',img=G+'BD07_domingo.png',theme='light',pill='Bom dia da Rara',title='Domingo leve, amanhã a gente volta',lines=['a expressão de hoje é'],key='lazy Sunday',after=['domingo preguiçoso, do jeito que tem que ser'],head=800),
@@ -19,7 +19,7 @@ S=[
  dict(id='M02',img=G+'M02_espiando.png',theme='light',pill='Modo carente',title=None,punch='Já treinou hoje?',lines=['só dando uma espiadinha'],key=None,after=[],head=930),
  dict(id='M03',img=G+'M03_cha.png',theme='dark',pill='Modo carente',title='Fiz até um chazinho pra gente treinar',lines=['esfriou'],key=None,after=[],head=800),
  dict(id='M04',img=G+'M04_drama.png',theme='dark',pill='Modo carente',title=None,punch='Esperando',lines=['eu tô aqui, sozinha, com o fone'],key=None,after=[],head=630),
- dict(id='M05',img=G+'M05_cartaz.png',theme='light',pill='Modo carente',title=None,punch='Responde',lines=['só um oi, pode ser em inglês','pode ser errado'],key=None,after=[],sign='oi?',head=670),
+ dict(id='M05',img=G+'M05_cartaz.png',theme='light',pill='Modo carente',title=None,punch='Responde',lines=['só um oi, pode ser em inglês','pode ser errado'],key=None,after=[],sign='oi?',signdy=8,head=670),
  dict(id='M06',img=G+'M06_abdominal.png',theme='light',pill='Modo carente',title='Presidente, 3 minutinhos',lines=['eu conto como abdominal'],key=None,after=[],head=810),
 ]
 def block(s):
@@ -40,7 +40,7 @@ def story(s):
     inner+=block(s)
     if s.get('bal'):
         b=s['bal']; inner+=f'<div class="bal" data-tip="{b["tip"][0]},{b["tip"][1]}" data-side="{b["side"]}" style="left:{b["x"]}px;top:{b["y"]}px;width:{b["w"]}px"><p class="i">{html.escape(b["intro"])}</p><div class="kk"><span class="k">{html.escape(b["key"])}</span></div><p class="a">{html.escape(b["after"])}</p></div>'
-    if s.get('sign'): inner+=f'<div class="sign">{html.escape(s["sign"])}</div>'
+    if s.get('sign'): inner+=f'<div class="sign" style="top:{1160+s.get("signdy",0)}px">{html.escape(s["sign"])}</div>'
     return f'<div class="st {s["theme"]}" id="{s["id"]}" data-head="{s.get("head",9999)}" style="{bg}">{inner}</div>'
 CSS='''
 @font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}

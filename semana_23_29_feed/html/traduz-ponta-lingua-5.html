@@ -1,0 +1,45 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Nunito';src:url('file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/html/../../semana1/_fontes/Nunito.ttf');font-weight:200 1000}
+@font-face{font-family:'Mochiy';src:url('file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/html/../../semana1/_fontes/MochiyPopOne-Regular.ttf')}
+@font-face{font-family:'JP';src:url('file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/html/../../semana1/_fontes/NotoSansJP.ttf');font-weight:100 900}
+@font-face{font-family:'NSC';src:url('file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/html/../../semana1/_fontes/NotoSansSC.ttf');font-weight:100 900}
+@font-face{font-family:'NAR';src:url('file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/html/../../semana1/_fontes/NotoSansArabic.ttf');font-weight:100 900}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#000}
+#post{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:'Nunito','JP';color:#081226;--ink:#081226;--acc:#FFC83D;--hl:#1B4FE0;--under:#E6C65A;--ctaacc:#1B4FE0}
+.bg{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
+.zone{position:absolute;left:64px;right:64px;top:56px;z-index:8;display:flex;flex-direction:column;align-items:flex-start}
+.ds-label{font-weight:900;font-size:28px;line-height:1;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:26px;color:var(--lbl,var(--ink))}
+.ds-label::after{content:'';width:48px;height:4px;border-radius:2px;background:currentColor}
+.ds-status{font-weight:800;font-size:24px;line-height:1;letter-spacing:.16em;text-transform:uppercase;opacity:.78;margin-bottom:22px}
+.ds-title{font-weight:900;font-size:66px;line-height:1.2;letter-spacing:-.01em;max-width:950px;margin-bottom:24px;color:var(--ttl,var(--ink))}
+.ds-title.small{font-size:51px}
+.hl{background:linear-gradient(transparent 58%,var(--hl) 58%,var(--hl) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 8px;margin:0 -8px}
+.hl{background:none!important;color:var(--hl);padding:0!important;margin:0!important}
+.ds-sub{font-weight:800;font-size:38px;line-height:1.3;max-width:900px;margin-bottom:30px;color:var(--sub,var(--ink));opacity:.94}
+.ds-fala{position:relative;z-index:8;background:transparent;padding:30px 56px 34px;filter:drop-shadow(0 16px 22px rgba(8,18,38,.24));--rad:58px 124px 66px 132px / 92px 58px 112px 62px;max-width:940px}
+.ds-fala.r0{transform:rotate(-1.6deg)}.ds-fala.r1{transform:rotate(1.3deg)}
+.ds-fala::before{content:'';position:absolute;inset:0;top:10px;border-radius:var(--rad);background:var(--under);z-index:-2}
+.ds-fala::after{content:'';position:absolute;inset:0;border-radius:var(--rad);background:#fff;z-index:-1}
+.ds-fala .main{font-weight:900;font-size:58px;line-height:1.15;color:#081226}
+.ds-fala .apoio{font-weight:700;font-size:36px;line-height:1.25;margin-top:8px;color:#4A5D8F}
+.ds-fala .tail{position:absolute;bottom:-88px;width:112px;height:100px;z-index:-1;overflow:visible}
+.ds-card{background:#fff;border-radius:34px;border-bottom:12px solid var(--under);padding:24px 38px 26px;box-shadow:0 14px 30px rgba(8,18,38,.16);max-width:952px;color:#081226}
+.ds-card .ct{font-weight:900;font-size:46px;line-height:1.16}
+.ds-card .cs{font-weight:800;font-size:36px;line-height:1.25;margin-top:6px;color:#4A5D8F}
+.ds-badge{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:24px;font-weight:900;font-size:24px;letter-spacing:.14em;text-transform:uppercase;background:#081226;color:#fff;margin-bottom:14px;white-space:nowrap}
+.ds-title,.ds-sub,.ds-cta>div:last-child,.ds-fala .main{text-wrap:balance}
+.ds-cta{display:flex;align-items:center;gap:18px;font-weight:900;font-size:42px;line-height:1.22;color:var(--cta,var(--ink));max-width:900px}
+.ds-cta .ic{flex:none;width:64px;height:64px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center}
+.ds-cta .ic svg{width:34px;height:34px;stroke:#081226;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.ds-cta b{color:var(--ctaacc,var(--acc))}
+.ds-nav{position:absolute;right:36px;bottom:36px;z-index:9;width:68px;height:68px;border-radius:50%;background:#FFC83D;display:flex;align-items:center;justify-content:center;border:3px solid #081226;box-shadow:0 5px 0 rgba(8,18,38,.28),0 10px 18px rgba(0,0,0,.14)}
+.ds-nav svg{width:36px;height:36px;stroke:#081226;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ds-punch{font-family:'Mochiy';font-size:99px;line-height:1.1;text-transform:uppercase;color:var(--acc);margin-bottom:20px;max-width:950px}
+.ds-chip{display:inline-flex;align-items:center;gap:14px;height:62px;padding:0 26px 0 12px;border-radius:31px;background:#fff;color:#081226;font-weight:900;font-size:36px;border-bottom:6px solid var(--under);box-shadow:0 8px 16px rgba(8,18,38,.14);white-space:nowrap}
+.ds-chip .ib{width:42px;height:42px;border-radius:50%;background:#FFC83D;display:flex;align-items:center;justify-content:center}
+.ds-chip .ib svg{width:24px;height:24px;stroke:#081226;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.ds-scrim{position:absolute;left:0;right:0;bottom:0;height:430px;background:linear-gradient(0deg,rgba(8,18,38,.78),rgba(8,18,38,0));z-index:7}
+.ds-caption{position:absolute;left:64px;bottom:58px;max-width:800px;z-index:8;font-weight:900;font-size:54px;line-height:1.2;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35);text-wrap:balance}
+.ds-caption b{color:#FFC83D}
+.gap{height:var(--g,24px)}
+</style></head><body><div id="post"><img class="bg" src="file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/gen/ta_bg_5.jpg"><div class="zone" data-box="zone"><div class="ds-label">Quiz da Rara</div><div class="ds-badge">Em alemão</div><div class="ds-card" data-box="card"><div class="ct">Es liegt mir auf der Zunge</div><div class="cs">Está na minha língua</div></div><div class="gap" style="--g:24px"></div><div class="ds-badge">Em italiano</div><div class="ds-card" data-box="card"><div class="ct">Ce l’ho sulla punta della lingua</div><div class="cs">Eu tenho na ponta da língua</div></div><div class="gap" style="--g:24px"></div></div><div class="ds-nav"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div></div><script>document.fonts.ready.then(()=>{document.querySelectorAll('.ds-fala').forEach(b=>{const hx=+b.dataset.hx,cy=+b.dataset.cy,mn=+b.dataset.min;const L=b.offsetLeft;const kids=[...b.querySelectorAll('.main,.apoio,.main *')].map(e=>[e,parseFloat(getComputedStyle(e).fontSize)]);let k=1;function fit(){kids.forEach(([e,f])=>e.style.fontSize=(f*k)+'px');b.style.top=((cy-136)-b.offsetHeight)+'px'}fit();while(b.offsetTop<mn&&k>0.8){k-=0.04;fit()}const t=b.querySelector('.tail');const flip=b.classList.contains('r1');t.style.left=Math.max(30,Math.min(b.offsetWidth-150,flip?(hx+14-L):(hx-126-L)))+'px';if(flip)t.style.transform='scaleX(-1)'})})</script></body></html>
