@@ -68,12 +68,12 @@ def word_slide(n,img,word,meaning,card1,card2,crest,tipx,bgc,txtc,scrim=None,fs=
     return page('falso-blackfriday',n,img,b,extra_f)
 cover=lbl('Falso amigo','#fff')+'<h1 style="top:128px;font-size:72px;width:950px;color:#fff">Black Friday em inglês tem <span class="hl">pegadinha</span></h1><div class="sup" style="top:330px;background:#FFC83D;color:#081226;width:760px;font-size:42px">4 palavras que parecem português, mas não são</div><div class="pill"><span>Arrasta para o lado</span><div class="btn" style="background:#FFC83D">'+ARR+'</div></div>'
 jobs.append((page('falso-blackfriday',1,'fa1_sh.png',cover,extra_f),'falso-blackfriday-1'))
-jobs.append((word_slide(2,'fa07_sh.png','PUSH','EMPURRAR','na porta da loja é empurrar','puxar é pull',580,484,'#6D3DB8','d',None,72),'falso-blackfriday-2'))
-jobs.append((word_slide(3,'fa_sale_sh.png','SALE','LIQUIDAÇÃO','na vitrine, é liquidação','nada a ver com sala',551,500,'#6D3DB8','w',None,62),'falso-blackfriday-3'))
-jobs.append((word_slide(4,'fa_receipt_sh.png','RECEIPT','NOTA','é a nota, o comprovante da compra','receita de bolo é recipe',548,524,'#6D3DB8','w',None,84),'falso-blackfriday-4'))
+jobs.append((word_slide(2,'fa07_sh.png','PUSH','EMPURRAR','Na porta da loja, é pra empurrar','Pra puxar, a palavra é pull',580,484,'#6D3DB8','d',None,72),'falso-blackfriday-2'))
+jobs.append((word_slide(3,'fa_sale_sh.png','SALE','LIQUIDAÇÃO','Na vitrine, quer dizer promoção','Não tem nada a ver com sala',551,500,'#6D3DB8','w',None,62),'falso-blackfriday-3'))
+jobs.append((word_slide(4,'fa_receipt_sh.png','RECEIPT','NOTA','É a nota, o comprovante da compra','Receita de bolo, em inglês, é recipe',548,524,'#6D3DB8','w',None,84),'falso-blackfriday-4'))
 scr='<div class="scrim" style="height:520px;background:linear-gradient(180deg,#5A2FA0 0%,#5A2FA0 62%,rgba(90,47,160,0) 100%)"></div>'
-jobs.append((word_slide(5,'fa_collar_sh.png','COLLAR','GOLA','gola de camisa ou coleira de bicho','colar de enfeite é necklace',560,330,'#6D3DB8','w',scr,88),'falso-blackfriday-5'))
-fin=lbl('Falso amigo','#fff')+'<div class="scrim" style="height:470px;background:linear-gradient(180deg,#5A2FA0 0%,#5A2FA0 80%,rgba(90,47,160,0) 100%)"></div><div class="punch" style="top:128px;color:#FFC83D">Bora de novo?</div><div class="sup" style="top:300px;background:#fff;color:#081226;width:950px;font-size:42px;padding:12px 28px">manda pro amigo que vai às compras lá fora</div>'
+jobs.append((word_slide(5,'fa_collar_sh.png','COLLAR','GOLA','É a gola de camisa ou a coleira','Colar de enfeite é necklace',560,330,'#6D3DB8','w',scr,88),'falso-blackfriday-5'))
+fin=lbl('Falso amigo','#fff')+'<div class="scrim" style="height:470px;background:linear-gradient(180deg,#5A2FA0 0%,#5A2FA0 80%,rgba(90,47,160,0) 100%)"></div><div class="punch" style="top:128px;color:#FFC83D">Bora de novo?</div><div class="sup" style="top:300px;background:#fff;color:#081226;width:950px;font-size:42px;padding:12px 28px">Manda pro amigo que vai às compras lá fora</div>'
 jobs.append((page('falso-blackfriday',6,'fa1_sh.png',fin,extra_f),'falso-blackfriday-6'))
 # render
 js=os.path.join(H,'render.mjs')

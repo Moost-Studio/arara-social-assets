@@ -19,10 +19,10 @@ const SERIES = {
     title: 'O mico do <span class="hl">microfone mudo</span>',
     cover: 'T2Q1_v1',
     frames: [
-      { img: 'T2Q1_v1', over: [{ kind: 'bar', pos: 'bottom', html: 'Eu falando o melhor inglês<br>da minha vida' }] },
-      { img: 'T2Q2_v2', over: [{ kind: 'tile', x: 163, y: 565, w: 396, h: 347, src: 'T2Q1_v1', bx: -238, by: -170, bw: 800 }] },
+      { img: 'T2Q1_v1', over: [{ kind: 'bar', pos: 'bottom', html: 'Eu na call, falando o melhor<br>inglês da minha vida' }] },
+      { img: 'T2Q2_v2', over: [{ kind: 'tile', x: 163, y: 565, w: 396, h: 347, src: 'T2Q1_v1', bx: -238, by: -170, bw: 800 }, { kind: 'bar', pos: 'bottom', html: 'Só que o meu microfone<br>estava <span class="y">no mudo</span>' }] },
       { img: 'T2Q3_v1', over: [{ kind: 'mic', cx: 880, cy: 330, d: 210 }] },
-      { img: 'T2Q4_v3', over: [{ kind: 'bar', pos: 'top', html: 'Ficou <s>fluente</s><br><span class="y">no mudo</span>' }] },
+      { img: 'T2Q4_v3', over: [{ kind: 'bar', pos: 'top', html: 'E ninguém ouviu uma<br><span class="y">palavra</span> do que eu disse' }] },
     ],
   },
   T3: {

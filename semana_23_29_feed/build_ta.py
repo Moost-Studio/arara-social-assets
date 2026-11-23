@@ -47,20 +47,20 @@ def page(n,img,body):
 srcs={1:'ta_s1_estudio.jpg',2:'ta_s2.jpg',3:'ta_s3.jpg',4:'ta_s4.jpg',5:'ta_s5.jpg',6:'ta_s6.jpg'}
 for n,s in srcs.items(): bg(f'{HERE}/gen/{s}',f'{HERE}/gen/ta_bg_{n}.jpg')
 pill=f'<div class="pill" style="right:44px;bottom:16px"><span>Arrasta para o lado</span><div class="btn">{ARR}</div></div>'
-page(1,'ta_bg_1.jpg',f"""<h1 style="top:112px;font-size:76px;width:960px">Sabe a palavra, mas ela <span class="bl">sumiu</span>?</h1>
-<div style="position:absolute;left:64px;top:280px;font-weight:800;font-size:38px">em inglês, o que você diz?</div>
-<div style="position:absolute;left:64px;top:332px;font-weight:900;font-size:34px;background:#081226;color:#fff;padding:6px 22px;border-radius:999px">Comenta a letra antes de arrastar</div>
+page(1,'ta_bg_1.jpg',f"""<h1 style="top:112px;font-size:76px;width:960px">A palavra <span class="bl">sumiu</span> na hora de falar?</h1>
+<div style="position:absolute;left:64px;top:280px;font-weight:800;font-size:38px">Em inglês, o que você diz?</div>
+<div style="position:absolute;left:64px;top:332px;font-weight:900;font-size:34px;background:#081226;color:#fff;padding:6px 22px;border-radius:999px">Escolhe uma letra e comenta antes de arrastar</div>
 <div class="opt" style="top:410px"><b>A</b>It’s on the tip of my tongue</div>
 <div class="opt" style="top:482px"><b>B</b>My head is empty</div>
 <div class="opt" style="top:554px"><b>C</b>I lost my words</div>{pill}""")
-page(2,'ta_bg_2.jpg',f"""<div class="chip" style="position:absolute;left:64px;top:118px">Inglês</div>
-<div class="card" style="top:178px;background:#2FB45A;border-bottom-color:#1E8A40;color:#fff;padding:20px 40px 20px;display:flex;gap:22px;align-items:center"><div style="width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;flex:none"><span style="font-weight:900;font-size:36px">A</span></div><div><div class="ph" style="font-size:54px">It’s on the tip of my tongue</div><div class="pt" style="color:#E8FFEF;margin-top:4px;font-size:38px">tá na ponta da língua</div></div></div>
+page(2,'ta_bg_2.jpg',f"""<div class="chip" style="position:absolute;left:64px;top:118px">Inglês, resposta A</div>
+<div class="card" style="top:178px;background:#2FB45A;border-bottom-color:#1E8A40;color:#fff;padding:20px 40px 20px;display:flex;gap:22px;align-items:center"><div style="width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;flex:none"><span style="font-weight:900;font-size:36px">A</span></div><div><div class="ph" style="font-size:54px">It’s on the tip of my tongue</div><div class="pt" style="color:#E8FFEF;margin-top:4px;font-size:38px">Quer dizer “está na ponta da língua”</div></div></div>
 <div class="opt" style="top:372px;opacity:.55"><b>B</b>My head is empty</div>
 <div class="opt" style="top:444px;opacity:.55"><b>C</b>I lost my words</div>
-<div style="position:absolute;left:64px;top:536px;font-weight:900;font-size:40px">igualzinho ao português, acredita?</div>{pill}""")
-page(3,'ta_bg_3.jpg',f"""<div class="card" style="top:140px"><div class="chip">Espanhol</div><div class="ph">Lo tengo en la punta de la lengua</div><div class="pt">eu tenho na ponta da língua</div></div>{pill}""")
-page(4,'ta_bg_4.jpg',f"""<div class="card" style="top:140px"><div class="chip">Francês</div><div class="ph">Je l’ai sur le bout de la langue</div><div class="pt">eu tenho na ponta da língua</div></div>{pill}""")
-page(5,'ta_bg_5.jpg',f"""<div class="card" style="top:116px;padding:20px 40px 18px"><div class="chip" style="margin-bottom:8px">Alemão</div><div class="ph" style="font-size:56px">Es liegt mir auf der Zunge</div><div class="pt" style="margin-top:4px">está na minha língua</div></div>
-<div class="card" style="top:352px;padding:20px 40px 18px"><div class="chip" style="margin-bottom:8px">Italiano</div><div class="ph" style="font-size:56px">Ce l’ho sulla punta della lingua</div><div class="pt" style="margin-top:4px">eu tenho na ponta da língua</div></div>{pill}""")
+<div style="position:absolute;left:64px;top:536px;font-weight:900;font-size:40px">É igualzinho ao português, dá pra acreditar?</div>{pill}""")
+page(3,'ta_bg_3.jpg',f"""<div class="card" style="top:140px"><div class="chip">Em espanhol</div><div class="ph">Lo tengo en la punta de la lengua</div><div class="pt">Eu tenho na ponta da língua</div></div>{pill}""")
+page(4,'ta_bg_4.jpg',f"""<div class="card" style="top:140px"><div class="chip">Em francês</div><div class="ph">Je l’ai sur le bout de la langue</div><div class="pt">Eu tenho na ponta da língua</div></div>{pill}""")
+page(5,'ta_bg_5.jpg',f"""<div class="card" style="top:116px;padding:20px 40px 18px"><div class="chip" style="margin-bottom:8px">Em alemão</div><div class="ph" style="font-size:56px">Es liegt mir auf der Zunge</div><div class="pt" style="margin-top:4px">Está na minha língua</div></div>
+<div class="card" style="top:352px;padding:20px 40px 18px"><div class="chip" style="margin-bottom:8px">Em italiano</div><div class="ph" style="font-size:56px">Ce l’ho sulla punta della lingua</div><div class="pt" style="margin-top:4px">Eu tenho na ponta da língua</div></div>{pill}""")
 page(6,'ta_bg_6.jpg',f"""<h1 style="top:120px;font-size:84px;width:940px">Deu branco? <span class="bl">Acontece</span> com todo mundo</h1>
-<div class="card" style="top:400px;display:flex;gap:22px;align-items:center;padding:22px 34px"><div style="width:64px;height:64px;border-radius:50%;background:#FFC83D;display:flex;align-items:center;justify-content:center;flex:none">{MSG}</div><div style="font-weight:900;font-size:44px;line-height:1.1">comenta qual idioma te surpreendeu</div></div>""")
+<div class="card" style="top:400px;display:flex;gap:22px;align-items:center;padding:22px 34px"><div style="width:64px;height:64px;border-radius:50%;background:#FFC83D;display:flex;align-items:center;justify-content:center;flex:none">{MSG}</div><div style="font-weight:900;font-size:44px;line-height:1.1">Comenta qual idioma te surpreendeu mais</div></div>""")
