@@ -14,11 +14,16 @@
 .bal small{display:block;font-weight:700;font-size:40px;line-height:1.25;color:#2E3A55;margin-top:12px}
 .bal::after{content:'';position:absolute;left:210px;bottom:-34px;width:0;height:0;border-left:30px solid transparent;border-right:30px solid transparent;border-top:36px solid #fff}
 </style></head><body><div id="post">
-<div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/qua_3.jpg')"></div><div class="veil"></div>
+<div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/qua_3_v5.jpg')"></div><div class="veil"></div>
 <div class="sel">DIÁRIO DA RARA</div><div class="pg">3 DE 3</div>
-<div class="bal" id="bal" style=""><div>bora de novo?</div><small>agora eu confiro antes de falar</small></div></div>
+<div class="bal" id="bal" style=""><div>Agora, antes de falar, eu sempre confiro o ícone do microfone</div><small>E se eu errar de novo, é só tentar outra vez. Bora de novo?</small></div></div>
 <script>
 const b=document.getElementById('bal');const topo=589;const bottomMax=topo-80;
 // ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
-b.style.top=(bottomMax-36-b.offsetHeight)+'px';
+const tit=document.querySelector('.tit');const minTop=tit?(tit.offsetTop+tit.offsetHeight+28):150;
+let fs=50,sm=40;
+function ajusta(){b.style.fontSize=fs+'px';b.querySelectorAll('small').forEach(e=>{e.style.fontSize=sm+'px'});b.style.top=(bottomMax-36-b.offsetHeight)+'px';}
+ajusta();
+while(b.offsetTop<minTop&&fs>40){fs-=2;sm=Math.max(36,sm-2);ajusta();}
+document.title='fs='+fs+' top='+b.offsetTop+' min='+minTop;
 </script></body></html>

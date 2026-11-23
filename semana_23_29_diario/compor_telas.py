@@ -6,26 +6,26 @@ HERE = pathlib.Path(__file__).resolve().parent
 SC = HERE.parent / 'semana1' / '_scripts'
 # topo do personagem em px (1920): onde o balão NÃO pode chegar
 EPS = {
- 'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 613, 470], titulo='Segunda e eu cheguei primeiro', kw='primeiro',
-   telas=[ ['são 7h e o escritório inteiro é meu'],
-           ['ensaiei o japonês do trabalho em voz alta', '<small>お疲れ様です (otsukaresama desu) pra cadeira, e ela nem respondeu</small>'],
-           ['só tem um detalhe', '<small>e até agora ninguém chegou</small>'] ]),
+ 'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 613, 470], titulo='Cheguei primeiro', kw='primeiro',
+   telas=[ ['Hoje eu cheguei às 7h e o escritório inteiro estava vazio, só pra mim'],
+           ['Aproveitei pra treinar o japonês do trabalho em voz alta. Falei <span style="white-space:nowrap">「お疲れ様です」</span>, que quer dizer “obrigada pelo esforço”, pra uma cadeira vazia', '<small>e a cadeira, claro, não respondeu</small>'],
+           ['Aí eu descobri por que ninguém veio, hoje é feriado no Japão'] ]),
  'qua': dict(img=['qua_call_v5.jpg', 'qua_2_v4.jpg', 'qua_3_v5.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
-   telas=[ ['10h, call importante, eu estava inspirada'],
-           ['falei por dez minutos', '<small>o microfone estava no mudo</small>'],
-           ['bora de novo?', '<small>agora eu confiro antes de falar</small>'] ]),
+   telas=[ ['Hoje às 10h eu tinha uma call importante e acordei muito inspirada'],
+           ['Falei por dez minutos seguidos. Só que o meu microfone estava no mudo, então ninguém me ouviu'],
+           ['Agora, antes de falar, eu sempre confiro o ícone do microfone', '<small>E se eu errar de novo, é só tentar outra vez. Bora de novo?</small>'] ]),
  'sex': dict(img=['sex_fila_v1.jpg', 'sex_2.jpg', 'sex_3.jpg'], sel='DIÁRIO DA RARA', topo=[819, 819, 819], titulo='A fila da Black Friday', kw='fila',
-   telas=[ ['a fila dá duas voltas no poleiro'],
-           ['aprendi duas palavras na fila', '<small>sale, liquidação</small><small>discount, desconto</small>'],
-           ['no fim saí com um suporte de microfone', '<small>amanhã o primo liga</small>'] ]),
+   telas=[ ['A fila da loja deu duas voltas no quarteirão, e eu fiquei nela'],
+           ['Enquanto esperava, aprendi duas palavras em inglês', '<small>“sale” quer dizer liquidação</small><small>“discount” quer dizer desconto</small>'],
+           ['No fim, saí da fila só com um suporte de microfone', '<small>Amanhã o meu primo Raro conta uma história</small>'] ]),
  'sab': dict(img=['sab_raro_v3.jpg', 'sab_2.jpg', 'sab_3.jpg'], sel='HISTÓRIA DO RARO', topo=[669, 669, 780], titulo='De onde vem sábado', kw='sábado',
-   telas=[ ['bah, prima, hoje é sábado e tu sabe de onde vem essa palavra'],
-           ['vem do hebraico, onde quer dizer descanso', '<small>passou pelo grego e pelo latim até chegar no nosso português</small>'],
-           ['por isso sábado combina com rede', '<small>devagar se vai ao longe, tchê</small>'] ]),
+   telas=[ ['Ooooopaaa, bão? Eu sou o Raro, primo da Rara. Hoje é sábado, uai, e ocê sabe de onde vem essa palavra?'],
+           ['Ela vem do hebraico, sô, e lá quer dizer “descanso”', '<small>Passou pelo grego e pelo latim até chegar no nosso português</small>'],
+           ['Por isso sábado combina tanto com rede, uai', '<small>Devagar se vai ao longe, sô. Amanhã a Rara volta com o resumo da semana</small>'] ]),
  'dom': dict(img=['dom_resumo_v2.jpg', 'dom_2.jpg', 'dom_3.jpg'], sel='DIÁRIO DA RARA', topo=[648, 429, 648], titulo='O resumo da semana', kw='resumo',
-   telas=[ ['domingo é dia de contar os micos'],
-           ['errei na call, errei na fila e errei a hora de chegar'],
-           ['tudo bem, bora de novo?', '<small>segunda tem mais</small>'] ]),
+   telas=[ ['Domingo é dia de contar os micos da semana'],
+           ['Essa semana falei no mudo, comprei só um suporte e cheguei num escritório vazio'],
+           ['E tudo bem, porque é errando que a gente aprende', '<small>Segunda tem mais. Bora de novo?</small>'] ]),
 }
 CSS = """@font-face{font-family:'Nunito';src:url('../_fontes/Nunito.ttf');font-weight:200 1000}
 @font-face{font-family:'Mochiy';src:url('../_fontes/MochiyPopOne-Regular.ttf')}
@@ -50,11 +50,17 @@ def tela(ep, d, i, linhas):
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body><div id="post">
 <div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/{d['img'][i]}')"></div><div class="veil"></div>
 <div class="sel">{d['sel']}</div><div class="pg">{i+1} DE 3</div>{titulo}
-<div class="bal" id="bal" style="{"font-size:46px;padding:22px 42px" if (ep=="dom" and i==1) else ""}">{bal}</div></div>
+<div class="bal" id="bal" style="">{bal}</div></div>
 <script>
 const b=document.getElementById('bal');const topo={d['topo'][i]};const bottomMax=topo-80;
 // ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
-b.style.top=(bottomMax-36-b.offsetHeight)+'px';
+const tit=document.querySelector('.tit');const minTop=tit?(tit.offsetTop+tit.offsetHeight+28):150;
+let fs=50,sm=40;
+function ajusta(){{b.style.fontSize=fs+'px';b.querySelectorAll('small').forEach(e=>{{e.style.fontSize=sm+'px'}});b.style.top=(bottomMax-36-b.offsetHeight)+'px';}}
+ajusta();
+while(b.offsetTop<minTop&&fs>40){{fs-=2;sm=Math.max(36,sm-2);ajusta();}}
+if(b.offsetTop<minTop){{b.style.padding='22px 40px';ajusta();}}
+document.title='fs='+fs+' top='+b.offsetTop+' min='+minTop;
 </script></body></html>"""
 def main():
     medidas = {}

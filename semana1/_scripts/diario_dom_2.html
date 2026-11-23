@@ -16,9 +16,15 @@
 </style></head><body><div id="post">
 <div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/dom_2.jpg')"></div><div class="veil"></div>
 <div class="sel">DIÁRIO DA RARA</div><div class="pg">2 DE 3</div>
-<div class="bal" id="bal" style="font-size:46px;padding:22px 42px"><div>errei na call, errei na fila e errei a hora de chegar</div></div></div>
+<div class="bal" id="bal" style=""><div>Essa semana falei no mudo, comprei só um suporte e cheguei num escritório vazio</div></div></div>
 <script>
 const b=document.getElementById('bal');const topo=429;const bottomMax=topo-80;
 // ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
-b.style.top=(bottomMax-36-b.offsetHeight)+'px';
+const tit=document.querySelector('.tit');const minTop=tit?(tit.offsetTop+tit.offsetHeight+28):150;
+let fs=50,sm=40;
+function ajusta(){b.style.fontSize=fs+'px';b.querySelectorAll('small').forEach(e=>{e.style.fontSize=sm+'px'});b.style.top=(bottomMax-36-b.offsetHeight)+'px';}
+ajusta();
+while(b.offsetTop<minTop&&fs>40){fs-=2;sm=Math.max(36,sm-2);ajusta();}
+if(b.offsetTop<minTop){b.style.padding='22px 40px';ajusta();}
+document.title='fs='+fs+' top='+b.offsetTop+' min='+minTop;
 </script></body></html>
