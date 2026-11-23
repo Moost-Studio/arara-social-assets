@@ -120,6 +120,7 @@ Os textos de 16 a 22/11 e do plano de 23 a 29/11 saíram telegráficos ("homem d
 - **Raro:** mesma regra, em linguagem caipira ("Ooooopaaa, bão?", "uai", "sô", "ocê"), sempre com "história" e nunca "causo". Substitui o sotaque gaúcho ("bah", "tchê") das versões anteriores.
 - **Ligação entre peças:** o Diário e os stories retomam o assunto do post do dia (ex.: feriado no Japão, microfone no mudo).
 - **Mínimo de 40 px** na arte do story; se o texto não couber, reduza o texto, não a fonte.
+- **Contexto explícito:** toda peça que fala de uma data ou assunto nomeia esse assunto (ex. "Hoje é Thanksgiving, o Dia de Ação de Graças nos Estados Unidos"). Frase como "hoje foi dia de agradecer" ou "só pra mim" sem causa nem referência é proibida: se o leitor precisa adivinhar, reescreva.
 - Antes de compor, o texto passa por uma leitura em voz alta: se alguém que não conhece a Rara não entende, reescreva.
 
 

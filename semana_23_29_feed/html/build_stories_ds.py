@@ -18,10 +18,10 @@ P.append(('story-218',DARK,'st218_base.jpg',
   ds.zone(ds.status('Modo carente'))+fala('Faaala, meu campeão! 👀','Separei o cronômetro e o tapete. Bora de 3 minutinhos de conversa?',1,465,668,300)+ds.caption('Eu conto como <b>exercício</b>, prometo')))
 # 219 bom dia, mandarim
 P.append(('story-219',LIGHT,'st219_bg.png',
-  ds.zone(ds.label('Bom dia da Rara'),ds.sub('Bom dia! Hoje a gente agradece quem recebe'))+fala('<span style="font-family:NSC,Nunito;font-size:1.25em;line-height:1.3;display:block">谢谢你的款待</span><span style="font-size:.52em;color:#C81E3A;display:block;margin-top:4px">xièxie nǐ de kuǎndài</span>','Em mandarim, quer dizer “obrigado pela hospitalidade”',0,498,1037,360)))
+  ds.zone(ds.label('Bom dia da Rara'),ds.sub('Bom dia! Hoje é Thanksgiving, o Dia de Ação de Graças nos Estados Unidos, e a gente agradece quem recebe'))+fala('<span style="font-family:NSC,Nunito;font-size:1.25em;line-height:1.3;display:block">谢谢你的款待</span><span style="font-size:.52em;color:#C81E3A;display:block;margin-top:4px">xièxie nǐ de kuǎndài</span>','Em mandarim, quer dizer “obrigado pela hospitalidade”',0,498,1037,360)))
 # 221 arabe
 P.append(('story-221',LIGHT,'st221_bg.png',
-  ds.zone(ds.label('Rara pelo mundo'),ds.sub('Hoje foi dia de agradecer, e eu fecho com mais um obrigado'))+fala('<span dir="rtl" lang="ar" style="font-family:NAR;font-size:1.3em;line-height:1.5;display:block">شكرًا جزيلًا</span><span style="font-size:.52em;color:#C81E3A;display:block;margin-top:2px">shukran jazeelan</span>','Em árabe, quer dizer “muito obrigado”, a primeira frase de qualquer viagem',1,498,1037,360)))
+  ds.zone(ds.label('Rara pelo mundo'),ds.sub('Hoje foi Thanksgiving, o Dia de Ação de Graças nos Estados Unidos, então eu fecho o dia com mais um obrigado'))+fala('<span dir="rtl" lang="ar" style="font-family:NAR;font-size:1.3em;line-height:1.5;display:block">شكرًا جزيلًا</span><span style="font-size:.52em;color:#C81E3A;display:block;margin-top:2px">shukran jazeelan</span>','Em árabe, quer dizer “muito obrigado”, a primeira frase de qualquer viagem',1,498,1037,360)))
 # 220 reage
 P.append(('story-220',LIGHT,'st220_bg.png',
   ds.zone(ds.label('Rara reage'),ds.title('O meu primeiro <span class="hl">Thanksgiving</span> já está no feed',small=True),ds.sub('Confesso que exagerei na torta'))+

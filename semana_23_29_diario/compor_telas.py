@@ -8,7 +8,7 @@ SC = HERE.parent / 'semana1' / '_scripts'
 HX = {'seg':[540,540,540],'qua':[560,560,560],'sex':[470,480,480],'sab':[590,590,780],'dom':[570,570,570]}
 EPS = {
  'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 613, 607], titulo='Cheguei primeiro', kw='primeiro',
-   telas=[ ['Hoje eu cheguei às 7h e o escritório inteiro estava vazio, só pra mim'],
+   telas=[ ['Hoje eu cheguei às 7h e o escritório inteiro estava vazio. Estranho, né?'],
            ['Aproveitei pra treinar o japonês do trabalho em voz alta. Falei <span style="white-space:nowrap">「お疲れ様です」</span>, que quer dizer “obrigada pelo esforço”, pra uma cadeira vazia', '<small>e a cadeira, claro, não respondeu</small>'],
            ['Aí eu descobri por que ninguém veio... é feriado no Japão...'] ]),
  'qua': dict(img=['qua_call_v5.jpg', 'qua_2_v4.jpg', 'qua_3_v5.jpg'], sel='DIÁRIO DA RARA', topo=[589, 520, 589], titulo='A call que só eu ouvi', kw='só eu',
