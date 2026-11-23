@@ -97,6 +97,17 @@ Rodrigo viu o vídeo de teste e aprovou ("gostei do vídeo, vamos guardar o esti
 ## Bordão (13/11/2026): "Errou? Treinou" substituído por "Bora de novo?"
 O Rodrigo reprovou "Errou? Treinou" por soar seco. Escolheu como bordão principal **"Bora de novo?"** (opção 10 da lista de 12/11; uma primeira leitura minha, "Pode errar, a gente erra junto", foi descartada). Aplicado em captions, telas do Diário e planos; logs e registros históricos ficam como estavam. Não usar "Errou? Treinou" em peça nova.
 
+## VOZ E COESÃO DO TEXTO (regra do Rodrigo, 23/11/2026, PRECEDE a seção 3.1b do sistema de marca)
+Os textos de 16 a 22/11 e do plano de 23 a 29/11 saíram telegráficos ("homem das cavernas"): frases soltas, sem conectivos, ironia sem preparação. Regras fixas daqui em diante, para posts, stories, legendas e reels:
+- **Linguagem extremamente acessível, mas SEMPRE coerente.** Cada fala nasce da anterior e leva à seguinte; nada solto, jogado ou desconexo. Toda tela tem conexão, sentido e propósito. Se uma frase só faz sentido para quem já sabe a história, reescreva.
+- **Frases completas, com sujeito e verbo, e conectivos** (porque, aí, só que, por isso, mas). A regra "uma fala por linha, sem ponto final" da 3.1b não autoriza cortar contexto. Sem dois-pontos e sem travessão na arte continuam valendo.
+- **Contexto antes da piada; ironia sinalizada** ("claro", "óbvio", "como sempre").
+- **Tratamento íntimo e irônico** ("Falaaa, meu presidente!", "Aopaaa, meu delegado!", "Fala, mestre!", "Falaaa, jogador!") só como abertura de conversa com o seguidor (bom dia e modo carente), um por story, em rodízio; depois da abertura, o texto segue conectado. Em post frio, use "você".
+- **Raro:** mesma regra, em linguagem caipira ("Ooooopaaa, bão?", "uai", "sô", "ocê"), sempre com "história" e nunca "causo". Substitui o sotaque gaúcho ("bah", "tchê") das versões anteriores.
+- **Ligação entre peças:** o Diário e os stories retomam o assunto do post do dia (ex.: feriado no Japão, microfone no mudo).
+- **Mínimo de 40 px** na arte do story; se o texto não couber, reduza o texto, não a fonte.
+- Antes de compor, o texto passa por uma leitura em voz alta: se alguém que não conhece a Rara não entende, reescreva.
+
 ## Rabo da Rara nunca reto (regra do Rodrigo, 17/11/2026)
 Nenhum post ou story pode mostrar o rabo da Rara caindo reto e vertical, como na canônica C01. O rabo sempre aparece curvo ou inclinado. Correção de 17/11 (11h50 UTC): o rabo não pode nascer **embaixo dos pés**, senão os pés parecem apoiados nele e o rabo parece segurar o corpo. O rabo nasce por TRÁS das pernas, passa atrás dos pés e sai em diagonal para o lado; os pés ficam livres na frente. Use `bend_tail_behind.py` (recortes, saída `<pose>_ct.png`) e `bend_tail_scene_behind.py` (cena de fundo liso). As versões `bend_tail_gen.py` e `bend_tail_scene.py` (rabo curvo logo abaixo dos pés) ficam só como histórico: não use.
 Como aplicar:

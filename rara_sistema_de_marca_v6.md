@@ -174,6 +174,8 @@ A contradição central: **fala muito, ouve mais.** Ela é tagarela no papo leve
 
 ### 3.1b Fala de rede social
 
+> **Atualização 23/11/2026:** a regra "uma fala por linha, sem ponto final" não autoriza cortar conectivos e contexto. Prevalece a seção "Voz e coesão do texto" do `guia_de_estilo_arara.md` (frases completas e conectadas, ironia preparada, Raro em linguagem caipira).
+
 Nas redes, a Rara escreve como fala: como um áudio ou uma mensagem para um amigo, nunca como um texto de site. Se a frase soa como anúncio ou como texto gerado por IA, reescreva.
 
 - **Uma fala por linha.** A quebra de linha separa as ideias. Sem ponto final, sem dois-pontos e sem travessão.
