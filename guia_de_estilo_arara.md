@@ -111,7 +111,7 @@ Os textos de 16 a 22/11 e do plano de 23 a 29/11 saíram telegráficos ("homem d
 
 ### Coesão vale também para imagens e vídeos (regra do Rodrigo, 23/11/2026)
 Nada na imagem ou no vídeo pode parecer solto, jogado ou desconexo. Tudo conversa com o que está ao redor e tem propósito.
-- **Balão de fala ancorado em quem fala:** fica perto da cabeça do personagem (a ponta do rabinho a cerca de 30 px da cabeça, nem colada nem longe) e o rabinho aponta para o falante, sem cobrir o rosto. Nunca flutuando no alto da tela, longe de quem fala.
+- **Balão de fala ancorado em quem fala:** fica perto da cabeça do personagem (a ponta do rabinho a cerca de 50 px do topo da cabeça (30 px ficou colado, 150 px ficou longe)) e o rabinho aponta para o falante, sem cobrir o rosto. Nunca flutuando no alto da tela, longe de quem fala.
 - **Elementos gráficos ligados à cena:** selo, título, etiqueta, cartão, ícone e botão têm relação com o que a cena mostra e com a fala; nada decorativo sem função.
 - **Imagem concorda com o texto:** cada tela mostra o que a fala descreve (pose, objeto, cenário); sem cena repetida para textos diferentes.
 - **Sequência com continuidade:** telas, slides e cenas de uma mesma peça mantêm cenário, luz, escala e roupa coerentes, e uma tela leva à próxima. Peças do mesmo dia (post, stories) retomam o mesmo assunto.
