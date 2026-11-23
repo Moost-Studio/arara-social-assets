@@ -5,6 +5,7 @@ import json, pathlib, subprocess, html
 HERE = pathlib.Path(__file__).resolve().parent
 SC = HERE.parent / 'semana1' / '_scripts'
 # topo do personagem em px (1920): onde o balão NÃO pode chegar
+HX = {'seg':[540,540,540],'qua':[560,560,560],'sex':[470,480,480],'sab':[590,590,780],'dom':[570,570,570]}
 EPS = {
  'seg': dict(img=['seg_escritorio_v1.jpg', 'seg_2.jpg', 'seg_3.jpg'], sel='DIÁRIO DA RARA', topo=[613, 613, 470], titulo='Cheguei primeiro', kw='primeiro',
    telas=[ ['Hoje eu cheguei às 7h e o escritório inteiro estava vazio, só pra mim'],
@@ -50,7 +51,9 @@ def tela(ep, d, i, linhas):
     t = d['titulo'].replace(d['kw'], f"<b>{d['kw']}</b>")
     bal = ''.join(f'<div>{l}</div>' if not l.startswith('<small') else l for l in linhas)
     titulo = f'<div class="tit">{t}</div>' if i == 0 else ''
-    cauda = (400, '') if i % 2 == 0 else (540, 'transform:scaleX(-1);')
+    hx = HX[ep][i]
+    esq = (i % 2 == 0)
+    cauda = (max(40, min(660, hx - 210)), '') if esq else (max(40, min(660, hx - 70)), 'transform:scaleX(-1);')
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{CSS}</style></head><body><div id="post">
 <div class="bg" style="background-image:url('../../semana_23_29_diario/geradas/{d['img'][i]}')"></div><div class="veil"></div>
 <div class="sel">{d['sel']}</div><div class="pg">{i+1} DE 3</div>{titulo}
@@ -60,7 +63,7 @@ const b=document.getElementById('bal');const topo={d['topo'][i]};const bottomMax
 // ancora o balão logo acima do topo do personagem (rabinho 36 px) e deixa crescer para cima
 const tit=document.querySelector('.tit');const minTop=tit?(tit.offsetTop+tit.offsetHeight+28):150;
 let fs=50,sm=40;
-function ajusta(){{b.style.fontSize=fs+'px';b.querySelectorAll('small').forEach(e=>{{e.style.fontSize=sm+'px'}});b.style.top=(bottomMax-70-b.offsetHeight)+'px';}}
+function ajusta(){{b.style.fontSize=fs+'px';b.querySelectorAll('small').forEach(e=>{{e.style.fontSize=sm+'px'}});b.style.top=(topo-124-b.offsetHeight)+'px';}}
 ajusta();
 while(b.offsetTop<minTop&&fs>40){{fs-=2;sm=Math.max(36,sm-2);ajusta();}}
 if(b.offsetTop<minTop){{b.style.padding='22px 40px';ajusta();}}
