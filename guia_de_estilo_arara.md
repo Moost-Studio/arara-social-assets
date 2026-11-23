@@ -108,6 +108,17 @@ Os textos de 16 a 22/11 e do plano de 23 a 29/11 saíram telegráficos ("homem d
 - **Mínimo de 40 px** na arte do story; se o texto não couber, reduza o texto, não a fonte.
 - Antes de compor, o texto passa por uma leitura em voz alta: se alguém que não conhece a Rara não entende, reescreva.
 
+
+### Coesão vale também para imagens e vídeos (regra do Rodrigo, 23/11/2026)
+Nada na imagem ou no vídeo pode parecer solto, jogado ou desconexo. Tudo conversa com o que está ao redor e tem propósito.
+- **Balão de fala ancorado em quem fala:** fica perto da cabeça do personagem (a ponta do rabinho a cerca de 30 px da cabeça, nem colada nem longe) e o rabinho aponta para o falante, sem cobrir o rosto. Nunca flutuando no alto da tela, longe de quem fala.
+- **Elementos gráficos ligados à cena:** selo, título, etiqueta, cartão, ícone e botão têm relação com o que a cena mostra e com a fala; nada decorativo sem função.
+- **Imagem concorda com o texto:** cada tela mostra o que a fala descreve (pose, objeto, cenário); sem cena repetida para textos diferentes.
+- **Sequência com continuidade:** telas, slides e cenas de uma mesma peça mantêm cenário, luz, escala e roupa coerentes, e uma tela leva à próxima. Peças do mesmo dia (post, stories) retomam o mesmo assunto.
+- **Objetos e personagem na mesma escala e na mesma luz** (ver escala e cena integrada).
+- **Vídeo e movimento:** cada movimento tem motivo narrativo (a Rara provoca o acontecimento); texto, som e imagem entram juntos e se explicam. Nada entra ou sai da tela sem causa.
+- **Conferência antes de entregar:** pergunte, tela a tela, "por que isso está aqui e a que se liga?". Sem resposta clara, refaça.
+
 ## Rabo da Rara nunca reto (regra do Rodrigo, 17/11/2026)
 Nenhum post ou story pode mostrar o rabo da Rara caindo reto e vertical, como na canônica C01. O rabo sempre aparece curvo ou inclinado. Correção de 17/11 (11h50 UTC): o rabo não pode nascer **embaixo dos pés**, senão os pés parecem apoiados nele e o rabo parece segurar o corpo. O rabo nasce por TRÁS das pernas, passa atrás dos pés e sai em diagonal para o lado; os pés ficam livres na frente. Use `bend_tail_behind.py` (recortes, saída `<pose>_ct.png`) e `bend_tail_scene_behind.py` (cena de fundo liso). As versões `bend_tail_gen.py` e `bend_tail_scene.py` (rabo curvo logo abaixo dos pés) ficam só como histórico: não use.
 Como aplicar:
