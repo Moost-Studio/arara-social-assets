@@ -32,6 +32,7 @@ S=[(1,ds.zone(LB,ds.title('Fui convidada pro <span class="hl">Thanksgiving</span
 (4,frase(4,'A pergunta clássica do jantar','What are you thankful for this year?','Pelo que você é grato este ano?')),
 (5,frase(5,'Quando você já comeu demais','I’m stuffed!','Não cabe mais nada')),
 (6,ds.zone(LB,ds.title('<span class="hl">Salva</span> pra quando te convidarem'),ds.sub('O Thanksgiving é sempre na quarta quinta-feira de novembro, então dá tempo de treinar')))]
+import re
 for n,body in S:
     k=f'thanksgiving-{n}'
     open(H+k+'.html','w').write(ds.doc(TH,paths[n],body))
