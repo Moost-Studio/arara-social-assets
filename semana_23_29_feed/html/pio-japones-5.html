@@ -14,11 +14,15 @@ h1{position:absolute;left:64px;top:118px;width:940px;font-weight:900;font-size:7
 .pill{position:absolute;left:44px;bottom:36px;z-index:6;display:flex;gap:22px;align-items:center;font-weight:800;font-size:36px;background:rgba(255,255,255,.92);padding:10px 14px 10px 30px;border-radius:999px;color:#3A1620}
 .btn{width:76px;height:76px;border-radius:50%;background:#D6203F;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 0 #9C1630}
 .btn svg{width:42px;height:42px;stroke:#fff;fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
-.bal{position:absolute;left:64px;top:108px;width:900px;z-index:6;background:#fff;border-radius:44px;border-bottom:14px solid #F2C9D2;padding:18px 40px 20px;box-shadow:0 14px 30px rgba(120,40,60,.18)}
+.bal{position:absolute;left:90px;width:900px;z-index:6;background:transparent;padding:26px 56px 30px;filter:drop-shadow(0 16px 22px rgba(120,40,60,.22));--rad:58px 124px 66px 132px / 92px 58px 112px 62px}
+.bal.r0{transform:rotate(-1.6deg)}.bal.r1{transform:rotate(1.3deg)}
+.bal::before{content:'';position:absolute;inset:0;top:10px;border-radius:var(--rad);background:#F2C9D2;z-index:-2}
+.bal::after{content:'';position:absolute;inset:0;border-radius:var(--rad);background:#fff;z-index:-1}
+.tail{position:absolute;bottom:-88px;width:112px;height:100px;z-index:-1;overflow:visible}
 .row{display:block}
 .jp{font-family:'JP','Nunito';font-weight:900;font-size:70px;line-height:1.12;white-space:nowrap}
 .ro{font-weight:900;font-size:40px;line-height:1.1;color:#D6203F;white-space:nowrap}
 .tr{font-weight:900;font-size:44px;line-height:1.15;margin-top:2px}
 .ap{font-weight:700;font-size:40px;line-height:1.2;margin-top:6px;color:#6B3A48}
 .punch{position:absolute;left:64px;top:122px;width:940px;font-family:'Mochiy';font-size:64px;line-height:1.16;color:#9C1630;z-index:5;text-transform:uppercase}
-</style></head><body><div id="post"><img class="bg" src="file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/gen/seg_s5_base.jpg"><div class="wash"></div><div class="lbl">Pio da Semana</div><div class="punch" data-box="punch">Salva pra usar no <span style="color:#D6203F">primeiro dia</span> de trabalho</div><div class="sub" data-box="sub" style="top:360px;width:900px">e manda pro colega que sonha com o Japão</div></div></body></html>
+</style></head><body><div id="post"><img class="bg" src="file:///home/rodrigo/.openclaw/workspace/arara_social/semana_23_29_feed/gen/seg_s5_base.jpg"><div class="wash"></div><div class="lbl">Pio da Semana</div><div class="punch" data-box="punch">Salva pra usar no seu <span style="color:#D6203F">primeiro dia</span> de trabalho</div><div class="sub" data-box="sub" style="top:360px;width:900px">e manda pro colega que sonha em conhecer o Japão</div></div></body></html>
